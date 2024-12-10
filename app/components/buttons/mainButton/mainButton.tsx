@@ -19,7 +19,7 @@ export default function MainButton({ text, type, onButtonClick }: IMainButton) {
       return (
         <Button
           onPress={onButtonClick}
-          className={(styles.main_button_overwrite, styles.primary)}
+          className={`${styles.main_button_overwrite} ${styles.primary}`}
         >
           {text}
         </Button>
@@ -28,7 +28,7 @@ export default function MainButton({ text, type, onButtonClick }: IMainButton) {
       return (
         <Button
           onPress={onButtonClick}
-          className={(styles.main_button_overwrite, styles.secondary)}
+          className={`${styles.main_button_overwrite} ${styles.secondary}`}
           variant="bordered"
         >
           {text}

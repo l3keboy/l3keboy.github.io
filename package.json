@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "tsc": "npx tsc --noEmit"
   },
   "dependencies": {
     "@nextui-org/react": "^2.6.5",

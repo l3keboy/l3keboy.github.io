@@ -1,6 +1,8 @@
 "use client";
-
 import { Button } from "@nextui-org/button";
+
+// Import types
+import { PressEvent } from "@react-types/shared";
 
 // Styles
 import styles from "./mainButton.module.css";
@@ -8,7 +10,7 @@ import styles from "./mainButton.module.css";
 interface IMainButton {
   text: string;
   type: 1 | 2;
-  onButtonClick: void;
+  onButtonClick: (e: PressEvent) => void;
 }
 
 export default function MainButton({ text, type, onButtonClick }: IMainButton) {
@@ -16,7 +18,7 @@ export default function MainButton({ text, type, onButtonClick }: IMainButton) {
     case 1:
       return (
         <Button
-          onClick={onButtonClick}
+          onPress={onButtonClick}
           className={(styles.main_button_overwrite, styles.primary)}
         >
           {text}
@@ -25,7 +27,7 @@ export default function MainButton({ text, type, onButtonClick }: IMainButton) {
     case 2:
       return (
         <Button
-          onClick={onButtonClick}
+          onPress={onButtonClick}
           className={(styles.main_button_overwrite, styles.secondary)}
           variant="bordered"
         >

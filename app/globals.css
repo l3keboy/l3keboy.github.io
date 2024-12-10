@@ -1,7 +1,10 @@
 /* Import Google icons */
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 /* Import Nunito font */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   /* Fonts */
@@ -9,9 +12,9 @@
 
   /* Colors */
   --primary-color-1: #121212;
-  --primary-color-2: #1F1F1E;
-  --secondary-color-1: #EFEFEF;
-  --accent-color-1: #4D7ED1;
+  --primary-color-2: #1f1f1e;
+  --secondary-color-1: #efefef;
+  --accent-color-1: #4d7ed1;
 }
 
 html {
@@ -47,7 +50,7 @@ h3 {
   font-size: 24px;
 }
 a {
-  color: var(--accent-color-1)
+  color: var(--accent-color-1);
 }
 span {
   color: var(--accent-color-1);

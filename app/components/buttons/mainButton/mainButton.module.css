@@ -1,0 +1,14 @@
+/* Shared overwrites */
+.main_button_overwrite {
+  border-radius: 40px;
+}
+
+/* Button styles */
+.primary {
+  background-color: var(--accent-color-1) !important;
+  color: var(--secondary-color-1);
+}
+
+.secondary {
+  color: var(--secondary-color-1) !important;
+}

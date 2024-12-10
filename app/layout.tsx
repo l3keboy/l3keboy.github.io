@@ -1,3 +1,9 @@
+"use client";
+
+// Import NextUI Provider
+import { NextUIProvider } from "@nextui-org/react";
+
+// Import styles
 import "./globals.css";
 
 export default function RootLayout({
@@ -8,7 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <title>Luke Hendriks</title>
-      <body>{children}</body>
+      <body>
+        <NextUIProvider>{children}</NextUIProvider>
+      </body>
     </html>
   );
 }

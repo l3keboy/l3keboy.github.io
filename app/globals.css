@@ -18,8 +18,8 @@
 }
 
 html {
-  background-color: var(--primary-color-1);
-  color: var(--secondary-color-1);
+  background-color: var(--primary-color-1) !important;
+  color: var(--secondary-color-1) !important;
   font-family: var(--font-family);
   font-weight: 100;
   font-size: 18px;

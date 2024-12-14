@@ -10,7 +10,7 @@ interface ITabs {
   tabTitle: string;
 }
 interface IMainTab {
-  tabSelectionChanged: (key: React.Key) => any;
+  tabSelectionChanged: (key: React.Key) => void;
   tabs?: ITabs[] | undefined;
 }
 

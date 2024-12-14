@@ -28,7 +28,7 @@ export default function MainTab({ tabSelectionChanged, tabs }: IMainTab) {
           panel: styles.tabs_panel_overwrite,
         }}
       >
-        {tabs.map((tabInfo) => (
+        {tabs.map((tabInfo: ITabs) => (
           <Tab key={tabInfo.tabKey} title={tabInfo.tabTitle} />
         ))}
       </Tabs>

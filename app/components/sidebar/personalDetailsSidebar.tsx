@@ -2,7 +2,6 @@
 import { Avatar } from "@nextui-org/react";
 import { Chip } from "@nextui-org/chip";
 import Image from "next/image";
-import { Button } from "@nextui-org/button";
 import { config } from "../../config";
 
 // Import components

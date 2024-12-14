@@ -1,5 +1,4 @@
 "use client";
-import { Chip } from "@nextui-org/chip";
 
 // Styles
 import styles from "./detailsContainer.module.css";

@@ -1,0 +1,21 @@
+.my_projects {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+.my_projects:last-child div:last-child hr {
+    display: none;
+}
+
+/* TABLET VIEW CHANGES */
+@media (max-width: 1050px) {
+}
+
+/* MOBILE VIEW CHANGES */
+@media (max-width: 768px) {
+    .my_projects {
+        gap: 0px;
+    }
+}

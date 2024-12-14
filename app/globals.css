@@ -13,6 +13,7 @@
   /* Colors */
   --primary-color-1: #121212;
   --primary-color-2: #1f1f1e;
+  --primary-color-3: #2C2C2B;
   --secondary-color-1: #efefef;
   --accent-color-1: #4d7ed1;
 }
@@ -35,13 +36,13 @@ body {
 h1 {
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 36px;
+  font-size: 32px;
   margin: 0;
 }
 h2 {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 30px;
+  font-size: 28px;
   margin: 0;
 }
 h3 {
@@ -58,14 +59,35 @@ span {
 
 /* TABLET VIEW CHANGES */
 @media (max-width: 1050px) {
+  html {
+    font-size: 14px;
+  }
   body {
-    max-width: 768px;
+    max-width: 100dvw;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 18px;
   }
 }
 
 /* MOBILE VIEW CHANGES */
 @media (max-width: 768px) {
-  body {
-    max-width: 320px;
+  html {
+    font-size: 10px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 16px;
   }
 }

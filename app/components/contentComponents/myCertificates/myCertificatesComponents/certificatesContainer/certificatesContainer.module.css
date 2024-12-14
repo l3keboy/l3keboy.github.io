@@ -1,0 +1,60 @@
+.certificate_container_root {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.certificate_details_container_root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Certificate details */
+.certificate_details_actions_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.certificate_details_title_container {
+  margin-bottom: 12px;
+}
+.certificate_details_content_container {
+  margin-bottom: 12px;
+  max-width: 75%;
+}
+.certificate_details_subtitle {
+  opacity: 75%;
+}
+.certificate_details_skills_title {
+  font-weight: 400;
+}
+.skills_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.skills_list:last-child div:last-child span:last-child {
+  display: none;
+}
+
+/* Certificate image */
+.certificate_image_overwrite {
+  width: 96px;
+  height: 96px;
+  background-color: var(--primary-color-3);
+}
+
+/* TABLET VIEW CHANGES */
+@media (max-width: 1050px) {
+}
+
+/* MOBILE VIEW CHANGES */
+@media (max-width: 768px) {
+    .certificate_image_overwrite {
+        display: none;
+    }
+    .certificate_details_content_container {
+        max-width:100%;
+    }
+}

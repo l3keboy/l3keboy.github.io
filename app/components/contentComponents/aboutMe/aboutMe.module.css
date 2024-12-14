@@ -1,0 +1,23 @@
+.what_i_am_doing_container {
+    margin-top: 48px;
+}
+.what_i_am_doing_items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+/* TABLET VIEW CHANGES */
+@media (max-width: 1050px) {
+    .what_i_am_doing_items {
+        flex-direction: column;
+    }
+  }
+  
+  /* MOBILE VIEW CHANGES */
+  @media (max-width: 768px) {
+
+  }
+  

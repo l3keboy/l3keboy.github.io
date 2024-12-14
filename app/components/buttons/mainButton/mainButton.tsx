@@ -2,24 +2,25 @@
 import { Button } from "@nextui-org/button";
 
 // Import types
-import { PressEvent } from "@react-types/shared";
+import IMainButton from "../../../shared/interfaces/IMainButton";
 
 // Styles
 import styles from "./mainButton.module.css";
 
-interface IMainButton {
-  text: string;
-  type: 1 | 2;
-  onButtonClick: (e: PressEvent) => void;
-}
-
-export default function MainButton({ text, type, onButtonClick }: IMainButton) {
+export default function MainButton({
+  text,
+  type,
+  onButtonClick,
+  customClass,
+}: IMainButton) {
   switch (type) {
     case 1:
       return (
         <Button
           onPress={onButtonClick}
-          className={(styles.main_button_overwrite, styles.primary)}
+          className={`${styles.main_button_overwrite} ${styles.primary} ${
+            customClass === undefined ? "" : customClass
+          }`}
         >
           {text}
         </Button>
@@ -28,7 +29,9 @@ export default function MainButton({ text, type, onButtonClick }: IMainButton) {
       return (
         <Button
           onPress={onButtonClick}
-          className={(styles.main_button_overwrite, styles.secondary)}
+          className={`${styles.main_button_overwrite} ${styles.secondary} ${
+            customClass === undefined ? "" : customClass
+          }`}
           variant="bordered"
         >
           {text}

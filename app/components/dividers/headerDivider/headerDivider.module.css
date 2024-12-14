@@ -1,0 +1,19 @@
+.header_divider {
+    width: 96px;
+    height: 8px;
+    background-color: var(--accent-color-1) !important;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 24px;
+}
+
+/* TABLET VIEW CHANGES */
+@media (max-width: 1050px) {
+    .header_divider {
+        width: 64px;
+    }
+  }
+  
+/* MOBILE VIEW CHANGES */
+@media (max-width: 768px) {
+}

@@ -1,0 +1,24 @@
+/* Main Divider */
+.main_divider {
+  background-color: var(--primary-color-3);
+  height: 2px;
+  margin: auto;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+/* TABLET VIEW CHANGES */
+@media (max-width: 1050px) {
+  .main_divider {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+/* MOBILE VIEW CHANGES */
+@media (max-width: 768px) {
+  .main_divider {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}

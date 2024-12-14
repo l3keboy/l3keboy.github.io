@@ -1,0 +1,139 @@
+/* Personal details sidebar */
+.personal_details_sidebar {
+  display: flex;
+  position: sticky;
+  top: 48px;
+  width: 25%;
+  background-color: var(--primary-color-2);
+  border-radius: 24px;
+  flex-direction: column;
+  max-height: max-content;
+  padding: 32px;
+}
+
+/* Personal Details */
+.personal_details_main {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+.personal_details_wrapper {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.personal_image_overwrite {
+  width: 164px;
+  height: 164px;
+  margin-bottom: 32px;
+  border-radius: 24px;
+  background-color: var(--primary-color-3);
+  padding: 12px;
+}
+.personal_function {
+  margin-top: 4px;
+  color: var(--secondary-color-1);
+  background-color: var(--primary-color-3);
+}
+
+/* View details */
+.view_personal_details {
+  display: none;
+  position: absolute; 
+  top: 0; 
+  right: 0;
+  border-radius: 0px 24px 0px 24px;
+  font-size: 12px;
+  padding: 12px;
+}
+
+/* Details content */
+.details_content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Socials container */
+.socials_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  gap: 12px;
+}
+.socials_link_overwrite:hover {
+  cursor: pointer;
+}
+
+.details_secondary_active {
+  display: block !important;
+}
+
+/* TABLET VIEW CHANGES */
+@media (max-width: 1050px) {
+  .personal_details_sidebar {
+    width: 100%;
+    padding: 24px;
+    top: 0;
+    position: relative;
+  }
+  .personal_details_secondary {
+    display: none;
+  }
+  .details_content {
+    flex-direction: row;
+    justify-content: center;
+    gap: 48px;
+    margin-bottom: 24px;
+  }
+  .personal_details_main {
+    flex-direction: row;
+    margin: 0px;
+    justify-content: start;
+  }
+  .personal_details_wrapper {
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    margin: 0px; 
+  }
+  .personal_image_overwrite {
+    margin-bottom: 0px;
+    margin-right: 32px;
+    width: 128px;
+    height: 128px;
+  }
+  .view_personal_details {
+    display: flex;
+  }
+}
+
+/* MOBILE VIEW CHANGES */
+@media (max-width: 768px) {
+  .personal_details_sidebar {
+    padding: 12px;
+  }
+  .details_content {
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .personal_details_wrapper {
+    justify-content: start;
+    align-items: start;
+    margin: 0px; 
+  }
+  .personal_image_overwrite {
+    margin-bottom: 0px;
+    margin-right: 16px;
+    width: 96px;
+    height: 96px;
+  }
+}

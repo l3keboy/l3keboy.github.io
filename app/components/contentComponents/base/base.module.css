@@ -1,0 +1,22 @@
+.content_base {
+  padding: 24px;
+  border-radius: 24px;
+  background-color: var(--primary-color-2);
+}
+.content_base_header {
+  margin-bottom: 48px;
+}
+.content_base_subtitle {
+  opacity: 75%;
+}
+
+/* TABLET VIEW CHANGES */
+@media (max-width: 1050px) {
+}
+
+/* MOBILE VIEW CHANGES */
+@media (max-width: 768px) {
+    .content_base_header {
+        margin-bottom: 24px;
+    }
+}

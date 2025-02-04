@@ -1,5 +1,5 @@
 "use client";
-import { Divider } from "@nextui-org/divider";
+import { Divider } from "@heroui/divider";
 
 // Styles
 import styles from "./headerDivider.module.css";

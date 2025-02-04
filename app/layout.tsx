@@ -1,7 +1,7 @@
 "use client";
 
 // Import NextUI Provider
-import { NextUIProvider } from "@nextui-org/react";
+import { HeroUIProvider } from "@heroui/react";
 
 // Import styles
 import "./globals.css";
@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="en">
       <title>Luke Hendriks</title>
       <body>
-        <NextUIProvider>{children}</NextUIProvider>
+        <HeroUIProvider>{children}</HeroUIProvider>
       </body>
     </html>
   );

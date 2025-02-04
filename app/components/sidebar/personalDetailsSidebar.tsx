@@ -1,6 +1,6 @@
 "use client";
-import { Avatar } from "@nextui-org/react";
-import { Chip } from "@nextui-org/chip";
+import { Avatar } from "@heroui/react";
+import { Chip } from "@heroui/chip";
 import Image from "next/image";
 import { config } from "../../config";
 

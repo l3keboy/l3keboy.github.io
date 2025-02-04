@@ -6,6 +6,27 @@ export const config = {
     {
       company: "Knowledge Pillars",
       companyIcon: "/assets/brands/knowledge_pillars_logo.jpeg",
+      certificateName: "JavaScript Coding Specialist",
+      grantDate: "February 2025",
+      expiryDate: null,
+      certificateNumber: "67a11e61e222fe7625430f76",
+      certificateUrl: {
+        displayName: "Certificate",
+        url: "https://platform.knowledge-pillars.com/c/67a11e61e222fe7625430f76",
+      },
+      skills: [
+        "Basic grammar, variable declaration, data types and literals",
+        "JavaScript operators and expressions",
+        "Control flow, loops, iterations and error handling",
+        "Functions",
+        "Working with Objects in JavaScript",
+        "Interact with the Document Object Model",
+        "Interact with HTML forms",
+      ],
+    },
+    {
+      company: "Knowledge Pillars",
+      companyIcon: "/assets/brands/knowledge_pillars_logo.jpeg",
       certificateName: "C# Coding Apprentice",
       grantDate: "September 2024",
       expiryDate: null,

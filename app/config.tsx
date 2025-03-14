@@ -4,6 +4,35 @@ export const config = {
   myLinkedIn: "https://www.linkedin.com/in/luke-h-421515225/",
   myCertificates: [
     {
+      company: "EXIN",
+      companyIcon: "/assets/brands/exin_logo.jpeg",
+      certificateName:
+        "EXIN BCS Foundation Certificate in Business Analysis (BAF)",
+      grantDate: "March 2025",
+      expiryDate: null,
+      certificateNumber: "6625367.20892338",
+      certificateUrl: {
+        displayName: "Certificate",
+        url: "https://mylogin.exin.nl/polarserver.asp?Script=GetLinkedInPost&CandidateCertificateGUID=479C1DF2-4DC9-46C9-9CA4-A2D4AD09F887&ts=1571870046",
+      },
+      skills: [
+        "What is business analysis?",
+        "The competencies of a business analyst",
+        "The strategic context for business analysis",
+        "The business analysis service framework",
+        "Investigating the business situation",
+        "Analyzing and managing stakeholders",
+        "Improving business services and processes",
+        "Defining the solution",
+        "Making the business case",
+        "Establishing the requirements",
+        "Documenting and modelling requirements",
+        "Validating and managing requirements",
+        "Delivering the requirements",
+        "Delivering the business solution",
+      ],
+    },
+    {
       company: "Knowledge Pillars",
       companyIcon: "/assets/brands/knowledge_pillars_logo.jpeg",
       certificateName: "JavaScript Coding Specialist",

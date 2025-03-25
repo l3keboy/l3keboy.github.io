@@ -4,6 +4,25 @@ export const config = {
   myLinkedIn: "https://www.linkedin.com/in/luke-h-421515225/",
   myCertificates: [
     {
+      company: "Microsoft",
+      companyIcon: "/assets/brands/microsoft_logo.jpeg",
+      certificateName: "Microsoft Certified: Azure Administrator Associate",
+      grantDate: "March 2025",
+      expiryDate: "March 2026",
+      certificateNumber: "91ACAED8BC28489C",
+      certificateUrl: {
+        displayName: "Certificate",
+        url: "https://learn.microsoft.com/api/credentials/share/en-us/HendriksLuke-7086/91ACAED8BC28489C?sharingId",
+      },
+      skills: [
+        "Manage Azure identities and governance",
+        "Implement and manage storage",
+        "Deploy and manage Azure compute resources",
+        "Implement and manage virtual networking",
+        "Monitor and maintain Azure resources",
+      ],
+    },
+    {
       company: "EXIN",
       companyIcon: "/assets/brands/exin_logo.jpeg",
       certificateName:

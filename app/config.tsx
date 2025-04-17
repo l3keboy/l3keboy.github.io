@@ -26,6 +26,27 @@ export const config = {
       company: "EXIN",
       companyIcon: "/assets/brands/exin_logo.jpeg",
       certificateName:
+        "EXIN BCS Practitioner Certificate in Modelling Business Processes",
+      grantDate: "April 2025",
+      expiryDate: null,
+      certificateNumber: "6625367.20894115",
+      certificateUrl: {
+        displayName: "Certificate",
+        url: "https://mylogin.exin.nl/polarserver.asp?Script=GetLinkedInPost&CandidateCertificateGUID=C8F0AC61-D4BF-4338-A8AC-D803962022F3&ts=-2037763906",
+      },
+      skills: [
+        "The Context for Business Processing Modelling",
+        "Modelling at the Enterprise Level",
+        "Modelling at the Event-Response Level",
+        "Modelling at the Actor-Task Level",
+        "Improving Business Processes",
+        "Managing and Implementing Change",
+      ],
+    },
+    {
+      company: "EXIN",
+      companyIcon: "/assets/brands/exin_logo.jpeg",
+      certificateName:
         "EXIN BCS Foundation Certificate in Business Analysis (BAF)",
       grantDate: "March 2025",
       expiryDate: null,

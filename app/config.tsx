@@ -4,6 +4,33 @@ export const config = {
   myLinkedIn: "https://www.linkedin.com/in/luke-h-421515225/",
   myCertificates: [
     {
+      company: "PeopleCert",
+      companyIcon: "/assets/brands/peoplecert_logo.png",
+      certificateName:
+        "ITIL v4 Foundation Certificate in IT Service Management",
+      grantDate: "June 2025",
+      expiryDate: "June 2028",
+      certificateNumber: "GR671779843LH",
+      certificateUrl: {
+        displayName: "Certificate",
+        url: "/assets/certificates/itil_v4_foundation_certificate_in_it_service_management.pdf",
+      },
+      skills: [
+        "Service management concepts",
+        "Service value system",
+        "Four dimensions of service management",
+        "Guiding principles",
+        "Service Value Chain",
+        "ITIL practices",
+        "Continuous improvement",
+        "Service Level Agreements",
+        "Key metrics and performance indicators",
+        "Service Operation",
+        "Digital Transformation",
+        "Problem Management",
+      ],
+    },
+    {
       company: "Microsoft",
       companyIcon: "/assets/brands/microsoft_logo.jpeg",
       certificateName: "Microsoft Certified: Azure Administrator Associate",

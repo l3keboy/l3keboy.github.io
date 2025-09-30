@@ -4,6 +4,46 @@ export const config = {
   myLinkedIn: "https://www.linkedin.com/in/luke-h-421515225/",
   myCertificates: [
     {
+      company: "Microsoft",
+      companyIcon: "/assets/brands/microsoft_logo.jpeg",
+      certificateName:
+        "Microsoft Certified: Azure Developer Associate (AZ-204)",
+      grantDate: "September 2025",
+      expiryDate: "September 2026",
+      certificateNumber: "7990801179F2FC6E",
+      certificateUrl: {
+        displayName: "Certificate",
+        url: "https://learn.microsoft.com/api/credentials/share/en-us/HendriksLuke-7086/7990801179F2FC6E?sharingId",
+      },
+      skills: [
+        "Develop Azure compute solutions",
+        "Develop for Azure storage",
+        "Implement Azure security",
+        "Monitor, troubleshoot, and optimize Azure solutions",
+        "Connect to and consume Azure services and third-party services",
+      ],
+    },
+    {
+      company: "Microsoft",
+      companyIcon: "/assets/brands/microsoft_logo.jpeg",
+      certificateName:
+        "Microsoft Certified: Azure Administrator Associate (AZ-104)",
+      grantDate: "March 2025",
+      expiryDate: "March 2026",
+      certificateNumber: "91ACAED8BC28489C",
+      certificateUrl: {
+        displayName: "Certificate",
+        url: "https://learn.microsoft.com/api/credentials/share/en-us/HendriksLuke-7086/91ACAED8BC28489C?sharingId",
+      },
+      skills: [
+        "Manage Azure identities and governance",
+        "Implement and manage storage",
+        "Deploy and manage Azure compute resources",
+        "Implement and manage virtual networking",
+        "Monitor and maintain Azure resources",
+      ],
+    },
+    {
       company: "PeopleCert",
       companyIcon: "/assets/brands/peoplecert_logo.png",
       certificateName:
@@ -28,25 +68,6 @@ export const config = {
         "Service Operation",
         "Digital Transformation",
         "Problem Management",
-      ],
-    },
-    {
-      company: "Microsoft",
-      companyIcon: "/assets/brands/microsoft_logo.jpeg",
-      certificateName: "Microsoft Certified: Azure Administrator Associate",
-      grantDate: "March 2025",
-      expiryDate: "March 2026",
-      certificateNumber: "91ACAED8BC28489C",
-      certificateUrl: {
-        displayName: "Certificate",
-        url: "https://learn.microsoft.com/api/credentials/share/en-us/HendriksLuke-7086/91ACAED8BC28489C?sharingId",
-      },
-      skills: [
-        "Manage Azure identities and governance",
-        "Implement and manage storage",
-        "Deploy and manage Azure compute resources",
-        "Implement and manage virtual networking",
-        "Monitor and maintain Azure resources",
       ],
     },
     {
@@ -167,7 +188,7 @@ export const config = {
     {
       company: "Microsoft",
       companyIcon: "/assets/brands/microsoft_logo.jpeg",
-      certificateName: "Microsoft Certified: Azure Fundamentals",
+      certificateName: "Microsoft Certified: Azure Fundamentals (AZ-900)",
       grantDate: "May 2024",
       expiryDate: null,
       certificateNumber: "5F9C8D99D7EBAB3B",

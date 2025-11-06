@@ -29,7 +29,7 @@ export const config = {
       certificateName:
         "Microsoft Certified: Azure Administrator Associate (AZ-104)",
       grantDate: "March 2025",
-      expiryDate: "March 2026",
+      expiryDate: "March 2027",
       certificateNumber: "91ACAED8BC28489C",
       certificateUrl: {
         displayName: "Certificate",

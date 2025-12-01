@@ -6,6 +6,25 @@ export const config = {
     {
       company: "Microsoft",
       companyIcon: "/assets/brands/microsoft_logo.jpeg",
+      certificateName: "Microsoft Certified: DevOps Engineer Expert (AZ-400)",
+      grantDate: "December 2025",
+      expiryDate: "December 2026",
+      certificateNumber: "53C1765EC4418787",
+      certificateUrl: {
+        displayName: "Certificate",
+        url: "https://learn.microsoft.com/api/credentials/share/en-us/HendriksLuke-7086/53C1765EC4418787?sharingId",
+      },
+      skills: [
+        "Design and implement processes and communications",
+        "Design and implement a source control strategy",
+        "Design and implement build and release pipelines",
+        "Develop a security and compliance plan",
+        "Implement an instrumentation strategy",
+      ],
+    },
+    {
+      company: "Microsoft",
+      companyIcon: "/assets/brands/microsoft_logo.jpeg",
       certificateName:
         "Microsoft Certified: Azure Developer Associate (AZ-204)",
       grantDate: "September 2025",

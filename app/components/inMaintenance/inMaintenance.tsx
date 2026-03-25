@@ -1,5 +1,6 @@
 "use client";
 
+import { WarningIcon } from "@phosphor-icons/react";
 // Styles
 import styles from "./inMaintenance.module.css";
 
@@ -19,12 +20,8 @@ export default function InMaintenance() {
         </p>
       </div>
       <div className={styles.in_maintenance_icon_container}>
-        <span
-          className={
-            "material-symbols-outlined " + styles.in_maintenance_icon_style
-          }
-        >
-          construction
+        <span className={styles.in_maintenance_icon_style}>
+          <WarningIcon />
         </span>
       </div>
     </div>

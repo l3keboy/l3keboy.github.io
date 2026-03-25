@@ -1,5 +1,6 @@
 .root {
-padding: 48px;
+  padding: 48px;
+  height: 100dvh;
 }
 
 .root_content {
@@ -19,7 +20,7 @@ padding: 48px;
 @media (max-width: 1050px) {
   .root {
     padding: 12px;
-    }
+  }
   .root_content {
     flex-direction: column;
   }

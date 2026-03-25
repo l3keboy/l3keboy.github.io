@@ -7,7 +7,7 @@ import styles from "./doingComponent.module.css";
 interface IDoingComponent {
   title: string;
   description: string;
-  icon: string;
+  icon: React.ReactNode;
 }
 
 export default function DoingComponent({
@@ -18,11 +18,7 @@ export default function DoingComponent({
   return (
     <div className={styles.doing_component_container}>
       <div className={styles.doing_component_icon}>
-        <span
-          className={`material-symbols-outlined ${styles.doing_component_icon_overwrite}`}
-        >
-          {icon}
-        </span>
+        <div className={styles.doing_component_icon_overwrite}>{icon}</div>
       </div>
       <div className={styles.doing_component_text}>
         <h4 className={styles.doing_component_title}>{title}</h4>

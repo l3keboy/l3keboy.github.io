@@ -6,6 +6,7 @@ import MainButton from "./components/buttons/mainButton/mainButton";
 
 // Import styles
 import styles from "./not-found.module.css";
+import { MagnifyingGlassIcon } from "@phosphor-icons/react";
 
 export default function NotFound() {
   // Get router
@@ -37,10 +38,8 @@ export default function NotFound() {
         </div>
       </div>
       <div className={styles.not_found_icon_container}>
-        <span
-          className={"material-symbols-outlined " + styles.not_found_icon_style}
-        >
-          search
+        <span className={styles.not_found_icon_style}>
+          <MagnifyingGlassIcon />
         </span>
       </div>
     </div>

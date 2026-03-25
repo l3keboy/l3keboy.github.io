@@ -15,17 +15,22 @@ import LinkedInIcon from "../../../public/assets/logos/linkedin.svg";
 
 // Styles
 import styles from "./personalDetailsSidebar.module.css";
+import {
+  GraduationCapIcon,
+  MapPinIcon,
+  TranslateIcon,
+} from "@phosphor-icons/react";
 
 export default function PersonalDetailsSidebar() {
   const toggleDetailsSecondaryActive = async () => {
     // Secondary element
     const elements = document.getElementsByClassName(
-      styles.personal_details_secondary
+      styles.personal_details_secondary,
     );
     const detailsSecondaryElement = elements[0];
     if (
       detailsSecondaryElement.classList.contains(
-        styles.details_secondary_active
+        styles.details_secondary_active,
       )
     ) {
       detailsSecondaryElement.classList.remove(styles.details_secondary_active);
@@ -58,16 +63,20 @@ export default function PersonalDetailsSidebar() {
         <MainDivider />
         <div className={styles.details_content}>
           <DetailsContainer
-            image="home_pin"
+            image={<MapPinIcon size={24} />}
             title="Location"
             text="Netherlands"
           />
           <DetailsContainer
-            image="language"
+            image={<TranslateIcon size={24} />}
             title="Languages"
             text="Dutch & English"
           />
-          <DetailsContainer image="school" title="Education" text="HBO-ICT" />
+          <DetailsContainer
+            image={<GraduationCapIcon size={24} />}
+            title="Education"
+            text="HBO-ICT"
+          />
         </div>
         <MainDivider />
         <div className={styles.socials_container}>

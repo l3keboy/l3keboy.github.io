@@ -18,6 +18,7 @@
   font-size: 64px;
   width: 64px;
   height: 64px;
+  color: var(--accent-color-1);
 }
 
 /* TABLET VIEW CHANGES */

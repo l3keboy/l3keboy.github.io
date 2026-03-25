@@ -6,6 +6,7 @@ import DoingComponent from "./aboutMeComponents/doingComponent/doingComponent";
 
 // Styles
 import styles from "./aboutMe.module.css";
+import { CloudIcon, WrenchIcon } from "@phosphor-icons/react";
 
 export default function AboutMe() {
   return (
@@ -25,12 +26,12 @@ export default function AboutMe() {
         <h2>What I am doing.</h2>
         <div className={styles.what_i_am_doing_items}>
           <DoingComponent
-            icon="cloud"
+            icon={<CloudIcon />}
             title="Azure Cloud Platform"
             description="I am currently developing myself on the Azure Cloud platform and getting multiple certifications to show my knowledge!"
           />
           <DoingComponent
-            icon="construction"
+            icon={<WrenchIcon />}
             title="Development"
             description="I am currently developing different applications and learning new languages like C#."
           />

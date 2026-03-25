@@ -15,10 +15,8 @@
   height: 48px;
 }
 .details_image_overwrite {
-  color: var(--accent-color-1);
-  background-color: var(--primary-color-3);
-  font-size: 24px;
   margin: auto;
+  color: var(--accent-color-1);
 }
 
 /* Main content */
@@ -49,4 +47,3 @@
     font-size: 12px;
   }
 }
-

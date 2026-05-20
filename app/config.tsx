@@ -28,7 +28,7 @@ export const config = {
       certificateName:
         "Microsoft Certified: Azure Developer Associate (AZ-204)",
       grantDate: "September 2025",
-      expiryDate: "September 2026",
+      expiryDate: "September 2027",
       certificateNumber: "7990801179F2FC6E",
       certificateUrl: {
         displayName: "Certificate",
@@ -268,6 +268,25 @@ export const config = {
     },
   ],
   myProjects: [
+    {
+      title: "Partio",
+      subtitle: "Party game application",
+      description:
+        "A party game application to play different party games with friends online (and offline).",
+      language_and_tools:
+        "C# | NextJS | Docker | Docker Compose | PostgreSQL | Supabase",
+      source: {
+        type: "Closed source",
+        url: "https://github.com/partio-official",
+      },
+      image: "",
+      links: [
+        {
+          displayName: "Website",
+          url: "https://partio.app/",
+        },
+      ],
+    },
     {
       title: "Husqy",
       subtitle: "Discord bot for all servers",

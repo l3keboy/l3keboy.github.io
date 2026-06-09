@@ -8,7 +8,7 @@ export const config = {
       companyIcon: "/assets/brands/microsoft_logo.jpeg",
       certificateName: "Microsoft Certified: DevOps Engineer Expert (AZ-400)",
       grantDate: "December 2025",
-      expiryDate: "December 2026",
+      expiryDate: "December 2027",
       certificateNumber: "53C1765EC4418787",
       certificateUrl: {
         displayName: "Certificate",

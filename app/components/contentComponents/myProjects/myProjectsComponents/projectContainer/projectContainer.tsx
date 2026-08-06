@@ -46,13 +46,15 @@ export default function ProjectContainer({
           </div>
         </div>
         <div className={styles.project_details_actions_container}>
-          <MainButton
-            type={1}
-            text="Go to source"
-            onButtonClick={() => {
-              navigateToUrl(project.source.url);
-            }}
-          />
+          {project.source.url && (
+            <MainButton
+              type={1}
+              text="Go to source"
+              onButtonClick={() => {
+                navigateToUrl(project.source.url);
+              }}
+            />
+          )}
           {project.links.length !== 0 ? (
             <>
               {project.links.map((link) => (

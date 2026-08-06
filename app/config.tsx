@@ -197,7 +197,7 @@ export const config = {
         "Change Management",
         "Continual Improvement",
         "Enterprise Architecture",
-        "Intergration Management",
+        "Integration Management",
         "IT Change Management",
         "IT Management",
         "IT Operations Management",
@@ -288,10 +288,28 @@ export const config = {
       ],
     },
     {
+      title: "Solyra coaching",
+      subtitle: "Holistic & Systemic coaching website",
+      description:
+        "Website for a Holistic & Systemic coach. Project includes, planning appointment, auto deployments using Vercel, automated emails, and more!",
+      language_and_tools: "NextJS | Vercel",
+      source: {
+        type: "Closed source",
+        url: "",
+      },
+      image: "https://solyra-coaching.nl/logo.png",
+      links: [
+        {
+          displayName: "Website",
+          url: "https://solyra-coaching.nl/",
+        },
+      ],
+    },
+    {
       title: "Husqy",
       subtitle: "Discord bot for all servers",
       description:
-        "An advanced discord bot that provides a server, its adminstrators and its users with different functionalities and modules. Some of these functionalities include: logging, greetings, tempchannels, reactionroles, etc.",
+        "Project is not actively maintained anymore. An advanced discord bot that provides a server, its administrators and its users with different functionalities and modules. Some of these functionalities include: logging, greetings, tempchannels, reactionroles, etc.",
       language_and_tools:
         "Python | NextJS | Docker | MicroK8S | PostgreSQL | Redis | Lavalink",
       source: {
@@ -319,7 +337,7 @@ export const config = {
       title: "Victreebot",
       subtitle: "Discord bot for Pokémon GO! Communities",
       description:
-        "A Discord bot for Pokémon GO! Communities providing different functionalies like registering raids, signing up for raids, registering known locations (with coordinates) in your area, etc.",
+        "A Discord bot for Pokémon GO! Communities providing different functionalities like registering raids, signing up for raids, registering known locations (with coordinates) in your area, etc.",
       language_and_tools: "Python | Docker | PostgreSQL",
       source: {
         type: "Open source",
@@ -338,7 +356,7 @@ export const config = {
       title: "l3keboy.github.io",
       subtitle: "This website",
       description:
-        "The current version of this website hosted on GitHub pages (with custom domain ofcourse!).",
+        "The current version of this website hosted on GitHub pages (with custom domain of course!).",
       language_and_tools: "NextJS | GitHub Pages",
       source: {
         type: "Open source",
@@ -351,7 +369,7 @@ export const config = {
       title: "IOS-QR_Validator",
       subtitle: "IOS application to validate the links behind QR codes",
       description:
-        "An IOS application which allows you to scan QR codes and validate the safety of the links behind them. It also allows you to open these links in a in app browser of safari.",
+        "Project is not actively maintained anymore. An IOS application which allows you to scan QR codes and validate the safety of the links behind them. It also allows you to open these links in a in app browser of safari.",
       language_and_tools: "Swift | XCode | Google Safebrowsing API",
       source: {
         type: "Open source",
@@ -365,7 +383,7 @@ export const config = {
       title: "IOS-TimeIt",
       subtitle: "IOS timer application",
       description:
-        "An IOS application which allows you to set a timer and sends a notification when the timer is done. It also has a time view (with seconds) and a stopwatch functionality.",
+        "Project is not actively maintained anymore. An IOS application which allows you to set a timer and sends a notification when the timer is done. It also has a time view (with seconds) and a stopwatch functionality.",
       language_and_tools: "Swift | XCode",
       source: {
         type: "Open source",
@@ -379,7 +397,7 @@ export const config = {
       title: "IOS-Factzzz",
       subtitle: "IOS application to get random facts",
       description:
-        "An IOS application to give a random fact. It allows you to favorite (Local device only, no iCloud) and share facts.",
+        "Project is not actively maintained anymore. An IOS application to give a random fact. It allows you to favorite (Local device only, no iCloud) and share facts.",
       language_and_tools: "Swift | XCode",
       source: {
         type: "Open source",
@@ -393,7 +411,7 @@ export const config = {
       title: "lukehendriks.net-v2",
       subtitle: "V2 of this website.",
       description:
-        "Second version of this website, with a more simplistic approach (just one landing page).",
+        "Project is not actively maintained anymore. Second version of this website, with a more simplistic approach (just one landing page).",
       language_and_tools: "Nuxt V3",
       source: {
         type: "Open source",
@@ -407,7 +425,7 @@ export const config = {
       title: "lukehendriks.net-v1",
       subtitle: "V1 of this website.",
       description:
-        "First version of this website using a Laravel backend and a NextJS frontend. This version had different features like a contact form and was secured using Google Recaptcha V3.",
+        "Project is not actively maintained anymore. First version of this website using a Laravel backend and a NextJS frontend. This version had different features like a contact form and was secured using Google Recaptcha V3.",
       language_and_tools: "ReactJS | Tailwind CSS | Laravel Lumen",
       source: {
         type: "Open source",

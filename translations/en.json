@@ -1,1 +1,54 @@
-{}
+{
+    "Components": {
+        "Navigation": {
+            "Header": {
+                "Links": {
+                    "1": {
+                        "title": "About",
+                        "ariaLabel": "Navigate to About",
+                        "url": "/"
+                    },
+                    "2": {
+                        "title": "Stack",
+                        "ariaLabel": "Navigate to Stack",
+                        "url": "/"
+                    },
+                    "3": {
+                        "title": "Projects",
+                        "ariaLabel": "Navigate to Projects",
+                        "url": "/"
+                    },
+                    "4": {
+                        "title": "Certifications",
+                        "ariaLabel": "Navigate to Certifications",
+                        "url": "/"
+                    },
+                    "5": {
+                        "title": "Contact",
+                        "ariaLabel": "Navigate to Contact",
+                        "url": "/"
+                    }
+                }
+            },
+            "Footer": {
+                "chip": "Contact",
+                "title": "Let's talk!",
+                "description": "Best reached over LinkedIn, or drop a star on something interesting on GitHub.",
+                "Buttons": {
+                    "linkedIn": "LinkedIn",
+                    "gitHub": "GitHub"
+                },
+                "Links": {
+                    "1": {
+                        "title": "Sitemap",
+                        "ariaLabel": "Navigate to Sitemap",
+                        "url": "/sitemap.xml"
+                    }
+                }
+            }
+        },
+        "ThemeSwitcher": {
+            "ariaLabel": "Toggle light and dark mode for the website"
+        }
+    }
+}

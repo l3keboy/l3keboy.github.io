@@ -1,11 +1,16 @@
-// app/components/theme-switcher.tsx
 "use client";
+// ! Themes are only relevant on the client side, therefore use client
 
 import { Button } from "@heroui/react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { IconMoon } from "../icons/Moon";
+import { IconSun } from "../icons/Sun";
+import { useTranslations } from "next-intl";
 
 export function ThemeSwitcher() {
+  const t = useTranslations("Components.ThemeSwitcher");
+
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme, theme } = useTheme();
 
@@ -21,22 +26,22 @@ export function ThemeSwitcher() {
   const activeTheme = theme === "system" ? resolvedTheme : theme;
 
   return (
-    <div className="flex items-center gap-2">
-      <Button
-        variant={activeTheme === "light" ? "primary" : "secondary"}
-        onPress={() => {
-          switch (activeTheme) {
-            case "light":
-              setTheme("dark");
-              break;
-            case "dark":
-              setTheme("light");
-              break;
-          }
-        }}
-      >
-        Toggle
-      </Button>
-    </div>
+    <Button
+      aria-label={t("ariaLabel")}
+      variant="outline"
+      size="md"
+      onPress={() => {
+        switch (activeTheme) {
+          case "light":
+            setTheme("dark");
+            break;
+          case "dark":
+            setTheme("light");
+            break;
+        }
+      }}
+    >
+      {activeTheme === "light" ? <IconMoon /> : <IconSun />}
+    </Button>
   );
 }

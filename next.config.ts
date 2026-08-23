@@ -4,6 +4,8 @@ import bundleAnalyzer from "@next/bundle-analyzer";
 import createNextIntlPlugin from "next-intl/plugin";
 import { PHASE_DEVELOPMENT_SERVER } from "next/constants";
 
+import { siteSettings } from "./utils/config/siteSettings";
+
 const withNextIntl = createNextIntlPlugin(
   "./utils/lib/next-intl/translationsRequest.tsx"
 );
@@ -19,12 +21,24 @@ const nextConfig = (phase: string): NextConfig => {
     output: "standalone",
     reactStrictMode: false,
     ...(isDev && {
-      allowedDevOrigins: ["localhost"],
+      allowedDevOrigins: ["localhost", "192.168.254.203"],
     }),
+    redirects() {
+      return [
+        siteSettings.maintenance === true
+          ? {
+              destination: '/maintenance',
+              permanent: false,
+              source: '/((?!maintenance|cms|_next|api|favicon.ico).*)',
+            }
+          : null,
+        siteSettings.maintenance === false
+          ? { destination: '/', permanent: false, source: '/maintenance' }
+          : null,
+      ].filter(Boolean) as never;
+    },
   };
 };
 
 module.exports = (phase: string) =>
-  withBundleAnalyzer(
-    withNextIntl(nextConfig(phase))
-  );
+  withBundleAnalyzer(withNextIntl(nextConfig(phase)));

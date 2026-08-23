@@ -11,7 +11,7 @@
   --font-family-secondary: var(--portfolio-font-family-secondary);
   --font-family-mono: var(--portfolio-font-family-mono);
 
-  /* Expose your own tokens as Tailwind utilities too, e.g. bg-portfolio-surface */
+  /* Expose your own tokens as Tailwind utilities */
   --color-portfolio-background: var(--portfolio-background);
   --color-portfolio-surface: var(--portfolio-surface);
   --color-portfolio-border: var(--portfolio-border);
@@ -21,10 +21,31 @@
   --color-portfolio-danger: var(--portfolio-danger);
   --color-portfolio-warning: var(--portfolio-warning);
   --color-portfolio-success: var(--portfolio-success);
+
+  /* Expose font styling tokens as Tailwind utilities */
+  --text-xs: var(--portfolio-text-xs);
+  --text-xs--line-height: 1.4;
+  --text-sm: var(--portfolio-text-sm);
+  --text-sm--line-height: 1.5;
+  --text-base: var(--portfolio-text-base);
+  --text-base--line-height: 1.6;
+  --text-lg: var(--portfolio-text-lg);
+  --text-lg--line-height: 1.6;
+  --text-xl: var(--portfolio-text-xl);
+  --text-xl--line-height: 1.3;
+  --text-xl--font-weight: 600;
+  --text-heading: var(--portfolio-text-heading);
+  --text-heading--line-height: 1.2;
+  --text-heading--letter-spacing: -0.01em;
+  --text-heading--font-weight: 600;
+  --text-display: var(--portfolio-text-display);
+  --text-display--line-height: 1.12;
+  --text-display--letter-spacing: -0.01em;
+  --text-display--font-weight: 700;
 }
 
 :root {
-  /* ---- Your tokens: the single source of truth (light values) ---- */
+  /* Your tokens: the single source of truth (light values) */
   --portfolio-background: #fafafa;
   --portfolio-surface: #ffffff;
   --portfolio-border: #e6e7ea;
@@ -35,7 +56,7 @@
   --portfolio-warning: #f5a524;
   --portfolio-success: #22c55e;
 
-  /* ---- Point HeroUI's expected variable names at your tokens ---- */
+  /* Point HeroUI's expected variable names at your tokens */
   --background: var(--portfolio-background);
   --foreground: var(--portfolio-text);
   --surface: var(--portfolio-surface);
@@ -50,11 +71,28 @@
   --warning-foreground: #13151a;
   --success: var(--portfolio-success);
   --success-foreground: #ffffff;
+
+  /* Font size primitives */
+  --portfolio-text-xs: 0.75rem; /* 12px  — mono labels, meta */
+  --portfolio-text-sm: 0.84375rem; /* 13.5px — tags, nav links */
+  --portfolio-text-base: 1rem; /* 16px  — body copy */
+  --portfolio-text-lg: 1.0625rem; /* 17px  — lede / intro paragraphs */
+  --portfolio-text-xl: 1.3125rem; /* 21px  — card titles */
+  --portfolio-text-heading: clamp(
+    1.4rem,
+    2.4vw,
+    1.85rem
+  ); /* h2, fluid 22.4–29.6px */
+  --portfolio-text-display: clamp(
+    2.1rem,
+    4.4vw,
+    3.2rem
+  ); /* h1, fluid 33.6–51.2px */
 }
 
 .dark,
 [data-theme="dark"] {
-  /* ---- Your tokens: the single source of truth (dark values) ---- */
+  /* Your tokens: the single source of truth (dark values) */
   --portfolio-background: #0c0d10;
   --portfolio-surface: #131519;
   --portfolio-border: #23262c;
@@ -78,4 +116,21 @@
   --warning-foreground: #13151a;
   --success: var(--portfolio-success);
   --success-foreground: #ffffff;
+
+  /* Font size primitives */
+  --portfolio-text-xs: 0.75rem; /* 12px  — mono labels, meta */
+  --portfolio-text-sm: 0.84375rem; /* 13.5px — tags, nav links */
+  --portfolio-text-base: 1rem; /* 16px  — body copy */
+  --portfolio-text-lg: 1.0625rem; /* 17px  — lede / intro paragraphs */
+  --portfolio-text-xl: 1.3125rem; /* 21px  — card titles */
+  --portfolio-text-heading: clamp(
+    1.4rem,
+    2.4vw,
+    1.85rem
+  ); /* h2, fluid 22.4–29.6px */
+  --portfolio-text-display: clamp(
+    2.1rem,
+    4.4vw,
+    3.2rem
+  ); /* h1, fluid 33.6–51.2px */
 }

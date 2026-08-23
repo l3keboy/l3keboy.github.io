@@ -1,2 +1,81 @@
 @import "tailwindcss";
 @import "@heroui/styles";
+
+/* Dark mode support */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Tailwind config */
+@theme inline {
+  /* Fonts */
+  --font-family-primary: var(--portfolio-font-family-primary);
+  --font-family-secondary: var(--portfolio-font-family-secondary);
+  --font-family-mono: var(--portfolio-font-family-mono);
+
+  /* Expose your own tokens as Tailwind utilities too, e.g. bg-portfolio-surface */
+  --color-portfolio-background: var(--portfolio-background);
+  --color-portfolio-surface: var(--portfolio-surface);
+  --color-portfolio-border: var(--portfolio-border);
+  --color-portfolio-text: var(--portfolio-text);
+  --color-portfolio-text-muted: var(--portfolio-text-muted);
+  --color-portfolio-accent: var(--portfolio-accent);
+  --color-portfolio-danger: var(--portfolio-danger);
+  --color-portfolio-warning: var(--portfolio-warning);
+  --color-portfolio-success: var(--portfolio-success);
+}
+
+:root {
+  /* ---- Your tokens: the single source of truth (light values) ---- */
+  --portfolio-background: #fafafa;
+  --portfolio-surface: #ffffff;
+  --portfolio-border: #e6e7ea;
+  --portfolio-text: #13151a;
+  --portfolio-text-muted: #63676f;
+  --portfolio-accent: #2f7dff;
+  --portfolio-danger: #ef4444;
+  --portfolio-warning: #f5a524;
+  --portfolio-success: #22c55e;
+
+  /* ---- Point HeroUI's expected variable names at your tokens ---- */
+  --background: var(--portfolio-background);
+  --foreground: var(--portfolio-text);
+  --surface: var(--portfolio-surface);
+  --border: var(--portfolio-border);
+
+  --accent: var(--portfolio-accent);
+  --accent-foreground: #ffffff;
+
+  --danger: var(--portfolio-danger);
+  --danger-foreground: #ffffff;
+  --warning: var(--portfolio-warning);
+  --warning-foreground: #13151a;
+  --success: var(--portfolio-success);
+  --success-foreground: #ffffff;
+}
+
+.dark,
+[data-theme="dark"] {
+  /* ---- Your tokens: the single source of truth (dark values) ---- */
+  --portfolio-background: #0c0d10;
+  --portfolio-surface: #131519;
+  --portfolio-border: #23262c;
+  --portfolio-text: #eceef1;
+  --portfolio-text-muted: #93989f;
+  --portfolio-accent: #2f7dff;
+  --portfolio-danger: #ef4444;
+  --portfolio-warning: #f5a524;
+  --portfolio-success: #22c55e;
+
+  /* ---- Point HeroUI's expected variable names at your tokens ---- */
+  --background: var(--portfolio-background);
+  --foreground: var(--portfolio-text);
+  --surface: var(--portfolio-surface);
+  --border: var(--portfolio-border);
+  --accent: var(--portfolio-accent);
+  --accent-foreground: #ffffff;
+  --danger: var(--portfolio-danger);
+  --danger-foreground: #ffffff;
+  --warning: var(--portfolio-warning);
+  --warning-foreground: #13151a;
+  --success: var(--portfolio-success);
+  --success-foreground: #ffffff;
+}

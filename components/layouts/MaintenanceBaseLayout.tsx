@@ -9,7 +9,7 @@ export default function BaseLayout({ children }: PortfolioLayout) {
           // Flex
           "flex-1",
           // Margins and paddings
-          "m-0 p-0 py-6",
+          "m-0 p-0",
         )}
         role="main"
       >

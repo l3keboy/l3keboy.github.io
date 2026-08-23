@@ -6,7 +6,7 @@ export default function Maintenance() {
   const t = useTranslations("Pages.Maintenance");
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-background px-6 text-foreground">
+    <main className="flex h-dvh m-auto items-center justify-center bg-background px-6 text-foreground">
       <div className="flex max-w-md flex-col gap-6 items-center text-center">
         <div className="flex max-w-md items-center flex-col gap-3">
           {/* #region Chip */}

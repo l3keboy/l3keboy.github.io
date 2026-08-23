@@ -9,5 +9,5 @@ export const siteSettings: ISiteSettings = {
   title: "Luke Hendriks",
   linkedInUrl: "https://www.linkedin.com/in/luke-h-421515225/",
   githubUrl: "https://github.com/l3keboy",
-  maintenance: false,
+  maintenance: true,
 };

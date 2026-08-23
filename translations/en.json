@@ -50,5 +50,12 @@
         "ThemeSwitcher": {
             "ariaLabel": "Toggle light and dark mode for the website"
         }
+    },
+    "Pages": {
+        "Maintenance": {
+            "chip": "Maintenance",
+            "title": "Back shortly",
+            "description": "I'm running some updates on this site. It'll be back online soon — thanks for your patience"
+        }
     }
 }

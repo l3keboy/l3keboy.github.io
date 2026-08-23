@@ -56,6 +56,15 @@
             "chip": "Maintenance",
             "title": "Back shortly",
             "description": "I'm running some updates on this site. It'll be back online soon — thanks for your patience"
+        },
+        "NotFound": {
+            "chip": "Error",
+            "title": "404",
+            "description": "This route doesn't exist. It might have moved, or maybe it was never deployed in the first place.",
+            "Buttons": {
+                "linkedIn": "LinkedIn",
+                "home": "Home"
+            }
         }
     }
 }

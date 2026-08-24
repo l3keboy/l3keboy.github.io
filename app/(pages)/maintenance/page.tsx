@@ -1,5 +1,5 @@
+import PortfolioChip from "@/components/ui/PortfolioChip";
 import HeadingTitle from "@/components/ui/titles/HeadingTitle";
-import { Chip } from "@heroui/react";
 import { useTranslations } from "next-intl";
 
 export default function Maintenance() {
@@ -10,25 +10,31 @@ export default function Maintenance() {
       <div className="flex max-w-md flex-col gap-6 items-center text-center">
         <div className="flex max-w-md items-center flex-col gap-3">
           {/* #region Chip */}
-          <Chip
+          <PortfolioChip
             variant="soft"
             color="warning"
             size="lg"
-            className="font-family-mono flex flex-row gap-1.5"
-          >
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-warning opacity-75" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-warning" />
-            </span>
-            {t("chip")}
-          </Chip>
+            classNames="p-1.5"
+            text={
+              <>
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-warning opacity-75" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-warning" />
+                </span>
+                {t("chip")}
+              </>
+            }
+          />
+          {/* #endregion */}
 
           {/* #region Title */}
           <HeadingTitle titleAs="h1" text={t("title")} />
+          {/* #endregion */}
         </div>
 
-        {/* Body */}
+        {/* #region Body */}
         <label className="text-muted">{t("description")}</label>
+        {/* #endregion */}
       </div>
     </main>
   );

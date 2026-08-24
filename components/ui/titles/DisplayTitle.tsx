@@ -1,8 +1,8 @@
-import { type Title } from "@/types/ui/Title";
+import { type ITitle } from "@/types/ui/Title";
 import clsx from "clsx";
 import * as React from "react";
 
-export default function DisplayTitle({ classNames, text, titleAs }: Title) {
+export default function DisplayTitle({ classNames, text, titleAs }: ITitle) {
   const HeadingAs: React.ElementType = titleAs ?? "h1";
 
   return (

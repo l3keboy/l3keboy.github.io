@@ -1,9 +1,9 @@
 import { Header } from "../common/navigation/Header";
 import { Footer } from "../common/navigation/Footer";
-import { type PortfolioLayout } from "@/types/components/layouts/PortfolioLayout";
+import { type IPortfolioLayout } from "@/types/components/layouts/PortfolioLayout";
 import clsx from "clsx";
 
-export default function BaseLayout({ children }: PortfolioLayout) {
+export default function BaseLayout({ children }: IPortfolioLayout) {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />

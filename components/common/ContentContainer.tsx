@@ -1,4 +1,4 @@
-import { type ContentContainerType } from "@/types/components/common/ContentContainerType";
+import { type IContentContainer } from "@/types/components/common/ContentContainer";
 import { Separator } from "@heroui/react";
 import clsx from "clsx";
 
@@ -6,7 +6,7 @@ export default function ContentContainer({
   children,
   classNames,
   showDivider,
-}: ContentContainerType) {
+}: IContentContainer) {
   const contentContainerClassNames = classNames ?? "";
   const contentContainerShowDivider = showDivider ?? false;
   return (

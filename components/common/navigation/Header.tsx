@@ -4,6 +4,7 @@ import { Avatar, Link } from "@heroui/react";
 import { useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
 import { ThemeSwitcher } from "../ThemeSwitcher";
+import ContentContainer from "../ContentContainer";
 
 export function Header() {
   const t = useTranslations("Components.Navigation.Header");
@@ -28,7 +29,7 @@ export function Header() {
       className="w-full py-6 border-b border-solid border-border"
       role="navigation"
     >
-      <div className="max-w-270 flex flex-row justify-between m-auto text-center">
+      <ContentContainer classNames="!flex-row !py-0">
         {/* #region Avatar */}
         <div className="flex flex-row gap-1.5">
           <Avatar className="bg-transparent">
@@ -75,7 +76,7 @@ export function Header() {
           <ThemeSwitcher />
         </div>
         {/* #endregion */}
-      </div>
+      </ContentContainer>
     </header>
   );
 }

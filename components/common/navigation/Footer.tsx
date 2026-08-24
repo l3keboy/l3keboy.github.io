@@ -2,6 +2,7 @@ import { type NavigationLink } from "@/types/components/navigation/NavigationLin
 import { siteSettings } from "@/utils/config/siteSettings";
 import { Button, Chip, Link, Separator } from "@heroui/react";
 import { useMessages, useTranslations } from "next-intl";
+import ContentContainer from "../ContentContainer";
 
 export function Footer() {
   const t = useTranslations("Components.Navigation.Footer");
@@ -27,7 +28,7 @@ export function Footer() {
       role="contentinfo"
     >
       {/* #region Footer top */}
-      <div className="max-w-270 w-full mx-auto flex flex-col md:flex-row justify-between py-6">
+      <ContentContainer classNames="flex flex-col md:flex-row justify-between">
         {/* #region Footer top */}
         <div className="flex flex-col gap-6">
           {/* #region Footer top Text */}
@@ -66,7 +67,7 @@ export function Footer() {
           </Link>
         </div>
         {/* #endregion */}
-      </div>
+      </ContentContainer>
       {/* #endregion */}
 
       {/* #region Separator */}
@@ -74,7 +75,7 @@ export function Footer() {
       {/* #endregion */}
 
       {/* #region Footer bottom */}
-      <div className="max-w-270 flex flex-row justify-between w-full mx-auto">
+      <ContentContainer classNames="flex flex-row justify-between w-full mx-auto !py-0">
         {/* #region Copyright */}
         <div>
           <label className="text-muted">
@@ -99,7 +100,7 @@ export function Footer() {
           })}
         </nav>
         {/* #endregion */}
-      </div>
+      </ContentContainer>
       {/* #endregion */}
     </div>
   );

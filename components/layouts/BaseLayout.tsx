@@ -12,11 +12,9 @@ export default function BaseLayout({ children }: PortfolioLayout) {
           // Flex
           "flex-1",
           // Margins and paddings
-          "m-0 p-0 py-6",
-          // Heights and Widths
-          "max-w-270",
+          "m-0 mx-auto p-0 py-12",
           // Flex
-          "flex flex-col w-full mx-auto",
+          "flex flex-col w-full",
         )}
         role="main"
       >

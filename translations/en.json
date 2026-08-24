@@ -78,19 +78,19 @@
                 "Summary": {
                     "1": {
                         "title": "Currently at",
-                        "description": "CZ"
+                        "description": "{employee}"
                     },
                     "2": {
                         "title": "Location",
-                        "description": "Netherlands"
+                        "description": "{location}"
                     },
                     "3": {
                         "title": "Education",
-                        "description": "HBO-ICT @ Fontys"
+                        "description": "{education}"
                     },
                     "4": {
                         "title": "Languages",
-                        "description": "Dutch & English"
+                        "description": "{languages}"
                     }
                 }
             }

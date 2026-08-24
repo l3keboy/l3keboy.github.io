@@ -1,3 +1,4 @@
+"use client";
 import { useMessages, useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
@@ -8,9 +9,11 @@ import DisplayTitle from "@/components/ui/titles/DisplayTitle";
 import { siteSettings } from "@/utils/config/siteSettings";
 
 import SummaryItem, { type ISummaryItem } from "./_components/SummaryItem";
+import { useLocaleContext } from "@/contexts/LocaleContext";
 
 export default function SectionHero() {
   const t = useTranslations("Pages.Home.Hero");
+  const { resolveSupportedLocale } = useLocaleContext();
 
   // #region Get summary items
   const messages = useMessages();
@@ -19,7 +22,21 @@ export default function SectionHero() {
   const summaryItems: ISummaryItem[] = [];
   keys.forEach((key) => {
     summaryItems.push({
-      description: t(`Summary.${key}.description`),
+      description: t(`Summary.${key}.description`, {
+        employee: siteSettings.currentEmployee,
+        education: siteSettings.currentEducation,
+        languages: siteSettings.currentLanguages
+          .map((x) =>
+            new Intl.DisplayNames([resolveSupportedLocale()], {
+              type: "language",
+            }).of(x),
+          )
+          .join(", "),
+        location:
+          new Intl.DisplayNames([resolveSupportedLocale()], {
+            type: "region",
+          }).of(siteSettings.currentLocation) ?? "",
+      }),
       key: parseInt(key),
       title: t(`Summary.${key}.title`),
     });
@@ -45,7 +62,7 @@ export default function SectionHero() {
         <div className="flex flex-row gap-3">
           <PortfolioLink
             content={<PortfolioButton content={t("Buttons.viewProjects")} />}
-            href={siteSettings.githubUrl}
+            href={siteSettings.urls.githubUrl}
             linkIsExternal
             noUnderline
           />
@@ -56,7 +73,7 @@ export default function SectionHero() {
                 variant="outline"
               />
             }
-            href={siteSettings.linkedInUrl}
+            href={siteSettings.urls.linkedInUrl}
             linkIsExternal
             noUnderline
           />

@@ -50,7 +50,7 @@ export default function NotFound() {
                   variant="outline"
                 />
               }
-              href={siteSettings.linkedInUrl}
+              href={siteSettings.urls.linkedInUrl}
               linkIsExternal
               noUnderline
             />

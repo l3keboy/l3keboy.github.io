@@ -1,4 +1,5 @@
 "use client";
+import { siteSettings } from "@/utils/config/siteSettings";
 import { useRouter } from "next/navigation";
 import {
   createContext,
@@ -14,6 +15,7 @@ import { useCookies } from "react-cookie";
 export interface ILocaleContext {
   locale: string;
   setLocale: ({ userPreferredLocale }: ISetLocale) => Promise<void>;
+  resolveSupportedLocale: () => string;
 }
 export interface ISetLocale {
   userPreferredLocale: string;
@@ -23,6 +25,9 @@ export interface ISetLocale {
 export const LocaleContext = createContext<ILocaleContext>({
   locale: "en-US",
   setLocale: function (): Promise<void> {
+    throw new Error("Function not implemented.");
+  },
+  resolveSupportedLocale: function (): string {
     throw new Error("Function not implemented.");
   },
 });
@@ -59,6 +64,14 @@ export default function LocaleContextProvider({
     [router, setCookie],
   );
 
+  const resolveSupportedLocale = () => {
+    return (siteSettings.siteMetadata.supportedSiteLanguages.find(
+      (x) => x === userLocale,
+    )?.length ?? 0 > 0)
+      ? userLocale
+      : siteSettings.siteMetadata.supportedSiteLanguages[0];
+  };
+
   useEffect(() => {
     const run = async () => {
       getLocale();
@@ -71,6 +84,7 @@ export default function LocaleContextProvider({
       value={{
         locale: userLocale,
         setLocale: setLocale,
+        resolveSupportedLocale: resolveSupportedLocale,
       }}
     >
       {children}

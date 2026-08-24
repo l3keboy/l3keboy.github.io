@@ -10,6 +10,7 @@ export default getRequestConfig(async () => {
   const preferredLocale = cookieStore
     .get("LUKEHENDRIKS_NET_LOCALE")
     ?.value.slice(0, 2);
+
   const locale =
     siteSettings.siteMetadata.supportedSiteLanguages.filter(
       (x) => x === preferredLocale,

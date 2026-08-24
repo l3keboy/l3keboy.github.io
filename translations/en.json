@@ -1,0 +1,364 @@
+{
+    "SiteSettings": {
+        "Projects": {
+            "partio": {
+                "title": "Partio",
+                "subtitle": "Party game application",
+                "description": "A party game application to play different party games with friends online (and offline).",
+                "Links": {
+                    "organization": "GitHub Organization",
+                    "website": "Website"
+                }
+            },
+            "solyra_coaching": {
+                "title": "Solyra Coaching",
+                "subtitle": "Holistic & Systemic coaching website",
+                "description": "Website for a Holistic & Systemic coach. Project includes, planning appointment, auto deployments using Vercel, automated emails, and more!",
+                "Links": {
+                    "website": "Website"
+                }
+            },
+            "husqy": {
+                "title": "Husqy",
+                "subtitle": "Discord bot for all servers",
+                "description": "Project is not actively maintained anymore. An advanced discord bot that provides a server, its administrators and its users with different functionalities and modules. Some of these functionalities include: logging, greetings, tempchannels, reactionroles, etc.",
+                "Links": {
+                    "organization": "GitHub Organization",
+                    "website": "Website",
+                    "docs": "Documentation",
+                    "dashboard": "Dashboard"
+                }
+            },
+            "victreebot": {
+                "title": "Victreebot",
+                "subtitle": "Discord bot for Pokémon GO! Communities",
+                "description": "A Discord bot for Pokémon GO! Communities providing different functionalities like registering raids, signing up for raids, registering known locations (with coordinates) in your area, etc.",
+                "Links": {
+                    "source": "Source code",
+                    "support_server": "Support server"
+                }
+            },
+            "l3keboy_github_io": {
+                "title": "l3keboy.github.io",
+                "subtitle": "This website",
+                "description": "The current version of this website hosted on Vercel (with custom domain of course!).",
+                "Links": {
+                    "source": "Source code"
+                }
+            },
+            "ios_qr_validator": {
+                "title": "IOS-QR_Validator",
+                "subtitle": "IOS application to validate the links behind QR codes",
+                "description": "Project is not actively maintained anymore. An IOS application which allows you to scan QR codes and validate the safety of the links behind them. It also allows you to open these links in a in app browser of safari.",
+                "Links": {
+                    "source": "Source code"
+                }
+            },
+            "ios_timeit": {
+                "title": "IOS-TimeIt",
+                "subtitle": "IOS timer application",
+                "description": "Project is not actively maintained anymore. An IOS application which allows you to set a timer and sends a notification when the timer is done. It also has a time view (with seconds) and a stopwatch functionality.",
+                "Links": {
+                    "source": "Source code"
+                }
+            },
+            "ios_factzzz": {
+                "title": "IOS-Factzzz",
+                "subtitle": "IOS application to get random facts",
+                "description": "Project is not actively maintained anymore. An IOS application to give a random fact. It allows you to favorite (Local device only, no iCloud) and share facts.",
+                "Links": {
+                    "source": "Source code"
+                }
+            },
+            "lukehendriks_net-v2": {
+                "title": "lukehendriks.net-v2",
+                "subtitle": "V2 of this website.",
+                "description": "Project is not actively maintained anymore. Second version of this website, with a more simplistic approach (just one landing page).",
+                "Links": {
+                    "source": "Source code"
+                }
+            },
+            "lukehendriks_net-v1": {
+                "title": "lukehendriks.net-v1",
+                "subtitle": "V1 of this website.",
+                "description": "Project is not actively maintained anymore. First version of this website using a Laravel backend and a NextJS frontend. This version had different features like a contact form and was secured using Google Recaptcha V3.",
+                "Links": {
+                    "source": "Source code"
+                }
+            }
+        },
+        "Certifications": {
+            "az_400": {
+                "Skills": {
+                    "1": "Design and implement processes and communications",
+                    "2": "Design and implement a source control strategy",
+                    "3": "Design and implement build and release pipelines",
+                    "4": "Develop a security and compliance plan",
+                    "5": "Implement an instrumentation strategy"
+                }
+            },
+            "az_204": {
+                "Skills": {
+                    "1": "Develop Azure compute solutions",
+                    "2": "Develop for Azure storage",
+                    "3": "Implement Azure security",
+                    "4": "Monitor, troubleshoot, and optimize Azure solutions",
+                    "5": "Connect to and consume Azure services and third-party services"
+                }
+            },
+            "az_104": {
+                "Skills": {
+                    "1": "Manage Azure identities and governance",
+                    "2": "Implement and manage storage",
+                    "3": "Deploy and manage Azure compute resources",
+                    "4": "Implement and manage virtual networking",
+                    "5": "Monitor and maintain Azure resources"
+                }
+            },
+            "itil_v4_foundation": {
+                "Skills": {
+                    "1": "Service management concepts",
+                    "2": "Service value system",
+                    "3": "Four dimensions of service management",
+                    "4": "Guiding principles",
+                    "5": "Service Value Chain",
+                    "6": "ITIL practices",
+                    "7": "Continuous improvement",
+                    "8": "Service Level Agreements",
+                    "9": "Key metrics and performance indicators",
+                    "10": "Service Operation",
+                    "11": "Digital Transformation",
+                    "12": "Problem Management"
+                }
+            },
+            "exin_bcs_practitioner": {
+                "Skills": {
+                    "1": "The Context for Business Processing Modelling",
+                    "2": "Modelling at the Enterprise Level",
+                    "3": "Modelling at the Event-Response Level",
+                    "4": "Modelling at the Actor-Task Level",
+                    "5": "Improving Business Processes",
+                    "6": "Managing and Implementing Change"
+                }
+            },
+            "exin_bcs_foundation": {
+                "Skills": {
+                    "1": "What is business analysis?",
+                    "2": "The competencies of a business analyst",
+                    "3": "The strategic context for business analysis",
+                    "4": "The business analysis service framework",
+                    "5": "Investigating the business situation",
+                    "6": "Analyzing and managing stakeholders",
+                    "7": "Improving business services and processes",
+                    "8": "Defining the solution",
+                    "9": "Making the business case",
+                    "10": "Establishing the requirements",
+                    "11": "Documenting and modelling requirements",
+                    "12": "Validating and managing requirements",
+                    "13": "Delivering the requirements",
+                    "14": "Delivering the business solution"
+                }
+            },
+            "js_coding_specialist": {
+                "Skills": {
+                    "1": "Basic grammar, variable declaration, data types and literals",
+                    "2": "JavaScript operators and expressions",
+                    "3": "Control flow, loops, iterations and error handling",
+                    "4": "Functions",
+                    "5": "Working with Objects in JavaScript",
+                    "6": "Interact with the Document Object Model",
+                    "7": "Interact with HTML forms"
+                }
+            },
+            "c#_coding_apprentice": {
+                "Skills": {
+                    "1": "C# Fundamentals",
+                    "2": "Control statements",
+                    "3": "Methods",
+                    "4": "Object-Oriented Programming (OOP) Concepts",
+                    "5": "Introduction to Design Patterns",
+                    "6": "Introduction to LINQ (IEnumerable)"
+                }
+            },
+            "dasa_devops_professional_enable_and_scale": {
+                "Skills": {
+                    "1": "Assembling effective Teams",
+                    "2": "Business transition",
+                    "3": "Change Management",
+                    "4": "Continual Improvement",
+                    "5": "Enterprise Architecture",
+                    "6": "Integration Management",
+                    "7": "IT Change Management",
+                    "8": "IT Management",
+                    "9": "IT Operations Management",
+                    "10": "IT Systems Control Implementation"
+                }
+            },
+            "az_900": {
+                "Skills": {
+                    "1": "Describe cloud concepts",
+                    "2": "Describe Azure architecture and services",
+                    "3": "Describe Azure management and governance"
+                }
+            },
+            "dasa_devops_fundamentals": {
+                "Skills": {
+                    "1": "DevOps",
+                    "2": "Continuous Improvement",
+                    "3": "DevOps Values",
+                    "4": "Collaboration",
+                    "5": "Cross-functional team management",
+                    "6": "Value stream mapping"
+                }
+            },
+            "network+": {
+                "Skills": {
+                    "1": "Network Management",
+                    "2": "Wireless Technologies",
+                    "3": "Virtualization",
+                    "4": "Software Defined Networking",
+                    "5": "Cloud Networking",
+                    "6": "Network Security",
+                    "7": "Vulnerability Management",
+                    "8": "System/Network Configuration",
+                    "9": "Routing and Switching",
+                    "10": "BCDR",
+                    "11": "Network Troubleshooting"
+                }
+            }
+        }
+    },
+    "Components": {
+        "Navigation": {
+            "Header": {
+                "Links": {
+                    "1": {
+                        "title": "About",
+                        "ariaLabel": "Navigate to About",
+                        "url": "/"
+                    },
+                    "2": {
+                        "title": "Stack",
+                        "ariaLabel": "Navigate to Stack",
+                        "url": "/"
+                    },
+                    "3": {
+                        "title": "Projects",
+                        "ariaLabel": "Navigate to Projects",
+                        "url": "/"
+                    },
+                    "4": {
+                        "title": "Certifications",
+                        "ariaLabel": "Navigate to Certifications",
+                        "url": "/"
+                    },
+                    "5": {
+                        "title": "Contact",
+                        "ariaLabel": "Navigate to Contact",
+                        "url": "/"
+                    }
+                }
+            },
+            "Footer": {
+                "chip": "Contact",
+                "title": "Let's talk!",
+                "description": "Best reached over LinkedIn, or drop a star on something interesting on GitHub.",
+                "Buttons": {
+                    "linkedIn": "LinkedIn",
+                    "gitHub": "GitHub"
+                },
+                "Links": {
+                    "1": {
+                        "title": "Sitemap",
+                        "ariaLabel": "Navigate to Sitemap",
+                        "url": "/sitemap.xml"
+                    }
+                }
+            }
+        },
+        "ThemeSwitcher": {
+            "ariaLabel": "Toggle light and dark mode for the website"
+        },
+        "CertificationContainer": {
+            "ariaLabel": "Navigate to {certificate}",
+            "granted": "Granted on:",
+            "expires": "Expires on:"
+        },
+        "ProjectContainer": {
+            "ariaLabel": "Navigate to {project}",
+            "languages": "Languages",
+            "tools": "Tools",
+            "projectDetails": "Details"
+        }
+    },
+    "Pages": {
+        "Maintenance": {
+            "chip": "Maintenance",
+            "title": "Back shortly",
+            "description": "I'm running some updates on this site. It'll be back online soon — thanks for your patience"
+        },
+        "NotFound": {
+            "chip": "Error",
+            "title": "404",
+            "description": "This route doesn't exist. It might have moved, or maybe it was never deployed in the first place.",
+            "Buttons": {
+                "linkedIn": "LinkedIn",
+                "home": "Home"
+            }
+        },
+        "Home": {
+            "Hero": {
+                "chip": "DevOps Engineer - Netherlands",
+                "title": "Building calm, secure cloud <styled>infrastructure.</styled>",
+                "description": "I'm Luke, a DevOps engineer specialized in the Azure platform. I work on containers, monitoring and automation — infrastructure that runs without issue.",
+                "Buttons": {
+                    "viewProjects": "View projects",
+                    "getInTouch": "Get in touch"
+                },
+                "Summary": {
+                    "1": {
+                        "title": "Currently at",
+                        "description": "{employee}"
+                    },
+                    "2": {
+                        "title": "Location",
+                        "description": "{location}"
+                    },
+                    "3": {
+                        "title": "Education",
+                        "description": "{education}"
+                    },
+                    "4": {
+                        "title": "Languages",
+                        "description": "{languages}"
+                    }
+                }
+            },
+            "About": {
+                "chip": "About",
+                "title": "Nice to meet you!",
+                "Paragraphs": {
+                    "1": "I'm a DevOps engineer from the Netherlands, specialised in the Azure platform. I studied at Fontys University of Applied Sciences, where I got my bachelor's in IT and specialised in Infrastructure and Cyber Security.",
+                    "2": "Along the way I've picked up Skills across containerisation, monitoring and security, working with tools like Elastic, Docker, Kubernetes, Python and Next.js. Right now I'm working on getting deeper into the Azure Cloud platform and picking up new languages like C#."
+                },
+                "Background": {
+                    "chip": "Background",
+                    "Paragraphs": {
+                        "1": "Past internships at Isah Business Software and Cubics, before landing on infrastructure and cyber security as my focus.",
+                        "2": "Currently working at CZ, and building toward certifications on the Azure platform."
+                    }
+                }
+            },
+            "ProjectHighlights": {
+                "chip": "Projects",
+                "title": "Some of my work",
+                "viewAll": "View all of my projects"
+            },
+            "CertificationHighlights": {
+                "chip": "Certifications",
+                "title": "Some highlights",
+                "viewAll": "View all of my certificates"
+            }
+        }
+    }
+}

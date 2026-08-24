@@ -1,47 +1,63 @@
-"use client";
-import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
-// Import components
-import MainButton from "./components/buttons/mainButton/mainButton";
+import PortfolioButton from "@/components/ui/PortfolioButton";
+import PortfolioChip from "@/components/ui/PortfolioChip";
+import PortfolioLink from "@/components/ui/PortfolioLink";
+import HeadingTitle from "@/components/ui/titles/HeadingTitle";
+import { siteSettings } from "@/utils/config/siteSettings";
 
-// Import styles
-import styles from "./not-found.module.css";
-import { MagnifyingGlassIcon } from "@phosphor-icons/react";
+import MaintenanceLayout from "./(pages)/maintenance/layout";
 
 export default function NotFound() {
-  // Get router
-  const router = useRouter();
-
-  const returnHomeButtonClicked = async () => {
-    router.push("/");
-  };
+  const t = useTranslations("Pages.NotFound");
 
   return (
-    <div className={styles.not_found}>
-      <div className={styles.not_found_text_container}>
-        <h1 className={styles.not_found_text_title}>
-          Whoopsss - <span>404</span>.
-        </h1>
-        <h2 className={styles.not_found_text_subtitle}>
-          That did not go according to plan.
-        </h2>
-        <p className={styles.not_found_text_paragraph}>
-          The page you are looking for does not exist. To help, you can return
-          home by pressing the button!
-        </p>
-        <div className={styles.not_found_actions}>
-          <MainButton
-            type={1}
-            text="Return home"
-            onButtonClick={returnHomeButtonClicked}
-          />
+    <MaintenanceLayout>
+      <main className="flex min-h-screen items-center justify-center bg-background px-6 text-foreground">
+        <div className="flex max-w-md flex-col gap-6 items-center text-center">
+          <div className="flex max-w-md items-center flex-col gap-3">
+            {/* #region Chip */}
+            <PortfolioChip
+              color="danger"
+              size="lg"
+              text={t("chip")}
+              variant="tertiary"
+            />
+            {/* #endregion */}
+
+            {/* #region Title */}
+            <HeadingTitle text={t("title")} titleAs="h1" />
+            {/* #endregion */}
+          </div>
+
+          {/* #region Body */}
+          <label className="text-muted">{t("description")}</label>
+          {/* #endregion */}
+
+          {/* #region Buttons */}
+          <div className="mt-8 flex gap-3">
+            <PortfolioLink
+              content={
+                <PortfolioButton content={t("Buttons.home")} size="lg" />
+              }
+              noUnderline
+            />
+            <PortfolioLink
+              content={
+                <PortfolioButton
+                  content={t("Buttons.linkedIn")}
+                  size="lg"
+                  variant="outline"
+                />
+              }
+              href={siteSettings.urls.linkedInUrl}
+              linkIsExternal
+              noUnderline
+            />
+          </div>
+          {/* #endregion */}
         </div>
-      </div>
-      <div className={styles.not_found_icon_container}>
-        <span className={styles.not_found_icon_style}>
-          <MagnifyingGlassIcon />
-        </span>
-      </div>
-    </div>
+      </main>
+    </MaintenanceLayout>
   );
 }

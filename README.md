@@ -1,3 +1,3 @@
 # Personal website
 
-My personal website, hosted at: https://lukehendriks.net/
+My personal website, hosted at [lukehendriks.net](https://lukehendriks.net/)

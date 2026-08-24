@@ -1,91 +1,136 @@
-/* Import Nunito font */
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "@heroui/styles";
+
+/* Dark mode support */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Tailwind config */
+@theme inline {
+  /* Fonts */
+  --font-family-primary: var(--portfolio-font-family-primary);
+  --font-family-secondary: var(--portfolio-font-family-secondary);
+  --font-family-mono: var(--portfolio-font-family-mono);
+
+  /* Expose your own tokens as Tailwind utilities */
+  --color-portfolio-background: var(--portfolio-background);
+  --color-portfolio-surface: var(--portfolio-surface);
+  --color-portfolio-border: var(--portfolio-border);
+  --color-portfolio-text: var(--portfolio-text);
+  --color-portfolio-text-muted: var(--portfolio-text-muted);
+  --color-portfolio-accent: var(--portfolio-accent);
+  --color-portfolio-danger: var(--portfolio-danger);
+  --color-portfolio-warning: var(--portfolio-warning);
+  --color-portfolio-success: var(--portfolio-success);
+
+  /* Expose font styling tokens as Tailwind utilities */
+  --text-xs: var(--portfolio-text-xs);
+  --text-xs--line-height: 1.4;
+  --text-sm: var(--portfolio-text-sm);
+  --text-sm--line-height: 1.5;
+  --text-base: var(--portfolio-text-base);
+  --text-base--line-height: 1.6;
+  --text-lg: var(--portfolio-text-lg);
+  --text-lg--line-height: 1.6;
+  --text-xl: var(--portfolio-text-xl);
+  --text-xl--line-height: 1.3;
+  --text-xl--font-weight: 600;
+  --text-heading: var(--portfolio-text-heading);
+  --text-heading--line-height: 1.2;
+  --text-heading--letter-spacing: -0.01em;
+  --text-heading--font-weight: 600;
+  --text-display: var(--portfolio-text-display);
+  --text-display--line-height: 1.12;
+  --text-display--letter-spacing: -0.01em;
+  --text-display--font-weight: 700;
+}
 
 :root {
-  /* Fonts */
-  --font-family: "Nunito", sans-serif;
+  /* Your tokens: the single source of truth (light values) */
+  --portfolio-background: #fafafa;
+  --portfolio-surface: #ffffff;
+  --portfolio-border: #e6e7ea;
+  --portfolio-text: #13151a;
+  --portfolio-text-muted: #63676f;
+  --portfolio-accent: #2f7dff;
+  --portfolio-danger: #ef4444;
+  --portfolio-warning: #f5a524;
+  --portfolio-success: #22c55e;
 
-  /* Colors */
-  --primary-color-1: #121212;
-  --primary-color-2: #1f1f1e;
-  --primary-color-3: #2c2c2b;
-  --secondary-color-1: #efefef;
-  --accent-color-1: #4d7ed1;
-}
+  /* Point HeroUI's expected variable names at your tokens */
+  --background: var(--portfolio-background);
+  --foreground: var(--portfolio-text);
+  --surface: var(--portfolio-surface);
+  --border: var(--portfolio-border);
 
-html {
-  background-color: var(--primary-color-1) !important;
-  color: var(--secondary-color-1) !important;
-  font-family: var(--font-family);
-  font-weight: 100;
-  font-size: 18px;
-}
+  --accent: var(--portfolio-accent);
+  --accent-foreground: #ffffff;
 
-body {
-  margin: 0;
-  padding: 0;
-  max-width: 1200px;
-  margin: auto;
-}
+  --danger: var(--portfolio-danger);
+  --danger-foreground: #ffffff;
+  --warning: var(--portfolio-warning);
+  --warning-foreground: #13151a;
+  --success: var(--portfolio-success);
+  --success-foreground: #ffffff;
 
-h1 {
-  font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 32px;
-  margin: 0;
-}
-h2 {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 28px;
-  margin: 0;
-}
-h3 {
-  font-family: var(--font-family);
-  font-weight: 200;
-  font-size: 24px;
-}
-a {
-  color: var(--accent-color-1);
-}
-span {
-  color: var(--accent-color-1);
+  /* Font size primitives */
+  --portfolio-text-xs: 0.75rem; /* 12px  — mono labels, meta */
+  --portfolio-text-sm: 0.84375rem; /* 13.5px — tags, nav links */
+  --portfolio-text-base: 1rem; /* 16px  — body copy */
+  --portfolio-text-lg: 1.0625rem; /* 17px  — lede / intro paragraphs */
+  --portfolio-text-xl: 1.3125rem; /* 21px  — card titles */
+  --portfolio-text-heading: clamp(
+    1.4rem,
+    2.4vw,
+    1.85rem
+  ); /* h2, fluid 22.4–29.6px */
+  --portfolio-text-display: clamp(
+    2.1rem,
+    4.4vw,
+    3.2rem
+  ); /* h1, fluid 33.6–51.2px */
 }
 
-/* TABLET VIEW CHANGES */
-@media (max-width: 1050px) {
-  html {
-    font-size: 14px;
-  }
-  body {
-    max-width: 100dvw;
-  }
-  h1 {
-    font-size: 24px;
-  }
-  h2 {
-    font-size: 22px;
-  }
-  h3 {
-    font-size: 18px;
-  }
-}
+.dark,
+[data-theme="dark"] {
+  /* Your tokens: the single source of truth (dark values) */
+  --portfolio-background: #0c0d10;
+  --portfolio-surface: #131519;
+  --portfolio-border: #23262c;
+  --portfolio-text: #eceef1;
+  --portfolio-text-muted: #93989f;
+  --portfolio-accent: #2f7dff;
+  --portfolio-danger: #ef4444;
+  --portfolio-warning: #f5a524;
+  --portfolio-success: #22c55e;
 
-/* MOBILE VIEW CHANGES */
-@media (max-width: 768px) {
-  html {
-    font-size: 10px;
-  }
-  h1 {
-    font-size: 24px;
-  }
-  h2 {
-    font-size: 22px;
-  }
-  h3 {
-    font-size: 16px;
-  }
+  /* ---- Point HeroUI's expected variable names at your tokens ---- */
+  --background: var(--portfolio-background);
+  --foreground: var(--portfolio-text);
+  --surface: var(--portfolio-surface);
+  --border: var(--portfolio-border);
+  --accent: var(--portfolio-accent);
+  --accent-foreground: #ffffff;
+  --danger: var(--portfolio-danger);
+  --danger-foreground: #ffffff;
+  --warning: var(--portfolio-warning);
+  --warning-foreground: #13151a;
+  --success: var(--portfolio-success);
+  --success-foreground: #ffffff;
+
+  /* Font size primitives */
+  --portfolio-text-xs: 0.75rem; /* 12px  — mono labels, meta */
+  --portfolio-text-sm: 0.84375rem; /* 13.5px — tags, nav links */
+  --portfolio-text-base: 1rem; /* 16px  — body copy */
+  --portfolio-text-lg: 1.0625rem; /* 17px  — lede / intro paragraphs */
+  --portfolio-text-xl: 1.3125rem; /* 21px  — card titles */
+  --portfolio-text-heading: clamp(
+    1.4rem,
+    2.4vw,
+    1.85rem
+  ); /* h2, fluid 22.4–29.6px */
+  --portfolio-text-display: clamp(
+    2.1rem,
+    4.4vw,
+    3.2rem
+  ); /* h1, fluid 33.6–51.2px */
 }

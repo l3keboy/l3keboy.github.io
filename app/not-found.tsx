@@ -32,14 +32,18 @@ export default function NotFound() {
 
           <div className="mt-8 flex gap-3">
             <Link href="/" className="no-underline">
-              <Button variant="primary">{t("Buttons.home")}</Button>
+              <Button size="lg" variant="primary">
+                {t("Buttons.home")}
+              </Button>
             </Link>
             <Link
               href={siteSettings.linkedInUrl}
               className="no-underline"
               target="__blank"
             >
-              <Button variant="outline">{t("Buttons.linkedIn")}</Button>
+              <Button size="lg" variant="outline">
+                {t("Buttons.linkedIn")}
+              </Button>
             </Link>
           </div>
         </div>

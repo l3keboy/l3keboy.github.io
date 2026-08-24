@@ -8,10 +8,10 @@ export enum Companies {
 }
 
 export const CompanyUrl = {
-  [Companies.MICROSOFT]: "",
-  [Companies.PEOPLECERT]: "",
-  [Companies.EXIN]: "",
-  [Companies.KNOWLEDGE_PILLARS]: "",
-  [Companies.DASA]: "",
-  [Companies.COMPTIA]: "",
+  [Companies.MICROSOFT]: null,
+  [Companies.PEOPLECERT]: null,
+  [Companies.EXIN]: null,
+  [Companies.KNOWLEDGE_PILLARS]: null,
+  [Companies.DASA]: null,
+  [Companies.COMPTIA]: null,
 };

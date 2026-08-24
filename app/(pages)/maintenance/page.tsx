@@ -29,7 +29,7 @@ export default function Maintenance() {
           {/* #endregion */}
 
           {/* #region Title */}
-          <HeadingTitle text={t("title")} titleAs="h1" />
+          <HeadingTitle text={t("title")} />
           {/* #endregion */}
         </div>
 

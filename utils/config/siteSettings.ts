@@ -106,7 +106,7 @@ export const siteSettings: ISiteSettings = {
       highlight: false
     },
     {
-      slug: "l3keboy.github.io",
+      slug: "l3keboy_github_io",
       languages: ["Nextjs"],
       tools: ["Vercel"],
       type: SourceType.OPEN_SOURCE,
@@ -149,7 +149,7 @@ export const siteSettings: ISiteSettings = {
       highlight: false
     },
     {
-      slug: "lukehendriks.net-v2",
+      slug: "lukehendriks_net-v2",
       languages: ["Nuxt V3"],
       tools: [],
       type: SourceType.OPEN_SOURCE,
@@ -160,7 +160,7 @@ export const siteSettings: ISiteSettings = {
       highlight: false
     },
     {
-      slug: "lukehendriks.net-v1",
+      slug: "lukehendriks_net-v1",
       languages: ["ReactJS", "TailwindCSS", "Laravel Lumen"],
       tools: [],
       type: SourceType.OPEN_SOURCE,

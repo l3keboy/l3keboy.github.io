@@ -38,7 +38,7 @@
                     "support_server": "Support server"
                 }
             },
-            "l3keboy.github.io": {
+            "l3keboy_github_io": {
                 "title": "l3keboy.github.io",
                 "subtitle": "This website",
                 "description": "The current version of this website hosted on Vercel (with custom domain of course!).",
@@ -70,7 +70,7 @@
                     "source": "Source code"
                 }
             },
-            "lukehendriks.net-v2": {
+            "lukehendriks_net-v2": {
                 "title": "lukehendriks.net-v2",
                 "subtitle": "V2 of this website.",
                 "description": "Project is not actively maintained anymore. Second version of this website, with a more simplistic approach (just one landing page).",
@@ -78,7 +78,7 @@
                     "source": "Source code"
                 }
             },
-            "lukehendriks.net-v1": {
+            "lukehendriks_net-v1": {
                 "title": "lukehendriks.net-v1",
                 "subtitle": "V1 of this website.",
                 "description": "Project is not actively maintained anymore. First version of this website using a Laravel backend and a NextJS frontend. This version had different features like a contact form and was secured using Google Recaptcha V3.",

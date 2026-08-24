@@ -14,7 +14,7 @@ export default function HeadingTitle({ classNames, text, titleAs }: ITitle) {
         // Font sizes and weight
         "text-heading",
         // Font color
-        "text-accent",
+        "text-text",
         classNames,
       )}
     >

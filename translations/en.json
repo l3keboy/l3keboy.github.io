@@ -93,6 +93,21 @@
                         "description": "{languages}"
                     }
                 }
+            },
+            "About": {
+                "chip": "About",
+                "title": "Nice to meet you!",
+                "Paragraphs": {
+                    "1": "I'm a DevOps engineer from the Netherlands, specialised in the Azure platform. I studied at Fontys University of Applied Sciences, where I got my bachelor's in IT and specialised in Infrastructure and Cyber Security.",
+                    "2": "Along the way I've picked up skills across containerisation, monitoring and security, working with tools like Elastic, Docker, Kubernetes, Python and Next.js. Right now I'm working on getting deeper into the Azure Cloud platform and picking up new languages like C#."
+                },
+                "Background": {
+                    "chip": "Background",
+                    "Paragraphs": {
+                        "1": "Past internships at Isah Business Software and Cubics, before landing on infrastructure and cyber security as my focus.",
+                        "2": "Currently working at CZ, and building toward certifications on the Azure platform."
+                    }
+                }
             }
         }
     }

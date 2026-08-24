@@ -14,9 +14,9 @@ import { useLocaleContext } from "@/contexts/LocaleContext";
 export default function SectionHero() {
   const t = useTranslations("Pages.Home.Hero");
   const { resolveSupportedLocale } = useLocaleContext();
+  const messages = useMessages();
 
   // #region Get summary items
-  const messages = useMessages();
   const keys = Object.keys(messages.Pages.Home.Hero.Summary);
 
   const summaryItems: ISummaryItem[] = [];

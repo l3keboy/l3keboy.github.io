@@ -10,9 +10,9 @@ import ContentContainer from "../ContentContainer";
 
 export function Footer() {
   const t = useTranslations("Components.Navigation.Footer");
+  const messages = useMessages();
 
   // #region Get footer links
-  const messages = useMessages();
   const keys = Object.keys(messages.Components.Navigation.Footer.Links);
 
   const navigationLinks: NavigationLink[] = [];

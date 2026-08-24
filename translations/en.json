@@ -65,6 +65,35 @@
                 "linkedIn": "LinkedIn",
                 "home": "Home"
             }
+        },
+        "Home": {
+            "Hero": {
+                "chip": "DevOps Engineer - Netherlands",
+                "title": "Building calm, secure cloud <styled>infrastructure.</styled>",
+                "description": "I'm Luke, a DevOps engineer specialized in the Azure platform. I work on containers, monitoring and automation — infrastructure that runs without issue.",
+                "Buttons": {
+                    "viewProjects": "View projects",
+                    "getInTouch": "Get in touch"
+                },
+                "Summary": {
+                    "1": {
+                        "title": "Currently at",
+                        "description": "CZ"
+                    },
+                    "2": {
+                        "title": "Location",
+                        "description": "Netherlands"
+                    },
+                    "3": {
+                        "title": "Education",
+                        "description": "HBO-ICT @ Fontys"
+                    },
+                    "4": {
+                        "title": "Languages",
+                        "description": "Dutch & English"
+                    }
+                }
+            }
         }
     }
 }

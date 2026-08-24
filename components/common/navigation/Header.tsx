@@ -1,10 +1,13 @@
-import { type NavigationLink } from "@/types/components/navigation/NavigationLink";
-import { siteSettings } from "@/utils/config/siteSettings";
 import { Avatar, Link } from "@heroui/react";
 import { useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
-import { ThemeSwitcher } from "../ThemeSwitcher";
+
+import PortfolioLink from "@/components/ui/PortfolioLink";
+import { type NavigationLink } from "@/types/components/navigation/NavigationLink";
+import { siteSettings } from "@/utils/config/siteSettings";
+
 import ContentContainer from "../ContentContainer";
+import { ThemeSwitcher } from "../ThemeSwitcher";
 
 export function Header() {
   const t = useTranslations("Components.Navigation.Header");
@@ -16,10 +19,10 @@ export function Header() {
   const navigationLinks: NavigationLink[] = [];
   keys.forEach((key) => {
     navigationLinks.push({
-      title: t(`Links.${key}.title`),
-      key: parseInt(key),
-      url: t(`Links.${key}.url`),
       ariaLabel: t(`Links.${key}.ariaLabel`),
+      key: parseInt(key),
+      title: t(`Links.${key}.title`),
+      url: t(`Links.${key}.url`),
     });
   });
   // #endregion
@@ -34,23 +37,24 @@ export function Header() {
         <div className="flex flex-row gap-1.5">
           <Avatar className="bg-transparent">
             <Avatar.Image
-              className="bg-transparent"
               asChild
+              className="bg-transparent"
               height={40}
               src="/assets/memoji.png"
               width={40}
             >
               <Image
-                loading="eager"
                 alt={siteSettings.title}
-                src="/assets/memoji.png"
                 className="bg-transparent"
+                loading="eager"
+                src="/assets/memoji.png"
               />
             </Avatar.Image>
           </Avatar>
-          <Link href="/" className="font-family-primary font-semibold my-auto">
-            {siteSettings.title}
-          </Link>
+          <PortfolioLink
+            classNames="font-family-primary font-semibold my-auto"
+            content={siteSettings.title}
+          />
         </div>
         {/* #endregion */}
 
@@ -58,14 +62,13 @@ export function Header() {
         <nav className="flex flex-row gap-3 text-center m-auto">
           {navigationLinks.map((link) => {
             return (
-              <Link
-                key={link.key}
+              <PortfolioLink
+                ariaLabel={link.ariaLabel}
+                classNames="font-family-primary text-sm text-muted"
+                content={link.title}
                 href={link.url}
-                aria-label={link.ariaLabel}
-                className="font-family-primary text-sm text-muted"
-              >
-                {link.title}
-              </Link>
+                key={link.key}
+              />
             );
           })}
         </nav>

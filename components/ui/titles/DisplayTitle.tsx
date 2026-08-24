@@ -1,6 +1,7 @@
-import { type ITitle } from "@/types/ui/Title";
 import clsx from "clsx";
 import * as React from "react";
+
+import { type ITitle } from "@/types/ui/Title";
 
 export default function DisplayTitle({ classNames, text, titleAs }: ITitle) {
   const HeadingAs: React.ElementType = titleAs ?? "h1";
@@ -13,7 +14,7 @@ export default function DisplayTitle({ classNames, text, titleAs }: ITitle) {
         // Font sizes and weight
         "text-display",
         // Font color
-        "text-accent",
+        "text-text",
         classNames,
       )}
     >

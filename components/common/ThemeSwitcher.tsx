@@ -1,12 +1,13 @@
 "use client";
 // ! Themes are only relevant on the client side, therefore use client
 
-import { Button } from "@heroui/react";
+import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+
 import { IconMoon } from "../icons/Moon";
 import { IconSun } from "../icons/Sun";
-import { useTranslations } from "next-intl";
+import PortfolioButton from "../ui/PortfolioButton";
 
 export function ThemeSwitcher() {
   const t = useTranslations("Components.ThemeSwitcher");
@@ -26,22 +27,21 @@ export function ThemeSwitcher() {
   const activeTheme = theme === "system" ? resolvedTheme : theme;
 
   return (
-    <Button
-      aria-label={t("ariaLabel")}
-      variant="outline"
-      size="md"
+    <PortfolioButton
+      ariaLabel={t("ariaLabel")}
+      content={activeTheme === "light" ? <IconMoon /> : <IconSun />}
       onPress={() => {
         switch (activeTheme) {
-          case "light":
-            setTheme("dark");
-            break;
           case "dark":
             setTheme("light");
             break;
+          case "light":
+            setTheme("dark");
+            break;
         }
       }}
-    >
-      {activeTheme === "light" ? <IconMoon /> : <IconSun />}
-    </Button>
+      size="sm"
+      variant="outline"
+    />
   );
 }

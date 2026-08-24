@@ -1,10 +1,12 @@
-import PortfolioRootLayout from "@/components/layouts/PortfolioRootLayout";
-import "./globals.css";
-import { getLocale } from "next-intl/server";
-import { Space_Grotesk, Source_Sans_3, IBM_Plex_Mono } from "next/font/google";
 import clsx from "clsx";
+
+import "./globals.css";
 import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
+import { getLocale } from "next-intl/server";
+import { IBM_Plex_Mono, Source_Sans_3, Space_Grotesk } from "next/font/google";
+
+import PortfolioRootLayout from "@/components/layouts/PortfolioRootLayout";
 
 // Fonts
 const spaceGrotesk = Space_Grotesk({
@@ -36,8 +38,8 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
 
   return (
     <html
-      lang={locale}
       className={`${spaceGrotesk.variable} ${sourceSans3.variable} ${ibmPlexMono.variable} font-family-secondary antialiased`}
+      lang={locale}
       suppressHydrationWarning
     >
       <body

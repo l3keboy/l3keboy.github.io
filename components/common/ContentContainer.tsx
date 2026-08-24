@@ -1,6 +1,11 @@
-import { type IContentContainer } from "@/types/components/common/ContentContainer";
 import { Separator } from "@heroui/react";
 import clsx from "clsx";
+
+export type IContentContainer = {
+  children: React.ReactNode;
+  classNames?: string;
+  showDivider?: boolean;
+};
 
 export default function ContentContainer({
   children,

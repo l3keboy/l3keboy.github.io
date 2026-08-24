@@ -1,5 +1,6 @@
-import { type IPortfolioLayout } from "@/types/components/layouts/PortfolioLayout";
 import clsx from "clsx";
+
+import { type IPortfolioLayout } from "@/types/components/layouts/PortfolioLayout";
 
 export default function BaseLayout({ children }: IPortfolioLayout) {
   return (

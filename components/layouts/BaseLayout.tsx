@@ -1,7 +1,9 @@
-import { Header } from "../common/navigation/Header";
-import { Footer } from "../common/navigation/Footer";
-import { type IPortfolioLayout } from "@/types/components/layouts/PortfolioLayout";
 import clsx from "clsx";
+
+import { type IPortfolioLayout } from "@/types/components/layouts/PortfolioLayout";
+
+import { Footer } from "../common/navigation/Footer";
+import { Header } from "../common/navigation/Header";
 
 export default function BaseLayout({ children }: IPortfolioLayout) {
   return (

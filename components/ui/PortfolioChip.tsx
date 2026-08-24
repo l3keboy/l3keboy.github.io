@@ -1,13 +1,22 @@
-import { type IPortfolioChip } from "@/types/ui/PortfolioChip";
 import { Chip } from "@heroui/react";
+import { ChipRootProps } from "@heroui/react";
 import clsx from "clsx";
+import { ReactNode } from "react";
+
+export type IPortfolioChip = {
+  classNames?: string;
+  color?: ChipRootProps["color"];
+  size?: ChipRootProps["size"];
+  text: ReactNode;
+  variant?: ChipRootProps["variant"];
+};
 
 export default function PortfolioChip({
-  text,
   classNames,
-  variant,
-  size,
   color,
+  size,
+  text,
+  variant,
 }: IPortfolioChip) {
   const portfolioChipClassNames = classNames ?? "";
 
@@ -17,13 +26,13 @@ export default function PortfolioChip({
 
   return (
     <Chip
-      variant={portfolioChipVariant}
-      color={portfolioChipColor}
-      size={portfolioChipSize}
       className={clsx(
         "font-family-mono p-0 flex flex-row gap-1.5",
         portfolioChipClassNames,
       )}
+      color={portfolioChipColor}
+      size={portfolioChipSize}
+      variant={portfolioChipVariant}
     >
       {text}
     </Chip>

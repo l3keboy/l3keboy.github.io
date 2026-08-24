@@ -2,6 +2,7 @@ import CookieContext from "@/contexts/CookieContext";
 import LocaleContextProvider from "@/contexts/LocaleContext";
 import TimeZoneContextProvider from "@/contexts/TimezoneContext";
 import { type IPortfolioLayout } from "@/types/components/layouts/PortfolioLayout";
+
 import PortfolioThemeLayout from "./PortfolioThemeLayout";
 
 export default function PortfolioRootLayout({ children }: IPortfolioLayout) {

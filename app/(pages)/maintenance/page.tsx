@@ -1,6 +1,7 @@
+import { useTranslations } from "next-intl";
+
 import PortfolioChip from "@/components/ui/PortfolioChip";
 import HeadingTitle from "@/components/ui/titles/HeadingTitle";
-import { useTranslations } from "next-intl";
 
 export default function Maintenance() {
   const t = useTranslations("Pages.Maintenance");
@@ -11,10 +12,9 @@ export default function Maintenance() {
         <div className="flex max-w-md items-center flex-col gap-3">
           {/* #region Chip */}
           <PortfolioChip
-            variant="soft"
+            classNames="p-1.5"
             color="warning"
             size="lg"
-            classNames="p-1.5"
             text={
               <>
                 <span className="relative flex h-1.5 w-1.5">
@@ -24,11 +24,12 @@ export default function Maintenance() {
                 {t("chip")}
               </>
             }
+            variant="soft"
           />
           {/* #endregion */}
 
           {/* #region Title */}
-          <HeadingTitle titleAs="h1" text={t("title")} />
+          <HeadingTitle text={t("title")} titleAs="h1" />
           {/* #endregion */}
         </div>
 

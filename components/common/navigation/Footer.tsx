@@ -1,7 +1,11 @@
+import { Chip, Separator } from "@heroui/react";
+import { useMessages, useTranslations } from "next-intl";
+
+import PortfolioButton from "@/components/ui/PortfolioButton";
+import PortfolioLink from "@/components/ui/PortfolioLink";
 import { type NavigationLink } from "@/types/components/navigation/NavigationLink";
 import { siteSettings } from "@/utils/config/siteSettings";
-import { Button, Chip, Link, Separator } from "@heroui/react";
-import { useMessages, useTranslations } from "next-intl";
+
 import ContentContainer from "../ContentContainer";
 
 export function Footer() {
@@ -14,10 +18,10 @@ export function Footer() {
   const navigationLinks: NavigationLink[] = [];
   keys.forEach((key) => {
     navigationLinks.push({
-      title: t(`Links.${key}.title`),
-      key: parseInt(key),
-      url: t(`Links.${key}.url`),
       ariaLabel: t(`Links.${key}.ariaLabel`),
+      key: parseInt(key),
+      title: t(`Links.${key}.title`),
+      url: t(`Links.${key}.url`),
     });
   });
   // #endregion
@@ -34,9 +38,9 @@ export function Footer() {
           {/* #region Footer top Text */}
           <div className="flex flex-col gap-3">
             <Chip
-              variant="tertiary"
-              color="accent"
               className="p-0 font-family-mono"
+              color="accent"
+              variant="tertiary"
             >
               {t("chip")}
             </Chip>
@@ -51,20 +55,23 @@ export function Footer() {
 
         {/* #region Footer top navigation buttons */}
         <div className="flex flex-row my-0 mt-3 md:my-auto gap-3">
-          <Link
+          <PortfolioLink
+            content={<PortfolioButton content={t("Buttons.linkedIn")} />}
             href={siteSettings.linkedInUrl}
-            className="no-underline"
-            target="__blank"
-          >
-            <Button variant="primary">{t("Buttons.linkedIn")}</Button>
-          </Link>
-          <Link
+            linkIsExternal
+            noUnderline
+          />
+          <PortfolioLink
+            content={
+              <PortfolioButton
+                content={t("Buttons.gitHub")}
+                variant="outline"
+              />
+            }
             href={siteSettings.githubUrl}
-            className="no-underline"
-            target="__blank"
-          >
-            <Button variant="outline">{t("Buttons.gitHub")}</Button>
-          </Link>
+            linkIsExternal
+            noUnderline
+          />
         </div>
         {/* #endregion */}
       </ContentContainer>
@@ -88,14 +95,13 @@ export function Footer() {
         <nav className="flex flex-row gap-3 text-center my-auto">
           {navigationLinks.map((link) => {
             return (
-              <Link
-                key={link.key}
+              <PortfolioLink
+                ariaLabel={link.ariaLabel}
+                classNames="font-family-primary text-sm text-muted"
+                content={link.title}
                 href={link.url}
-                aria-label={link.ariaLabel}
-                className="font-family-primary text-sm text-muted"
-              >
-                {link.title}
-              </Link>
+                key={link.key}
+              />
             );
           })}
         </nav>

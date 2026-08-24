@@ -1,10 +1,12 @@
 import { useTranslations } from "next-intl";
 
-import MaintenanceLayout from "./(pages)/maintenance/layout";
-import { Button, Chip, Link } from "@heroui/react";
+import PortfolioButton from "@/components/ui/PortfolioButton";
+import PortfolioChip from "@/components/ui/PortfolioChip";
+import PortfolioLink from "@/components/ui/PortfolioLink";
 import HeadingTitle from "@/components/ui/titles/HeadingTitle";
 import { siteSettings } from "@/utils/config/siteSettings";
-import PortfolioChip from "@/components/ui/PortfolioChip";
+
+import MaintenanceLayout from "./(pages)/maintenance/layout";
 
 export default function NotFound() {
   const t = useTranslations("Pages.NotFound");
@@ -16,15 +18,15 @@ export default function NotFound() {
           <div className="flex max-w-md items-center flex-col gap-3">
             {/* #region Chip */}
             <PortfolioChip
-              variant="tertiary"
               color="danger"
               size="lg"
               text={t("chip")}
+              variant="tertiary"
             />
             {/* #endregion */}
 
             {/* #region Title */}
-            <HeadingTitle titleAs="h1" text={t("title")} />
+            <HeadingTitle text={t("title")} titleAs="h1" />
             {/* #endregion */}
           </div>
 
@@ -34,20 +36,24 @@ export default function NotFound() {
 
           {/* #region Buttons */}
           <div className="mt-8 flex gap-3">
-            <Link href="/" className="no-underline">
-              <Button size="lg" variant="primary">
-                {t("Buttons.home")}
-              </Button>
-            </Link>
-            <Link
+            <PortfolioLink
+              content={
+                <PortfolioButton content={t("Buttons.home")} size="lg" />
+              }
+              noUnderline
+            />
+            <PortfolioLink
+              content={
+                <PortfolioButton
+                  content={t("Buttons.linkedIn")}
+                  size="lg"
+                  variant="outline"
+                />
+              }
               href={siteSettings.linkedInUrl}
-              className="no-underline"
-              target="__blank"
-            >
-              <Button size="lg" variant="outline">
-                {t("Buttons.linkedIn")}
-              </Button>
-            </Link>
+              linkIsExternal
+              noUnderline
+            />
           </div>
           {/* #endregion */}
         </div>

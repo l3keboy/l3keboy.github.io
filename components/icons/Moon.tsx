@@ -1,7 +1,7 @@
 export function IconMoon({}) {
   return (
     <svg
-      fill="#000000"
+      fill="currentColor"
       height="32"
       viewBox="0 0 256 256"
       width="32"

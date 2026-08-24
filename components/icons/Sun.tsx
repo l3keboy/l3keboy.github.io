@@ -1,7 +1,7 @@
 export function IconSun({}) {
   return (
     <svg
-      fill="#eceef1"
+      fill="currentColor"
       height="32"
       viewBox="0 0 256 256"
       width="32"

@@ -23,16 +23,32 @@ const nextConfig = (phase: string): NextConfig => {
     ...(isDev && {
       allowedDevOrigins: ["localhost", "192.168.254.203"],
     }),
+    images: {
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "github.com",
+        },
+        {
+          protocol: "https",
+          hostname: "solyra-coaching.nl",
+        },
+        {
+          protocol: "https",
+          hostname: "partio.app",
+        },
+      ],
+    },
     redirects() {
       return [
-        siteSettings.maintenance === true
+        siteSettings.siteMetadata.maintenance === true
           ? {
               destination: '/maintenance',
               permanent: false,
               source: '/((?!maintenance|cms|_next|api|favicon.ico).*)',
             }
           : null,
-        siteSettings.maintenance === false
+        siteSettings.siteMetadata.maintenance === false
           ? { destination: '/', permanent: false, source: '/maintenance' }
           : null,
       ].filter(Boolean) as never;

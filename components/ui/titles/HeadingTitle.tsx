@@ -1,13 +1,10 @@
 import clsx from "clsx";
-import * as React from "react";
 
 import { type ITitle } from "@/types/ui/Title";
 
-export default function HeadingTitle({ classNames, text, titleAs }: ITitle) {
-  const HeadingAs: React.ElementType = titleAs ?? "h2";
-
+export default function HeadingTitle({ classNames, text }: ITitle) {
   return (
-    <HeadingAs
+    <h2
       className={clsx(
         // Font family
         "font-family-primary",
@@ -19,6 +16,6 @@ export default function HeadingTitle({ classNames, text, titleAs }: ITitle) {
       )}
     >
       {text}
-    </HeadingAs>
+    </h2>
   );
 }

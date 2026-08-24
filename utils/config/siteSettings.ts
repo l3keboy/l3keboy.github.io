@@ -10,6 +10,7 @@ export type IProjectSiteSettings = {
   links: {
     slug: string
     url: string
+    highlight: boolean
   }[]
   highlight: boolean
 }
@@ -60,11 +61,17 @@ export const siteSettings: ISiteSettings = {
       slug: "partio",
       languages: ["C#", "NextJS", "HTML", "CSS", "TailwindCSS"],
       tools: ["Docker", "Docker Compose", "PostgreSQL", "Supabase", "Google Tag Manager", "Google Analytics", "CookieBot"],
-      image: "https://partio.app/partioIcons/partio-icon-green.svg",
+      image: "https://partio.app/apple-touch-icon.png",
       type: SourceType.CLOSED_SOURCE,
       links: [
-        { slug: "organization", url: "https://github.com/partio-official" },
-        { slug: "website", url: "https://partio.app/" }
+        {
+          slug: "website", url: "https://partio.app/",
+          highlight: true
+        },
+        {
+          slug: "organization", url: "https://github.com/partio-official",
+          highlight: false
+        }
       ],
       highlight: true
     },
@@ -75,7 +82,10 @@ export const siteSettings: ISiteSettings = {
       image: "https://solyra-coaching.nl/logo.png",
       type: SourceType.CLOSED_SOURCE,
       links: [
-        { slug: "website", url: "https://solyra-coaching.nl/" }
+        {
+          slug: "website", url: "https://solyra-coaching.nl/",
+          highlight: true
+        }
       ],
       highlight: false
     },
@@ -86,10 +96,22 @@ export const siteSettings: ISiteSettings = {
       image: "https://github.com/husqybot/assets/blob/main/logos/logo_default.png?raw=true",
       type: SourceType.CLOSED_SOURCE,
       links: [
-        { slug: "organization", url: "https://github.com/husqybot" },
-        { slug: "website", url: "https://husqy.xyz/" },
-        { slug: "docs", url: "https://docs.husqy.xyz/" },
-        { slug: "dashboard", url: "https://dashboard.husqy.xyz/" }
+        {
+          slug: "organization", url: "https://github.com/husqybot",
+          highlight: true
+        },
+        {
+          slug: "website", url: "https://husqy.xyz/",
+          highlight: false
+        },
+        {
+          slug: "docs", url: "https://docs.husqy.xyz/",
+          highlight: false
+        },
+        {
+          slug: "dashboard", url: "https://dashboard.husqy.xyz/",
+          highlight: false
+        }
       ],
       highlight: true
     },
@@ -100,8 +122,14 @@ export const siteSettings: ISiteSettings = {
       image: "https://github.com/l3keboy/Victreebot/blob/main/assets/logos/VictreeBot.png?raw=true",
       type: SourceType.OPEN_SOURCE,
       links: [
-        { slug: "source", url: "https://github.com/l3keboy/victreebot" },
-        { slug: "support_server", url: "https://discord.gg/sVmMUXCYp2" }
+        {
+          slug: "source", url: "https://github.com/l3keboy/victreebot",
+          highlight: true
+        },
+        {
+          slug: "support_server", url: "https://discord.gg/sVmMUXCYp2",
+          highlight: false
+        }
       ],
       highlight: false
     },
@@ -111,7 +139,10 @@ export const siteSettings: ISiteSettings = {
       tools: ["Vercel"],
       type: SourceType.OPEN_SOURCE,
       links: [
-        { slug: "source", url: "https://github.com/l3keboy/l3keboy.github.io" },
+        {
+          slug: "source", url: "https://github.com/l3keboy/l3keboy.github.io",
+          highlight: true
+        },
       ],
       highlight: true
     },
@@ -122,7 +153,10 @@ export const siteSettings: ISiteSettings = {
       type: SourceType.OPEN_SOURCE,
       image: "https://github.com/l3keboy/iOS-QR_Validator/blob/main/assets/permissions.png?raw=true",
       links: [
-        { slug: "source", url: "https://github.com/l3keboy/iOS-QR_Validator" },
+        {
+          slug: "source", url: "https://github.com/l3keboy/iOS-QR_Validator",
+          highlight: true
+        },
       ],
       highlight: false
     },
@@ -133,7 +167,10 @@ export const siteSettings: ISiteSettings = {
       type: SourceType.OPEN_SOURCE,
       image: "https://github.com/l3keboy/iOS-TimeIt/blob/main/assets/TimerView.png?raw=true",
       links: [
-        { slug: "source", url: "https://github.com/l3keboy/iOS-TimeIt" },
+        {
+          slug: "source", url: "https://github.com/l3keboy/iOS-TimeIt",
+          highlight: true
+        },
       ],
       highlight: false
     },
@@ -144,7 +181,10 @@ export const siteSettings: ISiteSettings = {
       type: SourceType.OPEN_SOURCE,
       image: "https://github.com/l3keboy/iOS-Factzzz/blob/main/assets/FactzzzView.png?raw=true",
       links: [
-        { slug: "source", url: "https://github.com/l3keboy/iOS-Factzzz" },
+        {
+          slug: "source", url: "https://github.com/l3keboy/iOS-Factzzz",
+          highlight: true
+        },
       ],
       highlight: false
     },
@@ -155,7 +195,10 @@ export const siteSettings: ISiteSettings = {
       type: SourceType.OPEN_SOURCE,
       image: "https://github.com/l3keboy/lukehendriks.net-v2/blob/main/frontend/assets/images/memoji.png?raw=true",
       links: [
-        { slug: "source", url: "https://github.com/l3keboy/lukehendriks.net-v2" },
+        {
+          slug: "source", url: "https://github.com/l3keboy/lukehendriks.net-v2",
+          highlight: true
+        },
       ],
       highlight: false
     },
@@ -166,7 +209,10 @@ export const siteSettings: ISiteSettings = {
       type: SourceType.OPEN_SOURCE,
       image: "https://github.com/l3keboy/lukehendriks.net-v1/blob/main/images/homescreen-hero.png?raw=true",
       links: [
-        { slug: "source", url: "https://github.com/l3keboy/lukehendriks.net-v1" },
+        {
+          slug: "source", url: "https://github.com/l3keboy/lukehendriks.net-v1",
+          highlight: true
+        },
       ],
       highlight: false
     }
@@ -187,7 +233,7 @@ export const siteSettings: ISiteSettings = {
       highlight: true,
     },
     {
-      slug: "az_204 ",
+      slug: "az_204",
       certificate: {
         name: "Microsoft Certified: Azure Developer Associate (AZ-204)",
         number: "7990801179F2FC6E",
@@ -201,7 +247,7 @@ export const siteSettings: ISiteSettings = {
       highlight: true,
     },
     {
-      slug: "az_104 ",
+      slug: "az_104",
       certificate: {
         name: "Microsoft Certified: Azure Administrator Associate (AZ-104)",
         number: "91ACAED8BC28489C",
@@ -215,7 +261,7 @@ export const siteSettings: ISiteSettings = {
       highlight: true,
     },
     {
-      slug: "itil_v4_foundation ",
+      slug: "itil_v4_foundation",
       certificate: {
         name: "ITIL v4 Foundation Certificate in IT Service Management",
         number: "GR671779843LH",
@@ -229,7 +275,7 @@ export const siteSettings: ISiteSettings = {
       highlight: false,
     },
     {
-      slug: "exin_bcs_practitioner ",
+      slug: "exin_bcs_practitioner",
       certificate: {
         name: "EXIN BCS Practitioner Certificate in Modelling Business Processes",
         number: "6625367.20894115",

@@ -1,21 +1,26 @@
 import { type ICertificationSiteSettings } from "@/utils/config/siteSettings";
-import CardTitle from "../../../../ui/titles/CardTitle";
+import CardTitle from "../../ui/titles/CardTitle";
 import { useTranslations } from "next-intl";
-import { IconArrowUpRight } from "../../../../icons/ArrowUpRight";
-import PortfolioLink from "../../../../ui/PortfolioLink";
+import { IconArrowUpRight } from "../../icons/ArrowUpRight";
+import PortfolioLink from "../../ui/PortfolioLink";
 import { DateDisplay } from "./DateDisplay";
+import PortfolioChip from "@/components/ui/PortfolioChip";
 
 export type ICertification = ICertificationSiteSettings & {
   skills: string[];
 };
 export type ICertificationContainer = {
   certificate: ICertification;
+  showSkills?: boolean;
 };
 
 export default function CertificationContainer({
   certificate,
+  showSkills,
 }: ICertificationContainer) {
   const t = useTranslations("Components.CertificationContainer");
+
+  const certificationContainerShowSkills = showSkills ?? false;
 
   return (
     <PortfolioLink
@@ -38,6 +43,23 @@ export default function CertificationContainer({
               expiryDate={certificate.expiryDate}
             />
           </div>
+          {certificationContainerShowSkills && (
+            <>
+              <label>{t("skills")}</label>
+              <div className="flex flex-row flex-wrap gap-x-3 gap-y-1.5">
+                {certificate.skills.map((skill) => (
+                  <PortfolioChip
+                    size="sm"
+                    color="accent"
+                    variant="soft"
+                    classNames="px-1.5 py-0.5"
+                    text={skill}
+                    key={`${certificate.slug}-${skill}`}
+                  />
+                ))}
+              </div>
+            </>
+          )}
         </div>
       }
     />

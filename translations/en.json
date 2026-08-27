@@ -267,7 +267,8 @@
         "CertificationContainer": {
             "ariaLabel": "Navigate to {certificate}",
             "granted": "Granted on:",
-            "expires": "Expires on:"
+            "expires": "Expires on:",
+            "skills": "Skills"
         },
         "ProjectContainer": {
             "ariaLabel": "Navigate to {project}",
@@ -355,6 +356,9 @@
                 "Buttons": {
                     "gitHub": "GitHub"
                 }
+            },
+            "ProjectsDisplay": {
+                "noProjects": "No projects just yet!"
             }
         },
         "Certifications": {
@@ -365,6 +369,9 @@
                 "Buttons": {
                     "linkedIn": "LinkedIn"
                 }
+            },
+            "CertificatesDisplay": {
+                "noCerts": "No certificates just yet!"
             }
         }
     }

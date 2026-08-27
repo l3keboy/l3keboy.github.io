@@ -12,7 +12,7 @@ export default function Maintenance() {
         <div className="flex max-w-md items-center flex-col gap-3">
           {/* #region Chip */}
           <PortfolioChip
-            classNames="p-1.5"
+            classNames="px-1.5 py-0.5"
             color="warning"
             size="lg"
             text={

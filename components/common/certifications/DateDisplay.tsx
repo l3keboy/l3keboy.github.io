@@ -22,15 +22,18 @@ export function DateDisplay({ grantDate, expiryDate }: IDateDisplay) {
           month: "long",
         }).format(grantDate)}
       </span>
-      {" - "}
+
       {expiryDate && (
-        <span>
-          {t("expires")}{" "}
-          {new Intl.DateTimeFormat(resolveSupportedLocale(), {
-            year: "numeric",
-            month: "long",
-          }).format(expiryDate)}
-        </span>
+        <>
+          {" - "}
+          <span>
+            {t("expires")}{" "}
+            {new Intl.DateTimeFormat(resolveSupportedLocale(), {
+              year: "numeric",
+              month: "long",
+            }).format(expiryDate)}
+          </span>
+        </>
       )}
     </>
   );

@@ -1,29 +1,21 @@
-"use client";
-// ! Locale used is client side
-
 import { type ICertificationSiteSettings } from "@/utils/config/siteSettings";
 import CardTitle from "../ui/titles/CardTitle";
 import { useTranslations } from "next-intl";
-import { useLocaleContext } from "@/contexts/LocaleContext";
 import { IconArrowUpRight } from "../icons/ArrowUpRight";
 import PortfolioLink from "../ui/PortfolioLink";
+import { DateDisplay } from "./DateDisplay";
 
 export type ICertification = ICertificationSiteSettings & {
   skills: string[];
 };
 export type ICertificationContainer = {
   certificate: ICertification;
-  showSkills?: boolean;
 };
 
 export default function CertificationContainer({
   certificate,
-  showSkills,
 }: ICertificationContainer) {
-  const { resolveSupportedLocale } = useLocaleContext();
   const t = useTranslations("Components.CertificationContainer");
-
-  const certificationContainerShowSkills = showSkills ?? false;
 
   return (
     <PortfolioLink
@@ -41,23 +33,10 @@ export default function CertificationContainer({
             </div>
           </div>
           <div className="leading-normal text-muted">
-            <span>
-              {t("granted")}{" "}
-              {new Intl.DateTimeFormat(resolveSupportedLocale(), {
-                year: "numeric",
-                month: "long",
-              }).format(certificate.grantDate)}
-            </span>
-            {" - "}
-            {certificate.expiryDate && (
-              <span>
-                {t("expires")}{" "}
-                {new Intl.DateTimeFormat(resolveSupportedLocale(), {
-                  year: "numeric",
-                  month: "long",
-                }).format(certificate.expiryDate)}
-              </span>
-            )}
+            <DateDisplay
+              grantDate={certificate.grantDate}
+              expiryDate={certificate.expiryDate}
+            />
           </div>
         </div>
       }

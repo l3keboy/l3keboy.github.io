@@ -1,4 +1,3 @@
-"use client";
 import { useMessages, useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";

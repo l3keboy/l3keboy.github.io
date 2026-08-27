@@ -1,3 +1,6 @@
+"use client";
+// ! Locale used is client side
+
 import { type ICertificationSiteSettings } from "@/utils/config/siteSettings";
 import CardTitle from "../ui/titles/CardTitle";
 import { useTranslations } from "next-intl";

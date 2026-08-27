@@ -151,7 +151,6 @@ export const siteSettings: ISiteSettings = {
       languages: ["Swift"],
       tools: ["XCode", "Google Safebrowsing API"],
       type: SourceType.OPEN_SOURCE,
-      image: "https://github.com/l3keboy/iOS-QR_Validator/blob/main/assets/permissions.png?raw=true",
       links: [
         {
           slug: "source", url: "https://github.com/l3keboy/iOS-QR_Validator",
@@ -165,7 +164,6 @@ export const siteSettings: ISiteSettings = {
       languages: ["Swift"],
       tools: ["XCode"],
       type: SourceType.OPEN_SOURCE,
-      image: "https://github.com/l3keboy/iOS-TimeIt/blob/main/assets/TimerView.png?raw=true",
       links: [
         {
           slug: "source", url: "https://github.com/l3keboy/iOS-TimeIt",
@@ -179,7 +177,6 @@ export const siteSettings: ISiteSettings = {
       languages: ["Swift"],
       tools: ["XCode"],
       type: SourceType.OPEN_SOURCE,
-      image: "https://github.com/l3keboy/iOS-Factzzz/blob/main/assets/FactzzzView.png?raw=true",
       links: [
         {
           slug: "source", url: "https://github.com/l3keboy/iOS-Factzzz",

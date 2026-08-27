@@ -37,6 +37,7 @@ export default function SectionCertificatesDisplay() {
             certs.map((cert) => {
               return (
                 <CertificationContainer
+                  cardTitleAs="h2"
                   key={cert.slug}
                   certificate={cert}
                   showSkills

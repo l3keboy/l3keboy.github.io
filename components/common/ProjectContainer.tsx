@@ -5,6 +5,7 @@ import CardTitle from "../ui/titles/CardTitle";
 import Image from "next/image";
 import PortfolioButton from "../ui/PortfolioButton";
 import clsx from "clsx";
+import { ElementType } from "react";
 
 export type IProject = IProjectSiteSettings & {
   title: string;
@@ -14,21 +15,24 @@ export type IProject = IProjectSiteSettings & {
 export type IProjectContainer = {
   project: IProject;
   bigIcon?: boolean;
+  cardTitleAs?: ElementType;
 };
 
 export default function ProjectContainer({
   project,
   bigIcon,
+  cardTitleAs,
 }: IProjectContainer) {
   const t = useTranslations("Components.ProjectContainer");
   const tProjects = useTranslations("SiteSettings.Projects");
 
   const projectContainerBigIcon = bigIcon ?? false;
+  const projectContainerCardTitleAs = cardTitleAs ?? "h3";
 
   return (
     <div className="w-full h-full p-6 rounded-lg bg-surface flex flex-col gap-3">
       <div className="flex flex-row justify-between gap-6 w-full relative">
-        <CardTitle text={project.title} />
+        <CardTitle text={project.title} as={projectContainerCardTitleAs} />
         {project.image && (
           <div
             className={clsx(

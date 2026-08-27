@@ -1,10 +1,17 @@
 import clsx from "clsx";
 
 import { type ITitle } from "@/types/ui/Title";
+import { ElementType } from "react";
 
-export default function CardTitle({ classNames, text }: ITitle) {
+export type ICardTitle = ITitle & {
+  as?: ElementType;
+};
+
+export default function CardTitle({ classNames, text, as }: ICardTitle) {
+  const CardTitleAs: ElementType = as ?? "h3";
+
   return (
-    <h3
+    <CardTitleAs
       className={clsx(
         // Font family
         "font-family-primary",
@@ -16,6 +23,6 @@ export default function CardTitle({ classNames, text }: ITitle) {
       )}
     >
       {text}
-    </h3>
+    </CardTitleAs>
   );
 }

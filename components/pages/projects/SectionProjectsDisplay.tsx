@@ -34,6 +34,7 @@ export default function SectionProjectsDisplay() {
             projects.map((project) => {
               return (
                 <ProjectContainer
+                  cardTitleAs="h2"
                   key={project.slug}
                   project={project}
                   bigIcon

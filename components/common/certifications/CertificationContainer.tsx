@@ -5,6 +5,7 @@ import { IconArrowUpRight } from "../../icons/ArrowUpRight";
 import PortfolioLink from "../../ui/PortfolioLink";
 import { DateDisplay } from "./DateDisplay";
 import PortfolioChip from "@/components/ui/PortfolioChip";
+import { ElementType } from "react";
 
 export type ICertification = ICertificationSiteSettings & {
   skills: string[];
@@ -12,15 +13,18 @@ export type ICertification = ICertificationSiteSettings & {
 export type ICertificationContainer = {
   certificate: ICertification;
   showSkills?: boolean;
+  cardTitleAs?: ElementType;
 };
 
 export default function CertificationContainer({
   certificate,
   showSkills,
+  cardTitleAs,
 }: ICertificationContainer) {
   const t = useTranslations("Components.CertificationContainer");
 
   const certificationContainerShowSkills = showSkills ?? false;
+  const certificationContainerCardTitleAs = cardTitleAs ?? "h3";
 
   return (
     <PortfolioLink
@@ -32,7 +36,10 @@ export default function CertificationContainer({
       content={
         <div className="w-full h-full p-6 rounded-lg bg-surface border border-transparent hover:border-accent hover:border-solid flex flex-col gap-3">
           <div className="flex flex-row justify-between gap-6">
-            <CardTitle text={certificate.certificate.name} />
+            <CardTitle
+              text={certificate.certificate.name}
+              as={certificationContainerCardTitleAs}
+            />
             <div>
               <IconArrowUpRight />
             </div>

@@ -30,7 +30,7 @@ export default function CertificationContainer({
       classNames="flex-1 flex h-auto w-full"
       href={certificate.certificate.url}
       content={
-        <div className="w-full h-full p-6 rounded-lg bg-surface hover:border hover:border-accent hover:border-solid flex flex-col gap-3">
+        <div className="w-full h-full p-6 rounded-lg bg-surface border border-transparent hover:border-accent hover:border-solid flex flex-col gap-3">
           <div className="flex flex-row justify-between gap-6">
             <CardTitle text={certificate.certificate.name} />
             <div>

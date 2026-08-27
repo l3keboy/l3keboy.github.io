@@ -1,8 +1,8 @@
 import { type ICertificationSiteSettings } from "@/utils/config/siteSettings";
-import CardTitle from "../ui/titles/CardTitle";
+import CardTitle from "../../../../ui/titles/CardTitle";
 import { useTranslations } from "next-intl";
-import { IconArrowUpRight } from "../icons/ArrowUpRight";
-import PortfolioLink from "../ui/PortfolioLink";
+import { IconArrowUpRight } from "../../../../icons/ArrowUpRight";
+import PortfolioLink from "../../../../ui/PortfolioLink";
 import { DateDisplay } from "./DateDisplay";
 
 export type ICertification = ICertificationSiteSettings & {

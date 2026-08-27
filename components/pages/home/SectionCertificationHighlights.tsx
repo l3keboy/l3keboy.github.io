@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import ContentContainer from "@/components/common/ContentContainer";
 import CertificationContainer, {
   type ICertification,
-} from "@/components/certifications/CertificationContainer";
+} from "@/components/pages/home/_components/certifications/CertificationContainer";
 import { siteSettings } from "@/utils/config/siteSettings";
 import PortfolioLink from "@/components/ui/PortfolioLink";
 import PortfolioChip from "@/components/ui/PortfolioChip";

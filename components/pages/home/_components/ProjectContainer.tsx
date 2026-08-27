@@ -1,9 +1,9 @@
 import { type IProjectSiteSettings } from "@/utils/config/siteSettings";
 import { useTranslations } from "next-intl";
-import PortfolioLink from "../ui/PortfolioLink";
-import CardTitle from "../ui/titles/CardTitle";
+import PortfolioLink from "../../../ui/PortfolioLink";
+import CardTitle from "../../../ui/titles/CardTitle";
 import Image from "next/image";
-import PortfolioButton from "../ui/PortfolioButton";
+import PortfolioButton from "../../../ui/PortfolioButton";
 
 export type IProject = IProjectSiteSettings & {
   title: string;

@@ -6,7 +6,7 @@ import HeadingTitle from "@/components/ui/titles/HeadingTitle";
 import { siteSettings } from "@/utils/config/siteSettings";
 import ProjectContainer, {
   type IProject,
-} from "@/components/common/ProjectContainer";
+} from "@/components/pages/home/_components/ProjectContainer";
 import PortfolioLink from "@/components/ui/PortfolioLink";
 
 export default function SectionProjectHighlights() {

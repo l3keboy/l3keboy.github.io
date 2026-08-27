@@ -235,12 +235,12 @@
                     "1": {
                         "title": "Projects",
                         "ariaLabel": "Navigate to Projects",
-                        "url": "/"
+                        "url": "/projects"
                     },
                     "2": {
                         "title": "Certifications",
                         "ariaLabel": "Navigate to Certifications",
-                        "url": "/"
+                        "url": "/certifications"
                     }
                 }
             },

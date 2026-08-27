@@ -3,9 +3,7 @@ import { useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
 import { siteSettings } from "@/utils/config/siteSettings";
-import ProjectContainer, {
-  type IProject,
-} from "../home/_components/ProjectContainer";
+import ProjectContainer, { type IProject } from "../../common/ProjectContainer";
 
 export default function SectionProjectsDisplay() {
   const t = useTranslations("Pages.Projects.ProjectsDisplay");

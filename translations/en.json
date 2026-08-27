@@ -233,28 +233,13 @@
             "Header": {
                 "Links": {
                     "1": {
-                        "title": "About",
-                        "ariaLabel": "Navigate to About",
-                        "url": "/"
-                    },
-                    "2": {
-                        "title": "Stack",
-                        "ariaLabel": "Navigate to Stack",
-                        "url": "/"
-                    },
-                    "3": {
                         "title": "Projects",
                         "ariaLabel": "Navigate to Projects",
                         "url": "/"
                     },
-                    "4": {
+                    "2": {
                         "title": "Certifications",
                         "ariaLabel": "Navigate to Certifications",
-                        "url": "/"
-                    },
-                    "5": {
-                        "title": "Contact",
-                        "ariaLabel": "Navigate to Contact",
                         "url": "/"
                     }
                 }

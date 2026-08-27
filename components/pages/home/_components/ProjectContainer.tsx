@@ -4,6 +4,7 @@ import PortfolioLink from "../../../ui/PortfolioLink";
 import CardTitle from "../../../ui/titles/CardTitle";
 import Image from "next/image";
 import PortfolioButton from "../../../ui/PortfolioButton";
+import clsx from "clsx";
 
 export type IProject = IProjectSiteSettings & {
   title: string;
@@ -12,32 +13,37 @@ export type IProject = IProjectSiteSettings & {
 };
 export type IProjectContainer = {
   project: IProject;
-  showAllLinks?: boolean;
-  showTools?: boolean;
-  showLanguages?: boolean;
+  bigIcon?: boolean;
 };
 
 export default function ProjectContainer({
   project,
-  showAllLinks,
+  bigIcon,
 }: IProjectContainer) {
   const t = useTranslations("Components.ProjectContainer");
   const tProjects = useTranslations("SiteSettings.Projects");
 
-  const projectContainerShowAllLinks = showAllLinks ?? false;
+  const projectContainerBigIcon = bigIcon ?? false;
 
   return (
     <div className="w-full h-full p-6 rounded-lg bg-surface flex flex-col gap-3">
-      <div className="flex flex-row justify-between gap-6">
+      <div className="flex flex-row justify-between gap-6 w-full relative">
         <CardTitle text={project.title} />
         {project.image && (
-          <Image
-            height={32}
-            width={32}
-            src={project.image}
-            alt={project.title}
-            style={{ height: "auto" }}
-          />
+          <div
+            className={clsx(
+              "absolute right-0",
+              projectContainerBigIcon ? "w-20 h-20" : "w-8 h-8",
+            )}
+          >
+            <Image
+              height={projectContainerBigIcon ? 80 : 32}
+              width={projectContainerBigIcon ? 80 : 32}
+              src={project.image}
+              alt={project.title}
+              style={{ height: "auto" }}
+            />
+          </div>
         )}
       </div>
       <div className="text-muted flex flex-col gap-3">
@@ -47,7 +53,7 @@ export default function ProjectContainer({
       </div>
       <div className="flex flex-row gap-3 flex-wrap">
         {project.links
-          .filter((x) => (!projectContainerShowAllLinks ? x.highlight : true))
+          .filter((x) => x.highlight)
           .map((link) => {
             return (
               <PortfolioLink

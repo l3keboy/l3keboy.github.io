@@ -26,7 +26,7 @@ export default function SectionCertificatesDisplay() {
   // #endregion
 
   // TODO Ordering -> By grant date, expiry date
-  // TODO Filtering -> By company
+  // TODO Filtering -> By company, Highlight
 
   return (
     <ContentContainer>

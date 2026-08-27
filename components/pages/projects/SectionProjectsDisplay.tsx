@@ -3,7 +3,9 @@ import { useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
 import { siteSettings } from "@/utils/config/siteSettings";
-import { type IProject } from "../home/_components/ProjectContainer";
+import ProjectContainer, {
+  type IProject,
+} from "../home/_components/ProjectContainer";
 
 export default function SectionProjectsDisplay() {
   const t = useTranslations("Pages.Projects.ProjectsDisplay");
@@ -23,10 +25,25 @@ export default function SectionProjectsDisplay() {
   });
   // #endregion
 
+  // TODO Filtering -> Highlighted, Source type (Open/Closed), Tools used?
+
   return (
     <ContentContainer>
       {projects.length <= 0 && <label>{t("noProjects")}</label>}
-      {projects.length > 0 && <div></div>}
+      {projects.length > 0 && (
+        <div className="flex flex-col gap-6">
+          {projects.length > 0 &&
+            projects.map((project) => {
+              return (
+                <ProjectContainer
+                  key={project.slug}
+                  project={project}
+                  bigIcon
+                />
+              );
+            })}
+        </div>
+      )}
     </ContentContainer>
   );
 }

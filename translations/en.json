@@ -337,12 +337,34 @@
             "ProjectHighlights": {
                 "chip": "Projects",
                 "title": "Some of my work",
-                "viewAll": "View all of my projects"
+                "viewAll": "View all of my projects",
+                "noProjects": "No projects just yet!"
             },
             "CertificationHighlights": {
                 "chip": "Certifications",
                 "title": "Some highlights",
-                "viewAll": "View all of my certificates"
+                "viewAll": "View all of my certificates",
+                "noCerts": "No certificates just yet!"
+            }
+        },
+        "Projects": {
+            "Hero": {
+                "chip": "Using my skills",
+                "title": "Projects",
+                "description": "Find an overview of my projects, their details, stack and links. I am always looking for good ideas or helping people out!",
+                "Buttons": {
+                    "gitHub": "GitHub"
+                }
+            }
+        },
+        "Certifications": {
+            "Hero": {
+                "chip": "My knowledge",
+                "title": "Certificates",
+                "description": "Find all of my certificates I have accomplished in the past. With many more to come!",
+                "Buttons": {
+                    "linkedIn": "LinkedIn"
+                }
             }
         }
     }

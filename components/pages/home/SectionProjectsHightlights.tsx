@@ -40,23 +40,27 @@ export default function SectionProjectHighlights() {
           <HeadingTitle text={t("title")} />
         </div>
         <div className="flex flex-col md:flex-row items-stretch gap-3">
-          {highlightedProjects.map((project) => {
-            return (
-              <ProjectContainer
-                key={project.slug}
-                project={project}
-                showLanguages
-                showTools
-              />
-            );
-          })}
+          {highlightedProjects.length > 0 &&
+            highlightedProjects.map((project) => {
+              return (
+                <ProjectContainer
+                  key={project.slug}
+                  project={project}
+                  showLanguages
+                  showTools
+                />
+              );
+            })}
+          {highlightedProjects.length <= 0 && <label>{t("noProjects")}</label>}
         </div>
       </div>
-      <PortfolioLink
-        href="/projects"
-        content={t("viewAll")}
-        classNames="text-center m-auto text-muted"
-      />
+      {highlightedProjects.length > 0 && (
+        <PortfolioLink
+          href="/projects"
+          content={t("viewAll")}
+          classNames="text-center m-auto text-muted"
+        />
+      )}
     </ContentContainer>
   );
 }

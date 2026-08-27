@@ -40,18 +40,22 @@ export default function SectionCertificationHighlights() {
           <HeadingTitle text={t("title")} />
         </div>
         <div className="flex flex-col md:flex-row items-stretch gap-3">
-          {highlightedCerts.map((cert) => {
-            return (
-              <CertificationContainer key={cert.slug} certificate={cert} />
-            );
-          })}
+          {highlightedCerts.length > 0 &&
+            highlightedCerts.map((cert) => {
+              return (
+                <CertificationContainer key={cert.slug} certificate={cert} />
+              );
+            })}
+          {highlightedCerts.length <= 0 && <label>{t("noCerts")}</label>}
         </div>
       </div>
-      <PortfolioLink
-        href="/certifications"
-        content={t("viewAll")}
-        classNames="text-center m-auto text-muted"
-      />
+      {highlightedCerts.length > 0 && (
+        <PortfolioLink
+          href="/certifications"
+          content={t("viewAll")}
+          classNames="text-center m-auto text-muted"
+        />
+      )}
     </ContentContainer>
   );
 }

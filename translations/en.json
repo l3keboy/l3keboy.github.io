@@ -381,6 +381,17 @@
             },
             "ProjectsDisplay": {
                 "noProjects": "No projects just yet!"
+            },
+            "Slug": {
+                "ProjectDetails": {
+                    "ariaLabel": "Navigate to {project}",
+                    "languages": "Languages",
+                    "noLanguages": "No languages yet!",
+                    "tools": "Tools",
+                    "noTools": "No tools yet!",
+                    "links": "Links",
+                    "noLinks": "No links yet!"
+                }
             }
         },
         "Certifications": {

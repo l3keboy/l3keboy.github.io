@@ -1,11 +1,10 @@
 import { type IProjectSiteSettings } from "@/utils/config/siteSettings";
 import { useTranslations } from "next-intl";
-import PortfolioLink from "../ui/PortfolioLink";
-import CardTitle from "../ui/titles/CardTitle";
-import Image from "next/image";
-import PortfolioButton from "../ui/PortfolioButton";
-import clsx from "clsx";
+import PortfolioLink from "../../ui/PortfolioLink";
+import CardTitle from "../../ui/titles/CardTitle";
+import PortfolioButton from "../../ui/PortfolioButton";
 import { ElementType } from "react";
+import ImageDisplay from "./ImageDisplay";
 
 export type IProject = IProjectSiteSettings & {
   title: string;
@@ -33,22 +32,11 @@ export default function ProjectContainer({
     <div className="w-full h-full p-6 rounded-lg bg-surface flex flex-col gap-3">
       <div className="flex flex-row justify-between gap-6 w-full relative">
         <CardTitle text={project.title} as={projectContainerCardTitleAs} />
-        {project.image && (
-          <div
-            className={clsx(
-              "absolute right-0",
-              projectContainerBigIcon ? "w-20 h-20" : "w-8 h-8",
-            )}
-          >
-            <Image
-              height={projectContainerBigIcon ? 80 : 32}
-              width={projectContainerBigIcon ? 80 : 32}
-              src={project.image}
-              alt={project.title}
-              style={{ height: "auto" }}
-            />
-          </div>
-        )}
+        <ImageDisplay
+          image={project.image}
+          title={project.title}
+          bigIcon={projectContainerBigIcon}
+        />
       </div>
       <div className="text-muted flex flex-col gap-3">
         <label>

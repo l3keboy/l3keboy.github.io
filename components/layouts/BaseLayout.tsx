@@ -16,7 +16,7 @@ export default function BaseLayout({ children }: IPortfolioLayout) {
           // Margins and paddings
           "m-0 mx-auto p-0 py-12",
           // Flex
-          "flex flex-col w-full",
+          "flex flex-col w-dvw",
         )}
         role="main"
       >

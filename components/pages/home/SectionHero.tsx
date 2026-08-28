@@ -1,48 +1,16 @@
-"use client";
-import { useMessages, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
 import PortfolioButton from "@/components/ui/PortfolioButton";
 import PortfolioChip from "@/components/ui/PortfolioChip";
 import PortfolioLink from "@/components/ui/PortfolioLink";
 import DisplayTitle from "@/components/ui/titles/DisplayTitle";
-import { useLocaleContext } from "@/contexts/LocaleContext";
 import { siteSettings } from "@/utils/config/siteSettings";
 
-import SummaryItem, { type ISummaryItem } from "./_components/SummaryItem";
+import SummaryItemOverview from "./_components/SummaryItemOverview";
 
-// TODO use client optimization (use locale context)
 export default function SectionHero() {
   const t = useTranslations("Pages.Home.Hero");
-  const { resolveSupportedLocale } = useLocaleContext();
-  const messages = useMessages();
-
-  // #region Get summary items
-  const keys = Object.keys(messages.Pages.Home.Hero.Summary);
-
-  const summaryItems: ISummaryItem[] = [];
-  keys.forEach((key) => {
-    summaryItems.push({
-      description: t(`Summary.${key}.description`, {
-        education: siteSettings.currentEducation,
-        employee: siteSettings.currentEmployee,
-        languages: siteSettings.currentLanguages
-          .map((x) =>
-            new Intl.DisplayNames([resolveSupportedLocale()], {
-              type: "language",
-            }).of(x),
-          )
-          .join(", "),
-        location:
-          new Intl.DisplayNames([resolveSupportedLocale()], {
-            type: "region",
-          }).of(siteSettings.currentLocation) ?? "",
-      }),
-      key: parseInt(key),
-      title: t(`Summary.${key}.title`),
-    });
-  });
-  // #endregion
 
   return (
     <ContentContainer showDivider>
@@ -80,11 +48,7 @@ export default function SectionHero() {
           />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row gap-0">
-        {summaryItems.map((item) => {
-          return <SummaryItem item={item} key={item.key} />;
-        })}
-      </div>
+      <SummaryItemOverview />
     </ContentContainer>
   );
 }

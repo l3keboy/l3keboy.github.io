@@ -1,13 +1,13 @@
 import clsx from "clsx";
-
-import { type ITitle } from "@/types/ui/Title";
 import { ElementType } from "react";
 
-export type ICardTitle = ITitle & {
-  as?: ElementType;
-};
+import { type ITitle } from "@/types/ui/Title";
 
-export default function CardTitle({ classNames, text, as }: ICardTitle) {
+export type ICardTitle = {
+  as?: ElementType;
+} & ITitle;
+
+export default function CardTitle({ as, classNames, text }: ICardTitle) {
   const CardTitleAs: ElementType = as ?? "h3";
 
   return (

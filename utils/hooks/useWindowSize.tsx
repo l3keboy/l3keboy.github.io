@@ -1,4 +1,6 @@
 "use client";
+// ! Client side component because hooks can only be client side
+
 import { useEffect, useState } from "react";
 
 export function useWindowSize() {

@@ -1,13 +1,13 @@
 import { useTranslations } from "next-intl";
 
-import ContentContainer from "@/components/common/ContentContainer";
 import CertificationContainer, {
   type ICertification,
 } from "@/components/common/certifications/CertificationContainer";
-import { siteSettings } from "@/utils/config/siteSettings";
-import PortfolioLink from "@/components/ui/PortfolioLink";
+import ContentContainer from "@/components/common/ContentContainer";
 import PortfolioChip from "@/components/ui/PortfolioChip";
+import PortfolioLink from "@/components/ui/PortfolioLink";
 import HeadingTitle from "@/components/ui/titles/HeadingTitle";
+import { siteSettings } from "@/utils/config/siteSettings";
 
 export default function SectionCertificationHighlights() {
   const t = useTranslations("Pages.Home.CertificationHighlights");
@@ -43,7 +43,7 @@ export default function SectionCertificationHighlights() {
           {highlightedCerts.length > 0 &&
             highlightedCerts.map((cert) => {
               return (
-                <CertificationContainer key={cert.slug} certificate={cert} />
+                <CertificationContainer certificate={cert} key={cert.slug} />
               );
             })}
           {highlightedCerts.length <= 0 && <label>{t("noCerts")}</label>}
@@ -51,9 +51,9 @@ export default function SectionCertificationHighlights() {
       </div>
       {highlightedCerts.length > 0 && (
         <PortfolioLink
-          href="/certifications"
-          content={t("viewAll")}
           classNames="text-center m-auto text-muted"
+          content={t("viewAll")}
+          href="/certifications"
         />
       )}
     </ContentContainer>

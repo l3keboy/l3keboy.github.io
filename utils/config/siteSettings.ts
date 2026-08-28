@@ -1,222 +1,55 @@
 import { Companies } from "../enums/Company"
 import { SourceType } from "../enums/SourceType"
 
-export type IProjectSiteSettings = {
-  slug: string
-  languages: string[]
-  tools: string[]
-  image?: string
-  type: SourceType
-  links: {
-    slug: string
-    url: string
-    highlight: boolean
-  }[]
-  highlight: boolean
-}
 export type ICertificationSiteSettings = {
-  slug: string
-  company: {
-    name: Companies
-  }
-  grantDate: Date;
-  expiryDate?: Date;
   certificate: {
     name: string;
     number: string;
     url: string;
   }
+  company: {
+    name: Companies
+  }
+  expiryDate?: Date;
+  grantDate: Date;
   highlight: boolean
+  slug: string
+}
+export type IProjectSiteSettings = {
+  highlight: boolean
+  image?: string
+  languages: string[]
+  links: {
+    highlight: boolean
+    slug: string
+    url: string
+  }[]
+  slug: string
+  tools: string[]
+  type: SourceType
 }
 
 export type ISiteSettings = {
-  urls: {
-    githubUrl: string;
-    linkedInUrl: string;
-  }
+  certifications: ICertificationSiteSettings[],
+  currentEducation: string
+  currentEmployee: string
+  currentLanguages: string[]
+  currentLocation: string
+  projects: IProjectSiteSettings[],
   siteMetadata: {
     maintenance: boolean;
     supportedSiteLanguages: string[]
   }
-  projects: IProjectSiteSettings[],
-  certifications: ICertificationSiteSettings[],
-  currentEmployee: string
-  currentEducation: string
-  currentLocation: string
-  currentLanguages: string[]
   title: string;
+  urls: {
+    githubUrl: string;
+    linkedInUrl: string;
+  }
 };
 
 export const siteSettings: ISiteSettings = {
-  urls: {
-    githubUrl: "https://github.com/l3keboy",
-    linkedInUrl: "https://www.linkedin.com/in/luke-h-421515225/",
-  },
-  siteMetadata: {
-    supportedSiteLanguages: ["en"],
-    maintenance: true,
-  },
-  projects:[
-    {
-      slug: "partio",
-      languages: ["C#", "NextJS", "HTML", "CSS", "TailwindCSS"],
-      tools: ["Docker", "Docker Compose", "PostgreSQL", "Supabase", "Google Tag Manager", "Google Analytics", "CookieBot"],
-      image: "https://partio.app/apple-touch-icon.png",
-      type: SourceType.CLOSED_SOURCE,
-      links: [
-        {
-          slug: "website", url: "https://partio.app/",
-          highlight: true
-        },
-        {
-          slug: "organization", url: "https://github.com/partio-official",
-          highlight: false
-        }
-      ],
-      highlight: true
-    },
-    {
-      slug: "solyra_coaching",
-      languages: ["Nextjs", "HTML", "CSS", "TailwindCSS"],
-      tools: ["Vercel", "Cal.com"],
-      image: "https://solyra-coaching.nl/logo.png",
-      type: SourceType.CLOSED_SOURCE,
-      links: [
-        {
-          slug: "website", url: "https://solyra-coaching.nl/",
-          highlight: true
-        }
-      ],
-      highlight: false
-    },
-    {
-      slug: "husqy",
-      languages: ["Python", "NextJS", "HTML", "CSS"],
-      tools: ["Docker", "MicroK8S", "PostgreSQL", "Redis", "Lavalink", "HashiCorp Vault", "OpenTelemetry", "Seq"],
-      image: "https://github.com/husqybot/assets/blob/main/logos/logo_default.png?raw=true",
-      type: SourceType.CLOSED_SOURCE,
-      links: [
-        {
-          slug: "organization", url: "https://github.com/husqybot",
-          highlight: true
-        },
-        {
-          slug: "website", url: "https://husqy.xyz/",
-          highlight: false
-        },
-        {
-          slug: "docs", url: "https://docs.husqy.xyz/",
-          highlight: false
-        },
-        {
-          slug: "dashboard", url: "https://dashboard.husqy.xyz/",
-          highlight: false
-        }
-      ],
-      highlight: true
-    },
-    {
-      slug: "victreebot",
-      languages: ["Python"],
-      tools: ["Docker", "PostgreSQL", "Docker"],
-      image: "https://github.com/l3keboy/Victreebot/blob/main/assets/logos/VictreeBot.png?raw=true",
-      type: SourceType.OPEN_SOURCE,
-      links: [
-        {
-          slug: "source", url: "https://github.com/l3keboy/victreebot",
-          highlight: true
-        },
-        {
-          slug: "support_server", url: "https://discord.gg/sVmMUXCYp2",
-          highlight: false
-        }
-      ],
-      highlight: false
-    },
-    {
-      slug: "l3keboy_github_io",
-      languages: ["Nextjs"],
-      tools: ["Vercel"],
-      type: SourceType.OPEN_SOURCE,
-      links: [
-        {
-          slug: "source", url: "https://github.com/l3keboy/l3keboy.github.io",
-          highlight: true
-        },
-      ],
-      highlight: true
-    },
-    {
-      slug: "ios_qr_validator",
-      languages: ["Swift"],
-      tools: ["XCode", "Google Safebrowsing API"],
-      type: SourceType.OPEN_SOURCE,
-      links: [
-        {
-          slug: "source", url: "https://github.com/l3keboy/iOS-QR_Validator",
-          highlight: true
-        },
-      ],
-      highlight: false
-    },
-    {
-      slug: "ios_timeit",
-      languages: ["Swift"],
-      tools: ["XCode"],
-      type: SourceType.OPEN_SOURCE,
-      links: [
-        {
-          slug: "source", url: "https://github.com/l3keboy/iOS-TimeIt",
-          highlight: true
-        },
-      ],
-      highlight: false
-    },
-    {
-      slug: "ios_factzzz",
-      languages: ["Swift"],
-      tools: ["XCode"],
-      type: SourceType.OPEN_SOURCE,
-      links: [
-        {
-          slug: "source", url: "https://github.com/l3keboy/iOS-Factzzz",
-          highlight: true
-        },
-      ],
-      highlight: false
-    },
-    {
-      slug: "lukehendriks_net-v2",
-      languages: ["Nuxt V3"],
-      tools: [],
-      type: SourceType.OPEN_SOURCE,
-      image: "https://github.com/l3keboy/lukehendriks.net-v2/blob/main/frontend/assets/images/memoji.png?raw=true",
-      links: [
-        {
-          slug: "source", url: "https://github.com/l3keboy/lukehendriks.net-v2",
-          highlight: true
-        },
-      ],
-      highlight: false
-    },
-    {
-      slug: "lukehendriks_net-v1",
-      languages: ["ReactJS", "TailwindCSS", "Laravel Lumen"],
-      tools: [],
-      type: SourceType.OPEN_SOURCE,
-      image: "https://github.com/l3keboy/lukehendriks.net-v1/blob/main/images/homescreen-hero.png?raw=true",
-      links: [
-        {
-          slug: "source", url: "https://github.com/l3keboy/lukehendriks.net-v1",
-          highlight: true
-        },
-      ],
-      highlight: false
-    }
-  ],
   certifications:[
     {
-      slug: "az_400",
       certificate: {
         name: "Microsoft Certified: DevOps Engineer Expert (AZ-400)",
         number: "53C1765EC4418787",
@@ -225,12 +58,12 @@ export const siteSettings: ISiteSettings = {
       company: {
         name: Companies.MICROSOFT
       },
-      grantDate: new Date(2025, 11), // December 2025
       expiryDate: new Date(2027, 11), // December 2027
+      grantDate: new Date(2025, 11), // December 2025
       highlight: true,
+      slug: "az_400",
     },
     {
-      slug: "az_204",
       certificate: {
         name: "Microsoft Certified: Azure Developer Associate (AZ-204)",
         number: "7990801179F2FC6E",
@@ -239,12 +72,12 @@ export const siteSettings: ISiteSettings = {
       company: {
         name: Companies.MICROSOFT
       },
-      grantDate: new Date(2025, 8), // September 2025
       expiryDate: new Date(2027, 8), // September 2027
+      grantDate: new Date(2025, 8), // September 2025
       highlight: true,
+      slug: "az_204",
     },
     {
-      slug: "az_104",
       certificate: {
         name: "Microsoft Certified: Azure Administrator Associate (AZ-104)",
         number: "91ACAED8BC28489C",
@@ -253,12 +86,12 @@ export const siteSettings: ISiteSettings = {
       company: {
         name: Companies.MICROSOFT
       },
-      grantDate: new Date(2025, 2), // March 2025
       expiryDate: new Date(2027, 2), // March 2027
+      grantDate: new Date(2025, 2), // March 2025
       highlight: true,
+      slug: "az_104",
     },
     {
-      slug: "itil_v4_foundation",
       certificate: {
         name: "ITIL v4 Foundation Certificate in IT Service Management",
         number: "GR671779843LH",
@@ -267,12 +100,12 @@ export const siteSettings: ISiteSettings = {
       company: {
         name: Companies.PEOPLECERT
       },
-      grantDate: new Date(2025, 5), // June 2025
       expiryDate: new Date(2028, 5), // June 2028
+      grantDate: new Date(2025, 5), // June 2025
       highlight: false,
+      slug: "itil_v4_foundation",
     },
     {
-      slug: "exin_bcs_practitioner",
       certificate: {
         name: "EXIN BCS Practitioner Certificate in Modelling Business Processes",
         number: "6625367.20894115",
@@ -283,9 +116,9 @@ export const siteSettings: ISiteSettings = {
       },
       grantDate: new Date(2025, 3), // April 2025
       highlight: false,
+      slug: "exin_bcs_practitioner",
     },
     {
-      slug: "exin_bcs_foundation",
       certificate: {
         name: "EXIN BCS Foundation Certificate in Business Analysis (BAF)",
         number: "6625367.20892338",
@@ -296,9 +129,9 @@ export const siteSettings: ISiteSettings = {
       },
       grantDate: new Date(2025, 2), // March 2025
       highlight: false,
+      slug: "exin_bcs_foundation",
     },
     {
-      slug: "js_coding_specialist",
       certificate: {
         name: "JavaScript Coding Specialist",
         number: "67a11e61e222fe7625430f76",
@@ -309,9 +142,9 @@ export const siteSettings: ISiteSettings = {
       },
       grantDate: new Date(2025, 1), // February 2025
       highlight: false,
+      slug: "js_coding_specialist",
     },
     {
-      slug: "c#_coding_apprentice",
       certificate: {
         name: "C# Coding Apprentice",
         number: "66e38132ba58052fdb8c551a",
@@ -322,9 +155,9 @@ export const siteSettings: ISiteSettings = {
       },
       grantDate: new Date(2024, 8), // September 2024
       highlight: false,
+      slug: "c#_coding_apprentice",
     },
     {
-      slug: "dasa_devops_professional_enable_and_scale",
       certificate: {
         name: "DASA DevOps Professional Enable and Scale",
         number: "103296889",
@@ -335,9 +168,9 @@ export const siteSettings: ISiteSettings = {
       },
       grantDate: new Date(2024, 4), // May 2024
       highlight: false,
+      slug: "dasa_devops_professional_enable_and_scale",
     },
     {
-      slug: "az_900",
       certificate: {
         name: "Microsoft Certified: Azure Fundamentals (AZ-900)",
         number: "5F9C8D99D7EBAB3B",
@@ -348,9 +181,9 @@ export const siteSettings: ISiteSettings = {
       },
       grantDate: new Date(2024, 4), // May 2024
       highlight: false,
+      slug: "az_900",
     },
     {
-      slug: "dasa_devops_fundamentals",
       certificate: {
         name: "DASA DevOps Fundamentals",
         number: "93842913",
@@ -361,9 +194,9 @@ export const siteSettings: ISiteSettings = {
       },
       grantDate: new Date(2024, 1), // February 2024
       highlight: false,
+      slug: "dasa_devops_fundamentals",
     },
     {
-      slug: "network+",
       certificate: {
         name: "CompTIA Network+ ce Certification",
         number: "7C6LLGT6BEE111WJ",
@@ -372,14 +205,181 @@ export const siteSettings: ISiteSettings = {
       company: {
         name: Companies.COMPTIA
       },
-      grantDate: new Date(2024, 0), // January 2024
       expiryDate: new Date(2027, 0), // January 2027
+      grantDate: new Date(2024, 0), // January 2024
       highlight: false,
+      slug: "network+",
     }
   ],
-  currentEmployee: "CZ",
-  currentLocation: "NL",
   currentEducation: "HBO-ICT - Fontys",
+  currentEmployee: "CZ",
   currentLanguages: ["nl", "en"],
+  currentLocation: "NL",
+  projects:[
+    {
+      highlight: true,
+      image: "https://partio.app/apple-touch-icon.png",
+      languages: ["C#", "NextJS", "HTML", "CSS", "TailwindCSS"],
+      links: [
+        {
+          highlight: true, slug: "website",
+          url: "https://partio.app/"
+        },
+        {
+          highlight: false, slug: "organization",
+          url: "https://github.com/partio-official"
+        }
+      ],
+      slug: "partio",
+      tools: ["Docker", "Docker Compose", "PostgreSQL", "Supabase", "Google Tag Manager", "Google Analytics", "CookieBot"],
+      type: SourceType.CLOSED_SOURCE
+    },
+    {
+      highlight: false,
+      image: "https://solyra-coaching.nl/logo.png",
+      languages: ["Nextjs", "HTML", "CSS", "TailwindCSS"],
+      links: [
+        {
+          highlight: true, slug: "website",
+          url: "https://solyra-coaching.nl/"
+        }
+      ],
+      slug: "solyra_coaching",
+      tools: ["Vercel", "Cal.com"],
+      type: SourceType.CLOSED_SOURCE
+    },
+    {
+      highlight: true,
+      image: "https://github.com/husqybot/assets/blob/main/logos/logo_default.png?raw=true",
+      languages: ["Python", "NextJS", "HTML", "CSS"],
+      links: [
+        {
+          highlight: true, slug: "organization",
+          url: "https://github.com/husqybot"
+        },
+        {
+          highlight: false, slug: "website",
+          url: "https://husqy.xyz/"
+        },
+        {
+          highlight: false, slug: "docs",
+          url: "https://docs.husqy.xyz/"
+        },
+        {
+          highlight: false, slug: "dashboard",
+          url: "https://dashboard.husqy.xyz/"
+        }
+      ],
+      slug: "husqy",
+      tools: ["Docker", "MicroK8S", "PostgreSQL", "Redis", "Lavalink", "HashiCorp Vault", "OpenTelemetry", "Seq"],
+      type: SourceType.CLOSED_SOURCE
+    },
+    {
+      highlight: false,
+      image: "https://github.com/l3keboy/Victreebot/blob/main/assets/logos/VictreeBot.png?raw=true",
+      languages: ["Python"],
+      links: [
+        {
+          highlight: true, slug: "source",
+          url: "https://github.com/l3keboy/victreebot"
+        },
+        {
+          highlight: false, slug: "support_server",
+          url: "https://discord.gg/sVmMUXCYp2"
+        }
+      ],
+      slug: "victreebot",
+      tools: ["Docker", "PostgreSQL", "Docker"],
+      type: SourceType.OPEN_SOURCE
+    },
+    {
+      highlight: true,
+      languages: ["Nextjs"],
+      links: [
+        {
+          highlight: true, slug: "source",
+          url: "https://github.com/l3keboy/l3keboy.github.io"
+        },
+      ],
+      slug: "l3keboy_github_io",
+      tools: ["Vercel"],
+      type: SourceType.OPEN_SOURCE
+    },
+    {
+      highlight: false,
+      languages: ["Swift"],
+      links: [
+        {
+          highlight: true, slug: "source",
+          url: "https://github.com/l3keboy/iOS-QR_Validator"
+        },
+      ],
+      slug: "ios_qr_validator",
+      tools: ["XCode", "Google Safebrowsing API"],
+      type: SourceType.OPEN_SOURCE
+    },
+    {
+      highlight: false,
+      languages: ["Swift"],
+      links: [
+        {
+          highlight: true, slug: "source",
+          url: "https://github.com/l3keboy/iOS-TimeIt"
+        },
+      ],
+      slug: "ios_timeit",
+      tools: ["XCode"],
+      type: SourceType.OPEN_SOURCE
+    },
+    {
+      highlight: false,
+      languages: ["Swift"],
+      links: [
+        {
+          highlight: true, slug: "source",
+          url: "https://github.com/l3keboy/iOS-Factzzz"
+        },
+      ],
+      slug: "ios_factzzz",
+      tools: ["XCode"],
+      type: SourceType.OPEN_SOURCE
+    },
+    {
+      highlight: false,
+      image: "https://github.com/l3keboy/lukehendriks.net-v2/blob/main/frontend/assets/images/memoji.png?raw=true",
+      languages: ["Nuxt V3"],
+      links: [
+        {
+          highlight: true, slug: "source",
+          url: "https://github.com/l3keboy/lukehendriks.net-v2"
+        },
+      ],
+      slug: "lukehendriks_net-v2",
+      tools: [],
+      type: SourceType.OPEN_SOURCE
+    },
+    {
+      highlight: false,
+      image: "https://github.com/l3keboy/lukehendriks.net-v1/blob/main/images/homescreen-hero.png?raw=true",
+      languages: ["ReactJS", "TailwindCSS", "Laravel Lumen"],
+      links: [
+        {
+          highlight: true, slug: "source",
+          url: "https://github.com/l3keboy/lukehendriks.net-v1"
+        },
+      ],
+      slug: "lukehendriks_net-v1",
+      tools: [],
+      type: SourceType.OPEN_SOURCE
+    }
+  ],
+  siteMetadata: {
+    maintenance: true,
+    supportedSiteLanguages: ["en"],
+  },
   title: "Luke Hendriks",
+  urls: {
+    githubUrl: "https://github.com/l3keboy",
+    linkedInUrl: "https://www.linkedin.com/in/luke-h-421515225/",
+  },
 };

@@ -1,18 +1,19 @@
 "use client";
 // ! Load image and image size on client side
 
-import Image from "next/image";
 import clsx from "clsx";
+import Image from "next/image";
+
 import { useWindowSize } from "@/utils/hooks/useWindowSize";
 
 // Interfaces
 export interface IImageDisplay {
+  bigIcon?: boolean;
   image?: string;
   title: string;
-  bigIcon?: boolean;
 }
 
-export default function ImageDisplay({ image, title, bigIcon }: IImageDisplay) {
+export default function ImageDisplay({ bigIcon, image, title }: IImageDisplay) {
   const { width } = useWindowSize();
 
   const imageDisplayBigIcon = bigIcon ?? false;
@@ -26,11 +27,11 @@ export default function ImageDisplay({ image, title, bigIcon }: IImageDisplay) {
         )}
       >
         <Image
-          height={imageDisplayBigIcon && width > 768 ? 80 : 32}
-          width={imageDisplayBigIcon && width > 768 ? 80 : 32}
-          src={image}
           alt={title}
+          height={imageDisplayBigIcon && width > 768 ? 80 : 32}
+          src={image}
           style={{ height: "auto" }}
+          width={imageDisplayBigIcon && width > 768 ? 80 : 32}
         />
       </div>
     )

@@ -1,26 +1,28 @@
-import { type IProjectSiteSettings } from "@/utils/config/siteSettings";
 import { useTranslations } from "next-intl";
+import { ElementType } from "react";
+
+import { type IProjectSiteSettings } from "@/utils/config/siteSettings";
+
+import PortfolioButton from "../../ui/PortfolioButton";
 import PortfolioLink from "../../ui/PortfolioLink";
 import CardTitle from "../../ui/titles/CardTitle";
-import PortfolioButton from "../../ui/PortfolioButton";
-import { ElementType } from "react";
 import ImageDisplay from "./ImageDisplay";
 
-export type IProject = IProjectSiteSettings & {
-  title: string;
-  subtitle: string;
+export type IProject = {
   description: string;
-};
+  subtitle: string;
+  title: string;
+} & IProjectSiteSettings;
 export type IProjectContainer = {
-  project: IProject;
   bigIcon?: boolean;
   cardTitleAs?: ElementType;
+  project: IProject;
 };
 
 export default function ProjectContainer({
-  project,
   bigIcon,
   cardTitleAs,
+  project,
 }: IProjectContainer) {
   const t = useTranslations("Components.ProjectContainer");
   const tProjects = useTranslations("SiteSettings.Projects");
@@ -31,11 +33,11 @@ export default function ProjectContainer({
   return (
     <div className="w-full h-full p-6 rounded-lg bg-surface flex flex-col gap-3">
       <div className="flex flex-row justify-between gap-6 w-full relative">
-        <CardTitle text={project.title} as={projectContainerCardTitleAs} />
+        <CardTitle as={projectContainerCardTitleAs} text={project.title} />
         <ImageDisplay
+          bigIcon={projectContainerBigIcon}
           image={project.image}
           title={project.title}
-          bigIcon={projectContainerBigIcon}
         />
       </div>
       <div className="text-muted flex flex-col gap-3">
@@ -52,16 +54,16 @@ export default function ProjectContainer({
                 ariaLabel={t("ariaLabel", {
                   project: `${project.slug} ${link.slug}`,
                 })}
-                noUnderline
-                linkIsExternal
-                href={link.url}
-                key={`${project.slug}-${link.slug}`}
                 content={
                   <PortfolioButton
-                    variant={link.highlight ? "primary" : "outline"}
                     content={tProjects(`${project.slug}.Links.${link.slug}`)}
+                    variant={link.highlight ? "primary" : "outline"}
                   />
                 }
+                href={link.url}
+                key={`${project.slug}-${link.slug}`}
+                linkIsExternal
+                noUnderline
               />
             );
           })}
@@ -70,15 +72,15 @@ export default function ProjectContainer({
           ariaLabel={t("ariaLabel", {
             project: `${project.slug}`,
           })}
-          noUnderline
-          href={`/projects/${project.slug}`}
           content={
             <PortfolioButton
+              content={t("projectDetails")}
               key={project.slug}
               variant="tertiary"
-              content={t("projectDetails")}
             />
           }
+          href={`/projects/${project.slug}`}
+          noUnderline
         />
       </div>
     </div>

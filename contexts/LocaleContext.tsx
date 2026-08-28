@@ -1,5 +1,6 @@
 "use client";
-import { siteSettings } from "@/utils/config/siteSettings";
+// ! Client side component because contexts can only be made client side
+
 import { useRouter } from "next/navigation";
 import {
   createContext,
@@ -11,11 +12,13 @@ import {
 import { ReactNode } from "react";
 import { useCookies } from "react-cookie";
 
+import { siteSettings } from "@/utils/config/siteSettings";
+
 // Interfaces
 export interface ILocaleContext {
   locale: string;
-  setLocale: ({ userPreferredLocale }: ISetLocale) => Promise<void>;
   resolveSupportedLocale: () => string;
+  setLocale: ({ userPreferredLocale }: ISetLocale) => Promise<void>;
 }
 export interface ISetLocale {
   userPreferredLocale: string;
@@ -24,10 +27,10 @@ export interface ISetLocale {
 // Context
 export const LocaleContext = createContext<ILocaleContext>({
   locale: "en-US",
-  setLocale: function (): Promise<void> {
+  resolveSupportedLocale: function (): string {
     throw new Error("Function not implemented.");
   },
-  resolveSupportedLocale: function (): string {
+  setLocale: function (): Promise<void> {
     throw new Error("Function not implemented.");
   },
 });
@@ -83,8 +86,8 @@ export default function LocaleContextProvider({
     <LocaleContext.Provider
       value={{
         locale: userLocale,
-        setLocale: setLocale,
         resolveSupportedLocale: resolveSupportedLocale,
+        setLocale: setLocale,
       }}
     >
       {children}

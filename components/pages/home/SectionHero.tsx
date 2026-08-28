@@ -6,11 +6,12 @@ import PortfolioButton from "@/components/ui/PortfolioButton";
 import PortfolioChip from "@/components/ui/PortfolioChip";
 import PortfolioLink from "@/components/ui/PortfolioLink";
 import DisplayTitle from "@/components/ui/titles/DisplayTitle";
+import { useLocaleContext } from "@/contexts/LocaleContext";
 import { siteSettings } from "@/utils/config/siteSettings";
 
 import SummaryItem, { type ISummaryItem } from "./_components/SummaryItem";
-import { useLocaleContext } from "@/contexts/LocaleContext";
 
+// TODO use client optimization (use locale context)
 export default function SectionHero() {
   const t = useTranslations("Pages.Home.Hero");
   const { resolveSupportedLocale } = useLocaleContext();
@@ -23,8 +24,8 @@ export default function SectionHero() {
   keys.forEach((key) => {
     summaryItems.push({
       description: t(`Summary.${key}.description`, {
-        employee: siteSettings.currentEmployee,
         education: siteSettings.currentEducation,
+        employee: siteSettings.currentEmployee,
         languages: siteSettings.currentLanguages
           .map((x) =>
             new Intl.DisplayNames([resolveSupportedLocale()], {

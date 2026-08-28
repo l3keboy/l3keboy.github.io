@@ -1,17 +1,17 @@
 export enum Companies {
-  MICROSOFT = "Microsoft",
-  PEOPLECERT = "PeopleCert",
+  COMPTIA = "CompTIA",
+  DASA = "DevOps Agile Skills Association",
   EXIN = "EXIN",
   KNOWLEDGE_PILLARS = "Knowledge Pillars",
-  DASA = "DevOps Agile Skills Association",
-  COMPTIA = "CompTIA",
+  MICROSOFT = "Microsoft",
+  PEOPLECERT = "PeopleCert",
 }
 
 export const CompanyUrl = {
-  [Companies.MICROSOFT]: null,
-  [Companies.PEOPLECERT]: null,
+  [Companies.COMPTIA]: null,
+  [Companies.DASA]: null,
   [Companies.EXIN]: null,
   [Companies.KNOWLEDGE_PILLARS]: null,
-  [Companies.DASA]: null,
-  [Companies.COMPTIA]: null,
+  [Companies.MICROSOFT]: null,
+  [Companies.PEOPLECERT]: null,
 };

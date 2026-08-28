@@ -1,13 +1,13 @@
 import { useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
-import PortfolioChip from "@/components/ui/PortfolioChip";
-import HeadingTitle from "@/components/ui/titles/HeadingTitle";
-import { siteSettings } from "@/utils/config/siteSettings";
 import ProjectContainer, {
   type IProject,
 } from "@/components/common/projects/ProjectContainer";
+import PortfolioChip from "@/components/ui/PortfolioChip";
 import PortfolioLink from "@/components/ui/PortfolioLink";
+import HeadingTitle from "@/components/ui/titles/HeadingTitle";
+import { siteSettings } from "@/utils/config/siteSettings";
 
 export default function SectionProjectHighlights() {
   const t = useTranslations("Pages.Home.ProjectHighlights");
@@ -22,9 +22,9 @@ export default function SectionProjectHighlights() {
   siteSettingsHighlightedProjects.forEach((project) => {
     highlightedProjects.push({
       ...project,
-      title: tProjects(`${project.slug}.title`),
-      subtitle: tProjects(`${project.slug}.subtitle`),
       description: tProjects(`${project.slug}.description`),
+      subtitle: tProjects(`${project.slug}.subtitle`),
+      title: tProjects(`${project.slug}.title`),
     });
   });
   // #endregion
@@ -42,23 +42,16 @@ export default function SectionProjectHighlights() {
         <div className="flex flex-col md:flex-row items-stretch gap-3">
           {highlightedProjects.length > 0 &&
             highlightedProjects.map((project) => {
-              return (
-                <ProjectContainer
-                  key={project.slug}
-                  project={project}
-                  showLanguages
-                  showTools
-                />
-              );
+              return <ProjectContainer key={project.slug} project={project} />;
             })}
           {highlightedProjects.length <= 0 && <label>{t("noProjects")}</label>}
         </div>
       </div>
       {highlightedProjects.length > 0 && (
         <PortfolioLink
-          href="/projects"
-          content={t("viewAll")}
           classNames="text-center m-auto text-muted"
+          content={t("viewAll")}
+          href="/projects"
         />
       )}
     </ContentContainer>

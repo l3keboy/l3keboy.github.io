@@ -1,12 +1,11 @@
-"use client";
 import { useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
 import { siteSettings } from "@/utils/config/siteSettings";
+
 import ProjectContainer, {
   type IProject,
 } from "../../common/projects/ProjectContainer";
-import { useWindowSize } from "@/utils/hooks/useWindowSize";
 
 export default function SectionProjectsDisplay() {
   const t = useTranslations("Pages.Projects.ProjectsDisplay");
@@ -19,9 +18,9 @@ export default function SectionProjectsDisplay() {
   siteSettingsProjects.forEach((project) => {
     projects.push({
       ...project,
-      title: tProjects(`${project.slug}.title`),
-      subtitle: tProjects(`${project.slug}.subtitle`),
       description: tProjects(`${project.slug}.description`),
+      subtitle: tProjects(`${project.slug}.subtitle`),
+      title: tProjects(`${project.slug}.title`),
     });
   });
   // #endregion
@@ -37,10 +36,10 @@ export default function SectionProjectsDisplay() {
             projects.map((project) => {
               return (
                 <ProjectContainer
+                  bigIcon
                   cardTitleAs="h2"
                   key={project.slug}
                   project={project}
-                  bigIcon
                 />
               );
             })}

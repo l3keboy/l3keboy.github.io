@@ -1,8 +1,8 @@
-"use client";
 import { useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
 import { siteSettings } from "@/utils/config/siteSettings";
+
 import CertificationContainer, {
   type ICertification,
 } from "../../common/certifications/CertificationContainer";
@@ -38,8 +38,8 @@ export default function SectionCertificatesDisplay() {
               return (
                 <CertificationContainer
                   cardTitleAs="h2"
-                  key={cert.slug}
                   certificate={cert}
+                  key={cert.slug}
                   showSkills
                 />
               );

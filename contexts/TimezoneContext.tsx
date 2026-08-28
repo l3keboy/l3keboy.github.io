@@ -1,4 +1,6 @@
 "use client";
+// ! Client side component because contexts can only be made client side
+
 import { useRouter } from "next/navigation";
 import {
   createContext,

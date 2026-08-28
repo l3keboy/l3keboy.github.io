@@ -41,7 +41,7 @@ export default function SectionAbout() {
           </div>
           {aboutParagraphs.map((paragraph, idx) => {
             return (
-              <label key={idx} className="text-muted">
+              <label className="text-muted" key={idx}>
                 {paragraph}
               </label>
             );
@@ -54,7 +54,7 @@ export default function SectionAbout() {
 
           {aboutBackgroundParagraphs.map((paragraph, idx) => {
             return (
-              <label key={idx} className="text-muted">
+              <label className="text-muted" key={idx}>
                 {paragraph}
               </label>
             );

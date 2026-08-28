@@ -1,6 +1,7 @@
-import { siteSettings } from "@/utils/config/siteSettings";
 import { getRequestConfig } from "next-intl/server";
 import { cookies } from "next/headers";
+
+import { siteSettings } from "@/utils/config/siteSettings";
 
 export default getRequestConfig(async () => {
   // Helpers

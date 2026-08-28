@@ -1,15 +1,16 @@
 "use client";
 // ! Locales are client side, therefore use client
 
-import { useLocaleContext } from "@/contexts/LocaleContext";
 import { useTranslations } from "next-intl";
+
+import { useLocaleContext } from "@/contexts/LocaleContext";
 
 // Interfaces
 export interface IDateDisplay {
-  grantDate: Date;
   expiryDate?: Date;
+  grantDate: Date;
 }
-export function DateDisplay({ grantDate, expiryDate }: IDateDisplay) {
+export function DateDisplay({ expiryDate, grantDate }: IDateDisplay) {
   const { resolveSupportedLocale } = useLocaleContext();
   const t = useTranslations("Components.CertificationContainer");
 
@@ -18,8 +19,8 @@ export function DateDisplay({ grantDate, expiryDate }: IDateDisplay) {
       <span>
         {t("granted")}{" "}
         {new Intl.DateTimeFormat(resolveSupportedLocale(), {
-          year: "numeric",
           month: "long",
+          year: "numeric",
         }).format(grantDate)}
       </span>
 
@@ -29,8 +30,8 @@ export function DateDisplay({ grantDate, expiryDate }: IDateDisplay) {
           <span>
             {t("expires")}{" "}
             {new Intl.DateTimeFormat(resolveSupportedLocale(), {
-              year: "numeric",
               month: "long",
+              year: "numeric",
             }).format(expiryDate)}
           </span>
         </>

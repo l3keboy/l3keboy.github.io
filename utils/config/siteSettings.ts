@@ -1,5 +1,6 @@
 import { Companies } from "../enums/Company"
 import { SourceType } from "../enums/SourceType"
+import { StackCategories } from "../enums/StackCategories";
 
 export type ICertificationSiteSettings = {
   certificate: {
@@ -40,6 +41,7 @@ export type ISiteSettings = {
     maintenance: boolean;
     supportedSiteLanguages: string[]
   }
+  stack: IStackCategorySiteSettings[]
   title: string;
   urls: {
     githubUrl: string;
@@ -47,7 +49,17 @@ export type ISiteSettings = {
   }
 };
 
+export type IStackCategorySiteSettings = {
+  slug: string;
+  tools: IStackCategoryToolSiteSettings[];
+}
+export type IStackCategoryToolSiteSettings = {
+  highlighted: boolean,
+  tool: string,
+}
+
 export const siteSettings: ISiteSettings = {
+  // ! Highlighted true are shown on home page
   certifications:[
     {
       certificate: {
@@ -215,11 +227,12 @@ export const siteSettings: ISiteSettings = {
   currentEmployee: "CZ",
   currentLanguages: ["nl", "en"],
   currentLocation: "NL",
+  // ! Highlighted true are shown on home page
   projects:[
     {
       highlight: true,
       image: "https://partio.app/apple-touch-icon.png",
-      languages: ["C#", "NextJS", "HTML", "CSS", "TailwindCSS"],
+      languages: ["C#", "Next.js", "HTML/CSS", "Tailwind"],
       links: [
         {
           highlight: true, slug: "website",
@@ -231,13 +244,13 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "partio",
-      tools: ["Docker", "Docker Compose", "PostgreSQL", "Supabase", "Google Tag Manager", "Google Analytics", "CookieBot"],
+      tools: ["Docker", "Docker Compose", "PostgreSQL", "Supabase", "Google Tag Manager", "Google Analytics", "CookieBot", "SignalR", ".NET", "HeroUI"],
       type: SourceType.CLOSED_SOURCE
     },
     {
       highlight: false,
       image: "https://solyra-coaching.nl/logo.png",
-      languages: ["Nextjs", "HTML", "CSS", "TailwindCSS"],
+      languages: ["Next.js", "HTML/CSS", "Tailwind"],
       links: [
         {
           highlight: true, slug: "website",
@@ -245,13 +258,13 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "solyra_coaching",
-      tools: ["Vercel", "Cal.com"],
+      tools: ["Vercel", "Cal.com", "HeroUI"],
       type: SourceType.CLOSED_SOURCE
     },
     {
       highlight: true,
       image: "https://github.com/husqybot/assets/blob/main/logos/logo_default.png?raw=true",
-      languages: ["Python", "NextJS", "HTML", "CSS"],
+      languages: ["Python", "Next.js", "HTML/CSS"],
       links: [
         {
           highlight: true, slug: "organization",
@@ -271,7 +284,7 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "husqy",
-      tools: ["Docker", "MicroK8S", "PostgreSQL", "Redis", "Lavalink", "HashiCorp Vault", "OpenTelemetry", "Seq"],
+      tools: ["Docker", "MicroK8S", "PostgreSQL", "Redis", "Lavalink", "HashiCorp Vault", "OpenTelemetry", "Seq", "HeroUI"],
       type: SourceType.CLOSED_SOURCE
     },
     {
@@ -294,7 +307,7 @@ export const siteSettings: ISiteSettings = {
     },
     {
       highlight: true,
-      languages: ["Nextjs"],
+      languages: ["Next.js"],
       links: [
         {
           highlight: true, slug: "source",
@@ -302,12 +315,12 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "l3keboy_github_io",
-      tools: ["Vercel"],
+      tools: ["Vercel", "HeroUI"],
       type: SourceType.OPEN_SOURCE
     },
     {
       highlight: false,
-      languages: ["Swift"],
+      languages: ["SwiftUI"],
       links: [
         {
           highlight: true, slug: "source",
@@ -320,7 +333,7 @@ export const siteSettings: ISiteSettings = {
     },
     {
       highlight: false,
-      languages: ["Swift"],
+      languages: ["SwiftUI"],
       links: [
         {
           highlight: true, slug: "source",
@@ -347,7 +360,7 @@ export const siteSettings: ISiteSettings = {
     {
       highlight: false,
       image: "https://github.com/l3keboy/lukehendriks.net-v2/blob/main/frontend/assets/images/memoji.png?raw=true",
-      languages: ["Nuxt V3"],
+      languages: ["Nuxt"],
       links: [
         {
           highlight: true, slug: "source",
@@ -361,7 +374,7 @@ export const siteSettings: ISiteSettings = {
     {
       highlight: false,
       image: "https://github.com/l3keboy/lukehendriks.net-v1/blob/main/images/homescreen-hero.png?raw=true",
-      languages: ["ReactJS", "TailwindCSS", "Laravel Lumen"],
+      languages: ["React", "Tailwind", "Laravel Lumen"],
       links: [
         {
           highlight: true, slug: "source",
@@ -377,6 +390,34 @@ export const siteSettings: ISiteSettings = {
     maintenance: true,
     supportedSiteLanguages: ["en"],
   },
+  // ! Highlighted true are shown on home page
+  stack: [
+    {
+      slug: StackCategories.CLOUD_AND_INFRA,
+      tools: [
+        {highlighted: true, tool: "Entra ID"}, {highlighted: true, tool: "Azure"}, {highlighted: true, tool: "Azure ARM"}, {highlighted: true, tool: "Azure Bicep"}, {highlighted: true, tool: "PostgreSQL"}, {highlighted: true, tool: "Redis"}, {highlighted: false, tool: "UniFi"}, {highlighted: false, tool: "PFsense"}, {highlighted: false, tool: "Nginx"}],
+    },
+    {
+      slug: StackCategories.CONTAINERS_AND_ORCHESTRATION,
+      tools: [{highlighted: true, tool: "Docker"}, {highlighted: true, tool: "Docker compose"}, {highlighted: true, tool: "MicroK8S"}, {highlighted: true, tool: "Kubernetes"}],
+    },
+    {
+      slug: StackCategories.CICD_AND_AUTOMATION,
+      tools: [{highlighted: true, tool: "GitHub Actions"}, {highlighted: true, tool: "Azure DevOps"}, {highlighted: true, tool: "Ansible"}],
+    },
+    {
+      slug: StackCategories.MONITORING_AND_SECURITY,
+      tools: [{highlighted: true, tool: "Azure Key Vault"}, {highlighted: true, tool: "Application Insights"}, {highlighted: false, tool: "Seq"}, {highlighted: true, tool: "OpenTelemetry"}, {highlighted: true, tool: "HashiCorp Vault"}, {highlighted: false, tool: "Elastic Stack"}, {highlighted: false, tool: "Grafana"}, {highlighted: false, tool: "Zabbix"}],
+    },
+    {
+      slug: StackCategories.LANGUAGES_AND_FRAMEWORKS,
+      tools: [{highlighted: true, tool: "C#"}, {highlighted: true, tool: ".NET"}, {highlighted: true, tool: "Next.js"}, {highlighted: true, tool: "Python"}, {highlighted: false, tool: "React"}, {highlighted: false, tool: "Javascript"}, {highlighted: false, tool: "HTML/CSS"}, {highlighted: false, tool: "Tailwind"}, {highlighted: false, tool: "PowerShell"}, {highlighted: false, tool: "Bash"}, {highlighted: false, tool: "SwiftUI"}, {highlighted: false, tool: "Nuxt"}, {highlighted: false, tool: "Laravel Lumen"}],
+    },
+    {
+      slug: StackCategories.TOOLS,
+      tools: [{highlighted: true, tool: "Visual Studio"}, {highlighted: true, tool: "VS Code"}, {highlighted: true, tool: "Git"}, {highlighted: true, tool: "Supabase"}, {highlighted: true, tool: "Google Tag Manager"}, {highlighted: false, tool: "GitHub"}, {highlighted: false, tool: "XCode"}, {highlighted: false, tool: "Google Analytics"}, {highlighted: false, tool: "CookieBot"}, {highlighted: false, tool: "Vercel"}, {highlighted: false, tool: "Cal.com"}],
+    },
+  ],
   title: "Luke Hendriks",
   urls: {
     githubUrl: "https://github.com/l3keboy",

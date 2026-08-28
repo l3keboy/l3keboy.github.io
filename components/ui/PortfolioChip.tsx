@@ -8,7 +8,7 @@ export type IPortfolioChip = {
   color?: ChipRootProps["color"];
   size?: ChipRootProps["size"];
   text: ReactNode;
-  variant?: ChipRootProps["variant"];
+  variant?: "neutral" | ChipRootProps["variant"];
 };
 
 export default function PortfolioChip({
@@ -20,14 +20,18 @@ export default function PortfolioChip({
 }: IPortfolioChip) {
   const portfolioChipClassNames = classNames ?? "";
 
-  const portfolioChipVariant = variant ?? "tertiary";
+  const portfolioChipVariant =
+    variant !== "neutral" ? (variant ?? "tertiary") : "primary";
   const portfolioChipSize = size ?? "lg";
   const portfolioChipColor = color ?? "accent";
 
   return (
     <Chip
       className={clsx(
-        "font-family-mono p-0 flex flex-row gap-1.5",
+        "font-family-mono p-0 flex flex-row gap-1.5 rounded-lg font-normal",
+        variant === "neutral"
+          ? "border border-solid border-border bg-transparent p-2 hover:border-accent"
+          : "",
         portfolioChipClassNames,
       )}
       color={portfolioChipColor}

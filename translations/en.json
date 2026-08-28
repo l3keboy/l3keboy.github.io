@@ -226,6 +226,16 @@
                     "11": "Network Troubleshooting"
                 }
             }
+        },
+        "Stack": {
+            "Categories": {
+                "cloud_and_infra": "Cloud & Infrastructure",
+                "containers_and_orchestration": "Containers & Orchestration",
+                "cicd_and_automation": "CI/CD & Automation",
+                "monitoring_and_security": "Monitoring & Security",
+                "languages_and_frameworks": "Languages & Frameworks",
+                "tool": "Tools & Other"
+            }
         }
     },
     "Components": {
@@ -241,6 +251,11 @@
                         "title": "Certifications",
                         "ariaLabel": "Navigate to Certifications",
                         "url": "/certifications"
+                    },
+                    "3": {
+                        "title": "Stack",
+                        "ariaLabel": "Navigate to Stack",
+                        "url": "/stack"
                     }
                 }
             },
@@ -335,6 +350,13 @@
                     }
                 }
             },
+            "Stack": {
+                "chip": "Stack",
+                "title": "Some tools I work with",
+                "viewAll": "View all",
+                "noStacks": "No stacks just yet!",
+                "noTools": "No tools just yet!"
+            },
             "ProjectHighlights": {
                 "chip": "Projects",
                 "title": "Some of my work",
@@ -372,6 +394,13 @@
             },
             "CertificatesDisplay": {
                 "noCerts": "No certificates just yet!"
+            }
+        },
+        "Stack": {
+            "Hero": {
+                "chip": "Everything I have worked with",
+                "title": "Stack",
+                "description": "Find all of the tools, languages, frameworks, etc. I have once worked with!"
             }
         }
     }

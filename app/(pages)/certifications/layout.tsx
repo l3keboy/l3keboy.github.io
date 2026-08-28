@@ -1,6 +1,6 @@
 import BaseLayout from "@/components/layouts/BaseLayout";
 
-export default function HomeLayout({
+export default function CertificationsLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return <BaseLayout>{children}</BaseLayout>;

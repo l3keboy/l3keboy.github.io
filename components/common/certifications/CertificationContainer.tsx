@@ -56,11 +56,10 @@ export default function CertificationContainer({
                 {certificate.skills.map((skill) => (
                   <PortfolioChip
                     classNames="px-1.5 py-0.5"
-                    color="accent"
                     key={`${certificate.slug}-${skill}`}
                     size="sm"
                     text={skill}
-                    variant="soft"
+                    variant="neutral"
                   />
                 ))}
               </div>

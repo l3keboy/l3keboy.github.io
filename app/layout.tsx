@@ -47,7 +47,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
           // Margins and paddings
           "m-0 p-0 px-6",
           // Heights and widths
-          "min-h-full max-w-dvw",
+          "min-h-dvh max-w-dvw",
           // Colors
           "bg-portfolio-background text-portfolio-text",
           // Fonts

@@ -58,6 +58,8 @@ export function Header() {
         </div>
         {/* #endregion */}
 
+        {/* TODO Hamburger menu */}
+        {/* TODO Translations switcher */}
         {/* #region Navigation links */}
         <nav className="flex flex-row gap-3 text-center m-auto">
           {navigationLinks.map((link) => {

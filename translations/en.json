@@ -279,6 +279,9 @@
         "ThemeSwitcher": {
             "ariaLabel": "Toggle light and dark mode for the website"
         },
+        "LanguageSwitcher": {
+            "ariaLabel": "Switch the preferred language for the website"
+        },
         "CertificationContainer": {
             "ariaLabel": "Navigate to {certificate}",
             "granted": "Granted on:",

@@ -1,4 +1,4 @@
-import { Avatar, Drawer, Link } from "@heroui/react";
+import { Avatar, Drawer } from "@heroui/react";
 import { useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -10,6 +10,7 @@ import ContentContainer from "../ContentContainer";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 import PortfolioButton from "@/components/ui/PortfolioButton";
 import { IconMenu } from "@/components/icons/Menu";
+import { LanguageSwitcher } from "../LanguageSwitcher";
 
 export function Header() {
   const t = useTranslations("Components.Navigation.Header");
@@ -60,7 +61,6 @@ export function Header() {
         </div>
         {/* #endregion */}
 
-        {/* TODO Translations switcher */}
         {/* #region Navigation links */}
         <nav className="flex-row gap-3 text-center m-auto hidden md:flex">
           {navigationLinks.map((link) => {
@@ -78,8 +78,9 @@ export function Header() {
         {/* #endregion */}
 
         {/* #region Dark mode toggle */}
-        <div className="my-auto hidden md:flex">
+        <div className="my-auto hidden md:flex gap-1.5">
           <ThemeSwitcher />
+          <LanguageSwitcher />
         </div>
         {/* #endregion */}
 
@@ -106,8 +107,9 @@ export function Header() {
                     </div>
                   </Drawer.Body>
                   <Drawer.Footer>
-                    <div className="">
+                    <div className="flex flex-row gap-1.5">
                       <ThemeSwitcher />
+                      <LanguageSwitcher />
                     </div>
                   </Drawer.Footer>
                 </Drawer.Dialog>

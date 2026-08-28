@@ -26,16 +26,16 @@ const nextConfig = (phase: string): NextConfig => {
     images: {
       remotePatterns: [
         {
-          protocol: "https",
           hostname: "github.com",
+          protocol: "https",
         },
         {
-          protocol: "https",
           hostname: "solyra-coaching.nl",
+          protocol: "https",
         },
         {
-          protocol: "https",
           hostname: "partio.app",
+          protocol: "https",
         },
       ],
     },

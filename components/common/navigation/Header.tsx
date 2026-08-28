@@ -1,4 +1,4 @@
-import { Avatar, Link } from "@heroui/react";
+import { Avatar, Drawer, Link } from "@heroui/react";
 import { useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -8,6 +8,8 @@ import { siteSettings } from "@/utils/config/siteSettings";
 
 import ContentContainer from "../ContentContainer";
 import { ThemeSwitcher } from "../ThemeSwitcher";
+import PortfolioButton from "@/components/ui/PortfolioButton";
+import { IconMenu } from "@/components/icons/Menu";
 
 export function Header() {
   const t = useTranslations("Components.Navigation.Header");
@@ -58,10 +60,9 @@ export function Header() {
         </div>
         {/* #endregion */}
 
-        {/* TODO Hamburger menu */}
         {/* TODO Translations switcher */}
         {/* #region Navigation links */}
-        <nav className="flex flex-row gap-3 text-center m-auto">
+        <nav className="flex-row gap-3 text-center m-auto hidden md:flex">
           {navigationLinks.map((link) => {
             return (
               <PortfolioLink
@@ -77,8 +78,42 @@ export function Header() {
         {/* #endregion */}
 
         {/* #region Dark mode toggle */}
-        <div className="my-auto">
+        <div className="my-auto hidden md:flex">
           <ThemeSwitcher />
+        </div>
+        {/* #endregion */}
+
+        {/* #region Hamburger menu */}
+        <div className="flex md:hidden">
+          <Drawer>
+            <PortfolioButton content={<IconMenu />} variant="ghost" />
+            <Drawer.Backdrop variant="opaque">
+              <Drawer.Content placement="right">
+                <Drawer.Dialog aria-label="Mobile menu">
+                  <Drawer.Body>
+                    <div className="flex flex-col gap-6">
+                      {navigationLinks.map((link) => {
+                        return (
+                          <PortfolioLink
+                            ariaLabel={link.ariaLabel}
+                            classNames="font-family-primary text-sm text-muted"
+                            content={link.title}
+                            href={link.url}
+                            key={link.key}
+                          />
+                        );
+                      })}
+                    </div>
+                  </Drawer.Body>
+                  <Drawer.Footer>
+                    <div className="">
+                      <ThemeSwitcher />
+                    </div>
+                  </Drawer.Footer>
+                </Drawer.Dialog>
+              </Drawer.Content>
+            </Drawer.Backdrop>
+          </Drawer>
         </div>
         {/* #endregion */}
       </ContentContainer>

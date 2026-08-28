@@ -3,7 +3,7 @@
 
 import { useLocaleContext } from "@/contexts/LocaleContext";
 import { useMessages, useTranslations } from "next-intl";
-import SummaryItem, { ISummaryItem } from "./SummaryItem";
+import SummaryItem, { type ISummaryItem } from "./SummaryItem";
 import { siteSettings } from "@/utils/config/siteSettings";
 
 export default function SummaryItemOverview() {

@@ -11,7 +11,7 @@ export default function SectionStackDisplay() {
 
   return (
     <ContentContainer>
-      <div className="flex flex-col gap-6">
+      <div className="grid grid-cols-1 gap-y-6 gap-x-3">
         {siteSettings.stack.length > 0 &&
           siteSettings.stack.map((stack) => (
             <div className="grow" key={stack.slug}>

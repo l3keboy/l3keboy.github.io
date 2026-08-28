@@ -20,7 +20,7 @@ export default function SectionStack() {
 
           <HeadingTitle text={t("title")} />
         </div>
-        <div className="grid grid-cols-3 grid-rows-2 gap-y-6 gap-x-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-y-6 gap-x-3">
           {siteSettings.stack.length > 0 &&
             siteSettings.stack.map((stack) => (
               <div className="grow" key={stack.slug}>

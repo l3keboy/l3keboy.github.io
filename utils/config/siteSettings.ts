@@ -426,7 +426,7 @@ export const siteSettings: ISiteSettings = {
       ],
     },
     {
-      slug: StackCategories.LANGUAGES_AND_FRAMEWORKS,
+      slug: StackCategories.DEVELOPMENT,
       tools: [
         {highlighted: true, tool: "C#"}, 
         {highlighted: true, tool: ".NET"}, 

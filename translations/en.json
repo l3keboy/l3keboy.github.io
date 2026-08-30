@@ -12,8 +12,8 @@
             },
             "solyra_coaching": {
                 "title": "Solyra Coaching",
-                "subtitle": "Website for a Holistic & Systemic Coach",
-                "description": "Website for a Holistic & Systemic coach. Project features: planning appointments, auto deployments using Vercel, automated emails, and more!",
+                "subtitle": "Website for a Holistic & Systemic coach",
+                "description": "Website for a Holistic & Systemic Coach, featuring appointment scheduling, automated deployments with Vercel, automated emails, and more.",
                 "Links": {
                     "website": "Website"
                 }
@@ -32,7 +32,7 @@
             "victreebot": {
                 "title": "Victreebot",
                 "subtitle": "Discord bot for Pokémon GO! communities",
-                "description": "A Discord bot for Pokémon GO! communities providing users with features like registering raids, signing up for raids, registering known locations (using coordinates) in your area, etc. Helping Pokémon GO! communities coordinate and interact in one central place.",
+                "description": "A Discord bot for Pokémon GO! communities, providing features such as raid registration and sign-ups, as well as registering known locations in your area. It helps Pokémon GO! communities coordinate and interact in one central place.",
                 "Links": {
                     "source": "Source code",
                     "support_server": "Support server"
@@ -41,7 +41,7 @@
             "l3keboy_github_io": {
                 "title": "l3keboy.github.io",
                 "subtitle": "This website",
-                "description": "The current version of this website built on Next.js and hosted on Vercel. Featuring light and dark themes, translations and easy configurable content.",
+                "description": "The current version of my personal website, built with Next.js and hosted on Vercel. It features light and dark themes, multilingual support, and easily configurable content.",
                 "Links": {
                     "source": "Source code"
                 }
@@ -49,7 +49,7 @@
             "ios_qr_validator": {
                 "title": "iOS App - QR_Validator",
                 "subtitle": "Validate the links behind QR codes",
-                "description": "An iOS application which allows you to scan QR codes to validate the safety of the links behind them. You can also open these links in an in-app browser of Safari. This project is not maintained anymore and is now in public archive.",
+                "description": "An iOS application which allows you to scan QR codes to validate the safety of the links behind them. You can also open these links in an in-app browser of Safari. This project is no longer maintained and has been archived.",
                 "Links": {
                     "source": "Source code"
                 }
@@ -57,7 +57,7 @@
             "ios_timeit": {
                 "title": "iOS App - TimeIt",
                 "subtitle": "Timer application",
-                "description": "An iOS application which allows you to set a timer and sends a notification when the timer is done. Also features a clock view (with seconds) and a stopwatch (with laps support). This project is not maintained anymore and is now in public archive.",
+                "description": "An iOS application which allows you to set a timer and sends a notification when the timer is done. Also features a clock view (with seconds) and a stopwatch with lap support. This project is no longer maintained and has been archived.",
                 "Links": {
                     "source": "Source code"
                 }
@@ -65,7 +65,7 @@
             "ios_factzzz": {
                 "title": "iOS App - Factzzz",
                 "subtitle": "Get random facts",
-                "description": "An iOS application that displays a random fact. It allows you to save favorites (local device only, no iCloud) and share facts. This project is not maintained anymore and is now in public archive.",
+                "description": "An iOS application that displays a random fact. It allows you to save favorites (local device only, no iCloud) and share facts. This project is no longer maintained and has been archived.",
                 "Links": {
                     "source": "Source code"
                 }
@@ -73,7 +73,7 @@
             "lukehendriks_net-v2": {
                 "title": "lukehendriks.net - V2",
                 "subtitle": "V2 of this website.",
-                "description": "The second version of this website, with a more simplistic approach to V1, that being just a landing page. This project is not maintained anymore and is now in public archive.",
+                "description": "The second version of this website, taking a simpler approach than V1 and focusing solely on a landing page. This project is no longer maintained and has been archived.",
                 "Links": {
                     "source": "Source code"
                 }
@@ -81,7 +81,7 @@
             "lukehendriks_net-v1": {
                 "title": "lukehendriks.net - V1",
                 "subtitle": "V1 of this website.",
-                "description": "The first version of this website using a Laravel backend and a NextJS frontend. This website included features like a contact form (secured using Google Recaptcha V3) and automatic mailing. This project is not maintained anymore and is now in public archive.",
+                "description": "The first version of this website, built with a Laravel backend and Next.js frontend. It included features such as a contact form secured with Google reCAPTCHA v3 and automated email delivery. This project is no longer maintained and has been archived.",
                 "Links": {
                     "source": "Source code"
                 }
@@ -233,8 +233,8 @@
                 "containers_and_orchestration": "Containers & Orchestration",
                 "cicd_and_automation": "CI/CD & Automation",
                 "monitoring_and_security": "Monitoring & Security",
-                "languages_and_frameworks": "Languages & Frameworks",
-                "tool": "Tools & Other"
+                "development": "Development",
+                "tool": "Tools & Platforms"
             }
         }
     },
@@ -311,9 +311,9 @@
         },
         "Home": {
             "Hero": {
-                "chip": "DevOps Engineer - Full-stack Developer - Netherlands",
+                "chip": "DevOps Engineer · Full-stack Developer · Netherlands",
                 "title": "Building cloud <styled>infrastructure</styled> and <styled>applications.</styled>",
-                "description": "I'm Luke, a DevOps Engineer and Full-stack Developer focused on Microsoft Azure, modern cloud-native technologies and backend development.",
+                "description": "I'm Luke, a DevOps Engineer and Full-stack Developer focused on Microsoft Azure, modern cloud-native technologies, and backend development.",
                 "Buttons": {
                     "viewProjects": "View projects",
                     "getInTouch": "Get in touch"
@@ -341,14 +341,14 @@
                 "chip": "About",
                 "title": "Nice to meet you!",
                 "Paragraphs": {
-                    "1": "I'm a DevOps Engineer from the Netherlands, specializing in Microsoft Azure, cloud infrastructure, automation, and backend development. I studied HBO-ICT at Fontys University of Applied Sciences, where I specialized in Infrastructure and Cyber Security.",
-                    "2": "My experience spans cloud infrastructure, software development, containerization, monitoring, security, and CI/CD. I work with technologies including Azure, .NET, C#, Python, Docker, Kubernetes, and Next.js. I'm currently deepening my expertise in Azure and exploring how AI can be applied to modern software and infrastructure."
+                    "1": "I'm a DevOps Engineer from the Netherlands, specializing in Microsoft Azure, cloud infrastructure, automation, and backend development. I studied HBO-ICT at Fontys University of Applied Sciences, specializing in Infrastructure and Cyber Security.",
+                    "2": "My experience spans cloud infrastructure, software development, containerization, monitoring, security, and CI/CD. I work with technologies including Azure, .NET, C#, Python, Docker, Kubernetes, and Next.js. I'm currently deepening my expertise in Azure and exploring AI."
                 },
                 "Background": {
                     "chip": "Background",
                     "Paragraphs": {
-                        "1": "I have finished internships at Isah Business Software (ERP software) where I worked on improving the monitoring within the IT department and Cubics (managed service provider) where I worked on managing Azure tenants from multiple clients.",
-                        "2": "I am currently working at CZ (Health insurance), where I work on backend systems using .NET and Azure (ARM, Functions, Storage, Key Vaults, etc.)."
+                        "1": "I completed internships at Isah Business Software (ERP software), where I worked on improving IT monitoring, and Cubics (managed service provider), where I worked on managing Azure tenants for multiple clients.",
+                        "2": "I am currently working at CZ (Health insurer), where I work on backend systems using .NET and Azure (ARM, Functions, Storage, Key Vault, etc.)."
                     }
                 }
             },
@@ -356,20 +356,20 @@
                 "chip": "Technologies I work with",
                 "title": "Stack",
                 "viewAll": "View all",
-                "noStacks": "No stacks just yet!",
-                "noTools": "No tools just yet!"
+                "noStacks": "No stacks yet!",
+                "noTools": "No tools yet!"
             },
             "ProjectHighlights": {
                 "chip": "Selected projects",
                 "title": "Projects",
                 "viewAll": "View all of my projects",
-                "noProjects": "No projects just yet!"
+                "noProjects": "No projects yet!"
             },
             "CertificationHighlights": {
                 "chip": "Certifications & expertise",
                 "title": "Certifications",
-                "viewAll": "View all of my certificates",
-                "noCerts": "No certificates just yet!"
+                "viewAll": "View all of my Certifications",
+                "noCerts": "No Certifications yet!"
             }
         },
         "Projects": {
@@ -382,7 +382,7 @@
                 }
             },
             "ProjectsDisplay": {
-                "noProjects": "No projects just yet!"
+                "noProjects": "No projects yet!"
             },
             "Slug": {
                 "ProjectDetails": {
@@ -404,7 +404,7 @@
                 }
             },
             "CertificatesDisplay": {
-                "noCerts": "No certificates just yet!"
+                "noCerts": "No Certifications yet!"
             }
         },
         "Stack": {

@@ -42,18 +42,6 @@ export default function NotFound() {
               }
               noUnderline
             />
-            <PortfolioLink
-              content={
-                <PortfolioButton
-                  content={t("Buttons.linkedIn")}
-                  size="lg"
-                  variant="outline"
-                />
-              }
-              href={siteSettings.urls.linkedInUrl}
-              linkIsExternal
-              noUnderline
-            />
           </div>
           {/* #endregion */}
         </div>

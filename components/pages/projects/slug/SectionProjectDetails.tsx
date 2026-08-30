@@ -43,7 +43,7 @@ export default function SectionProjectDetails({ project }: ISectionHero) {
                   variant="neutral"
                 />
               ))}
-            {project.languages.length <= 0 && <label>{t("noTools")}</label>}
+            {project.tools.length <= 0 && <label>{t("noTools")}</label>}
           </div>
         </div>
         <div>

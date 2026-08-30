@@ -31,7 +31,7 @@ export default function SectionAbout() {
   return (
     <ContentContainer showDivider>
       <div className="flex flex-col md:flex-row justify-between gap-24">
-        <div className="flex flex-col gap-6 w-full md:w-[85%]">
+        <div className="flex flex-col gap-6 w-full md:w-[55%]!">
           <div className=" flex flex-col gap-3">
             {/* #region Chip */}
             <PortfolioChip text={t("chip")} />
@@ -47,7 +47,7 @@ export default function SectionAbout() {
             );
           })}
         </div>
-        <div className="grow flex flex-col gap-3">
+        <div className="md:w-[45%]! flex flex-col gap-3">
           {/* #region Chip */}
           <PortfolioChip text={t("Background.chip")} />
           {/* #endregion */}

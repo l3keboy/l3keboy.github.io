@@ -232,7 +232,7 @@ export const siteSettings: ISiteSettings = {
     {
       highlight: true,
       image: "https://partio.app/apple-touch-icon.png",
-      languages: ["C#", "Next.js", "HTML/CSS", "Tailwind"],
+      languages: ["C#", ".NET", "Next.js", "HTML/CSS", "Tailwind"],
       links: [
         {
           highlight: true, slug: "website",
@@ -244,7 +244,7 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "partio",
-      tools: ["Docker", "Docker Compose", "PostgreSQL", "Supabase", "Google Tag Manager", "Google Analytics", "CookieBot", "SignalR", ".NET", "HeroUI"],
+      tools: ["VS code", "Figma", "Docker", "Docker Compose", "PostgreSQL", "Supabase", "Google Tag Manager", "Google Analytics", "CookieBot", "SignalR", "HeroUI"],
       type: SourceType.CLOSED_SOURCE
     },
     {
@@ -258,7 +258,7 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "solyra_coaching",
-      tools: ["Vercel", "Cal.com", "HeroUI"],
+      tools: ["Vercel", "Cal.com", "HeroUI", "VS code", "Figma"],
       type: SourceType.CLOSED_SOURCE
     },
     {
@@ -284,7 +284,7 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "husqy",
-      tools: ["Docker", "MicroK8S", "PostgreSQL", "Redis", "Lavalink", "HashiCorp Vault", "OpenTelemetry", "Seq", "HeroUI"],
+      tools: ["VS Code", "Docker", "MicroK8S", "PostgreSQL", "Redis", "Lavalink", "HashiCorp Vault", "OpenTelemetry", "Seq", "HeroUI", "Tanstack Query", "Discord API"],
       type: SourceType.CLOSED_SOURCE
     },
     {
@@ -302,12 +302,12 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "victreebot",
-      tools: ["Docker", "PostgreSQL", "Docker"],
+      tools: ["Docker", "PostgreSQL", "Discord API", "Poké API", "VS code"],
       type: SourceType.OPEN_SOURCE
     },
     {
       highlight: true,
-      languages: ["Next.js"],
+      languages: ["Next.js", "Tailwind"],
       links: [
         {
           highlight: true, slug: "source",
@@ -315,7 +315,7 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "l3keboy_github_io",
-      tools: ["Vercel", "HeroUI"],
+      tools: ["Vercel", "HeroUI", "Next-intl", "Figma", "React-cookie", "VS code"],
       type: SourceType.OPEN_SOURCE
     },
     {
@@ -346,7 +346,7 @@ export const siteSettings: ISiteSettings = {
     },
     {
       highlight: false,
-      languages: ["Swift"],
+      languages: ["SwiftUI"],
       links: [
         {
           highlight: true, slug: "source",
@@ -354,13 +354,13 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "ios_factzzz",
-      tools: ["XCode"],
+      tools: ["XCode", "Uselessfacts API"],
       type: SourceType.OPEN_SOURCE
     },
     {
       highlight: false,
       image: "https://github.com/l3keboy/lukehendriks.net-v2/blob/main/frontend/assets/images/memoji.png?raw=true",
-      languages: ["Nuxt"],
+      languages: ["Nuxt", "Tailwind"],
       links: [
         {
           highlight: true, slug: "source",
@@ -368,7 +368,7 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "lukehendriks_net-v2",
-      tools: [],
+      tools: ["VS Code", "Figma"],
       type: SourceType.OPEN_SOURCE
     },
     {
@@ -382,7 +382,7 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "lukehendriks_net-v1",
-      tools: [],
+      tools: ["VS Code", "Figma"],
       type: SourceType.OPEN_SOURCE
     }
   ],

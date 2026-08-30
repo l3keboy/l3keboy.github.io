@@ -6,7 +6,7 @@ import { siteSettings } from "@/utils/config/siteSettings";
 import PortfolioChip from "@/components/ui/PortfolioChip";
 
 export default function SectionStackDisplay() {
-  const t = useTranslations("Pages.Projects.ProjectsDisplay");
+  const t = useTranslations("Pages.Stack.StackDisplay");
   const tStack = useTranslations("SiteSettings.Stack");
 
   return (

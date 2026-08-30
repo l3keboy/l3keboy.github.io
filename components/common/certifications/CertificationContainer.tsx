@@ -51,7 +51,7 @@ export default function CertificationContainer({
           </div>
           {certificationContainerShowSkills && (
             <>
-              <label>{t("skills")}</label>
+              <label>{t("skills").toUpperCase()}</label>
               <div className="flex flex-row flex-wrap gap-x-3 gap-y-1.5">
                 {certificate.skills.map((skill) => (
                   <PortfolioChip

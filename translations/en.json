@@ -4,7 +4,7 @@
             "partio": {
                 "title": "Partio",
                 "subtitle": "Play online party games",
-                "description": "A application built to play party games with friends, online and offline, anytime, anywhere. Built with multi-language and extensibility in mind, from the ground up.",
+                "description": "A party game platform designed to let friends play together online or locally. Partio was built from the ground up with extensibility and multilingual support in mind, making it easy to expand with new games and languages.",
                 "Links": {
                     "organization": "GitHub Organization",
                     "website": "Website"
@@ -12,7 +12,7 @@
             },
             "solyra_coaching": {
                 "title": "Solyra Coaching",
-                "subtitle": "Holistic & Systemic coaching website",
+                "subtitle": "Website for a Holistic & Systemic Coach",
                 "description": "Website for a Holistic & Systemic coach. Project features: planning appointments, auto deployments using Vercel, automated emails, and more!",
                 "Links": {
                     "website": "Website"
@@ -21,7 +21,7 @@
             "husqy": {
                 "title": "Husqy",
                 "subtitle": "General purpose Discord bot",
-                "description": "An advanced discord bot that provides a Discord server (and its admins) different functionalities, mostly in the form of modules which can be turned on/off. Some of these functionalities include: logging, greetings, tempchannels, reactionroles, etc. It has monetization built in to increase limits and is fully split into microservices. Currently this project is paused due to different priorities, I may start this up again in the future!",
+                "description": "A modular Discord bot designed to provide communities and administrators with a wide range of server-management features. Husqy uses a microservice architecture and includes functionality such as logging, greetings, temporary voice channels, reaction roles, and more. Husqy includes a web dashboard, documentation, configurable modules, and built-in monetization to support increased limits. The project is currently paused due to other priorities, but may be continued in the future.",
                 "Links": {
                     "organization": "GitHub Organization",
                     "website": "Website",
@@ -31,8 +31,8 @@
             },
             "victreebot": {
                 "title": "Victreebot",
-                "subtitle": "Discord bot for Pokémon GO! Communities",
-                "description": "A Discord bot for Pokémon GO! Communities providing users with features like registering raids, signing up for raids, registering known locations (using coordinates) in your area, etc. Powering Pokémon GO! Communities to interact easily and centrally.",
+                "subtitle": "Discord bot for Pokémon GO! communities",
+                "description": "A Discord bot for Pokémon GO! communities providing users with features like registering raids, signing up for raids, registering known locations (using coordinates) in your area, etc. Helping Pokémon GO! communities coordinate and interact in one central place.",
                 "Links": {
                     "source": "Source code",
                     "support_server": "Support server"
@@ -47,25 +47,25 @@
                 }
             },
             "ios_qr_validator": {
-                "title": "IOS App - QR_Validator",
+                "title": "iOS App - QR_Validator",
                 "subtitle": "Validate the links behind QR codes",
-                "description": "An IOS application which allows you to scan QR codes to validate the safety of the links behind them. It also allows you to open these links in a in app browser of Safari. This project is not maintained anymore and is now in public archive.",
+                "description": "An iOS application which allows you to scan QR codes to validate the safety of the links behind them. You can also open these links in an in-app browser of Safari. This project is not maintained anymore and is now in public archive.",
                 "Links": {
                     "source": "Source code"
                 }
             },
             "ios_timeit": {
-                "title": "IOS App - TimeIt",
+                "title": "iOS App - TimeIt",
                 "subtitle": "Timer application",
-                "description": "An IOS application which allows you to set a timer and sends a notification when the timer is done. Also features a cock view (with seconds) and a stopwatch (which supports laps). This project is not maintained anymore and is now in public archive.",
+                "description": "An iOS application which allows you to set a timer and sends a notification when the timer is done. Also features a clock view (with seconds) and a stopwatch (with laps support). This project is not maintained anymore and is now in public archive.",
                 "Links": {
                     "source": "Source code"
                 }
             },
             "ios_factzzz": {
-                "title": "IOS App - Factzzz",
+                "title": "iOS App - Factzzz",
                 "subtitle": "Get random facts",
-                "description": "An IOS application to give a random fact. It allows you to save favorites (local device only, no iCloud) and share facts. This project is not maintained anymore and is now in public archive.",
+                "description": "An iOS application that displays a random fact. It allows you to save favorites (local device only, no iCloud) and share facts. This project is not maintained anymore and is now in public archive.",
                 "Links": {
                     "source": "Source code"
                 }
@@ -311,9 +311,9 @@
         },
         "Home": {
             "Hero": {
-                "chip": "DevOps Engineer - Netherlands",
-                "title": "Building cloud <styled>infra</styled> and <styled>apps.</styled>",
-                "description": "I'm Luke, DevOps engineer and Full-stack developer working with Microsoft Azure.",
+                "chip": "DevOps Engineer - Full-stack Developer - Netherlands",
+                "title": "Building cloud <styled>infrastructure</styled> and <styled>applications.</styled>",
+                "description": "I'm Luke, a DevOps Engineer and Full-stack Developer focused on Microsoft Azure, modern cloud-native technologies and backend development.",
                 "Buttons": {
                     "viewProjects": "View projects",
                     "getInTouch": "Get in touch"
@@ -341,8 +341,8 @@
                 "chip": "About",
                 "title": "Nice to meet you!",
                 "Paragraphs": {
-                    "1": "I'm a DevOps engineer from the Netherlands, specialized on the Azure platform. I studied at Fontys University of Applied Sciences, where I got my bachelor's in IT and specialized in Infrastructure and Cyber Security.",
-                    "2": "Along the way I've picked up skills across development, containerization, monitoring and security, working with tools like Elastic, Docker, Kubernetes, .NET, Python and Next.js. Right now I'm working on getting deeper into the Azure Cloud platform and AI."
+                    "1": "I'm a DevOps Engineer from the Netherlands, specializing in Microsoft Azure, cloud infrastructure, automation, and backend development. I studied HBO-ICT at Fontys University of Applied Sciences, where I specialized in Infrastructure and Cyber Security.",
+                    "2": "My experience spans cloud infrastructure, software development, containerization, monitoring, security, and CI/CD. I work with technologies including Azure, .NET, C#, Python, Docker, Kubernetes, and Next.js. I'm currently deepening my expertise in Azure and exploring how AI can be applied to modern software and infrastructure."
                 },
                 "Background": {
                     "chip": "Background",
@@ -400,7 +400,7 @@
             "Hero": {
                 "chip": "My knowledge",
                 "title": "Certifications",
-                "description": "Find all of my certificates I have accomplished in the past. With many more to come!",
+                "description": "View all of my certifications. With many more to come!",
                 "Buttons": {
                     "linkedIn": "LinkedIn"
                 }
@@ -413,7 +413,7 @@
             "Hero": {
                 "chip": "Everything I have worked with",
                 "title": "Stack",
-                "description": "Find all of the tools, languages, frameworks, etc. I have once worked with!"
+                "description": "Find all of the tools, languages, frameworks, etc. I have worked with!"
             },
             "ProjectDetails": {
                 "noTools": "No tools yet!",

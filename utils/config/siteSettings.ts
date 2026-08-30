@@ -244,7 +244,7 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "partio",
-      tools: ["VS code", "Figma", "Docker", "Docker Compose", "PostgreSQL", "Supabase", "Google Tag Manager", "Google Analytics", "CookieBot", "SignalR", "HeroUI"],
+      tools: ["VS Code", "Figma", "Docker", "Docker Compose", "PostgreSQL", "Supabase", "Google Tag Manager", "Google Analytics", "CookieBot", "SignalR", "HeroUI"],
       type: SourceType.CLOSED_SOURCE
     },
     {
@@ -258,7 +258,7 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "solyra_coaching",
-      tools: ["Vercel", "Cal.com", "HeroUI", "VS code", "Figma"],
+      tools: ["Vercel", "Cal.com", "HeroUI", "VS Code", "Figma"],
       type: SourceType.CLOSED_SOURCE
     },
     {
@@ -302,7 +302,7 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "victreebot",
-      tools: ["Docker", "PostgreSQL", "Discord API", "Poké API", "VS code"],
+      tools: ["Docker", "PostgreSQL", "Discord API", "PokéAPI", "VS Code"],
       type: SourceType.OPEN_SOURCE
     },
     {
@@ -315,7 +315,7 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "l3keboy_github_io",
-      tools: ["Vercel", "HeroUI", "Next-intl", "Figma", "React-cookie", "VS code"],
+      tools: ["Vercel", "HeroUI", "Next-intl", "Figma", "React-cookie", "VS Code"],
       type: SourceType.OPEN_SOURCE
     },
     {
@@ -328,7 +328,7 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "ios_qr_validator",
-      tools: ["XCode", "Google Safebrowsing API"],
+      tools: ["Xcode", "Google Safebrowsing API"],
       type: SourceType.OPEN_SOURCE
     },
     {
@@ -341,7 +341,7 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "ios_timeit",
-      tools: ["XCode"],
+      tools: ["Xcode"],
       type: SourceType.OPEN_SOURCE
     },
     {
@@ -354,7 +354,7 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "ios_factzzz",
-      tools: ["XCode", "Uselessfacts API"],
+      tools: ["Xcode", "Useless Facts API"],
       type: SourceType.OPEN_SOURCE
     },
     {
@@ -395,27 +395,80 @@ export const siteSettings: ISiteSettings = {
     {
       slug: StackCategories.CLOUD_AND_INFRA,
       tools: [
-        {highlighted: true, tool: "Entra ID"}, {highlighted: true, tool: "Azure"}, {highlighted: true, tool: "Azure ARM"}, {highlighted: true, tool: "Azure Bicep"}, {highlighted: true, tool: "PostgreSQL"}, {highlighted: true, tool: "Redis"}, {highlighted: false, tool: "UniFi"}, {highlighted: false, tool: "PFsense"}, {highlighted: false, tool: "Nginx"}],
+        {highlighted: true, tool: "Azure"}, 
+        {highlighted: true, tool: "Azure ARM"}, 
+        {highlighted: true, tool: "Azure Bicep"}, 
+        {highlighted: true, tool: "Entra ID"}, 
+        {highlighted: true, tool: "PostgreSQL"}, 
+        {highlighted: true, tool: "Redis"}, 
+        {highlighted: false, tool: "UniFi"}, 
+        {highlighted: false, tool: "pfSense"}, 
+        {highlighted: false, tool: "Nginx"}
+      ],
     },
     {
       slug: StackCategories.CONTAINERS_AND_ORCHESTRATION,
-      tools: [{highlighted: true, tool: "Docker"}, {highlighted: true, tool: "Docker compose"}, {highlighted: true, tool: "MicroK8S"}, {highlighted: true, tool: "Kubernetes"}],
+      tools: [
+        {highlighted: true, tool: "Docker"}, 
+        {highlighted: true, tool: "Docker Compose"}, 
+        {highlighted: true, tool: "MicroK8s"}, 
+        {highlighted: true, tool: "Kubernetes"}
+      ],
     },
     {
       slug: StackCategories.CICD_AND_AUTOMATION,
-      tools: [{highlighted: true, tool: "GitHub Actions"}, {highlighted: true, tool: "Azure DevOps"}, {highlighted: true, tool: "Ansible"}],
+      tools: [
+        {highlighted: true, tool: "GitHub Actions"}, 
+        {highlighted: true, tool: "Azure DevOps"}, 
+        {highlighted: true, tool: "Ansible"}
+      ],
     },
     {
       slug: StackCategories.MONITORING_AND_SECURITY,
-      tools: [{highlighted: true, tool: "Azure Key Vault"}, {highlighted: true, tool: "Application Insights"}, {highlighted: false, tool: "Seq"}, {highlighted: true, tool: "OpenTelemetry"}, {highlighted: true, tool: "HashiCorp Vault"}, {highlighted: false, tool: "Elastic Stack"}, {highlighted: false, tool: "Grafana"}, {highlighted: false, tool: "Zabbix"}],
+      tools: [
+        {highlighted: true, tool: "Azure Key Vault"}, 
+        {highlighted: true, tool: "Application Insights"}, 
+        {highlighted: true, tool: "OpenTelemetry"}, 
+        {highlighted: true, tool: "HashiCorp Vault"}, 
+        {highlighted: false, tool: "Seq"}, 
+        {highlighted: false, tool: "Elastic Stack"}, 
+        {highlighted: false, tool: "Grafana"}, 
+        {highlighted: false, tool: "Zabbix"}
+      ],
     },
     {
       slug: StackCategories.LANGUAGES_AND_FRAMEWORKS,
-      tools: [{highlighted: true, tool: "C#"}, {highlighted: true, tool: ".NET"}, {highlighted: true, tool: "Next.js"}, {highlighted: true, tool: "Python"}, {highlighted: false, tool: "React"}, {highlighted: false, tool: "Javascript"}, {highlighted: false, tool: "HTML/CSS"}, {highlighted: false, tool: "Tailwind"}, {highlighted: false, tool: "PowerShell"}, {highlighted: false, tool: "Bash"}, {highlighted: false, tool: "SwiftUI"}, {highlighted: false, tool: "Nuxt"}, {highlighted: false, tool: "Laravel Lumen"}],
+      tools: [
+        {highlighted: true, tool: "C#"}, 
+        {highlighted: true, tool: ".NET"}, 
+        {highlighted: true, tool: "Next.js"}, 
+        {highlighted: true, tool: "Python"}, 
+        {highlighted: false, tool: "React"}, 
+        {highlighted: false, tool: "JavaScript"}, 
+        {highlighted: false, tool: "HTML/CSS"}, 
+        {highlighted: false, tool: "Tailwind"}, 
+        {highlighted: false, tool: "PowerShell"}, 
+        {highlighted: false, tool: "Bash"}, 
+        {highlighted: false, tool: "SwiftUI"}, 
+        {highlighted: false, tool: "Nuxt"}, 
+        {highlighted: false, tool: "Laravel Lumen"}
+      ],
     },
     {
       slug: StackCategories.TOOLS,
-      tools: [{highlighted: true, tool: "Visual Studio"}, {highlighted: true, tool: "VS Code"}, {highlighted: true, tool: "Git"}, {highlighted: true, tool: "Supabase"}, {highlighted: true, tool: "Google Tag Manager"}, {highlighted: false, tool: "GitHub"}, {highlighted: false, tool: "XCode"}, {highlighted: false, tool: "Google Analytics"}, {highlighted: false, tool: "CookieBot"}, {highlighted: false, tool: "Vercel"}, {highlighted: false, tool: "Cal.com"}],
+      tools: [
+        {highlighted: true, tool: "Visual Studio"}, 
+        {highlighted: true, tool: "VS Code"},
+        {highlighted: true, tool: "Git"}, 
+        {highlighted: true, tool: "Supabase"}, 
+        {highlighted: true, tool: "Google Tag Manager"}, 
+        {highlighted: false, tool: "GitHub"}, 
+        {highlighted: false, tool: "Xcode"}, 
+        {highlighted: false, tool: "Google Analytics"}, 
+        {highlighted: false, tool: "CookieBot"}, 
+        {highlighted: false, tool: "Vercel"}, 
+        {highlighted: false, tool: "Cal.com"}
+      ],
     },
   ],
   title: "Luke Hendriks",

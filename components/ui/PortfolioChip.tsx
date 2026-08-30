@@ -38,7 +38,9 @@ export default function PortfolioChip({
       size={portfolioChipSize}
       variant={portfolioChipVariant}
     >
-      {text}
+      <Chip.Label className={clsx(variant === "neutral" ? "text-portfolio-text!" : "")}>
+        {text}
+      </Chip.Label>
     </Chip>
   );
 }

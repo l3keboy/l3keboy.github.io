@@ -353,30 +353,30 @@
                 }
             },
             "Stack": {
-                "chip": "Stack",
-                "title": "Some tools I work with",
+                "chip": "Technologies I work with",
+                "title": "Stack",
                 "viewAll": "View all",
                 "noStacks": "No stacks just yet!",
                 "noTools": "No tools just yet!"
             },
             "ProjectHighlights": {
-                "chip": "Projects",
-                "title": "Some of my work",
+                "chip": "Selected projects",
+                "title": "Projects",
                 "viewAll": "View all of my projects",
                 "noProjects": "No projects just yet!"
             },
             "CertificationHighlights": {
-                "chip": "Certifications",
-                "title": "Some highlights",
+                "chip": "Certifications & expertise",
+                "title": "Certifications",
                 "viewAll": "View all of my certificates",
                 "noCerts": "No certificates just yet!"
             }
         },
         "Projects": {
             "Hero": {
-                "chip": "Using my skills",
+                "chip": "Selected projects",
                 "title": "Projects",
-                "description": "Find an overview of my projects and their primary links. Navigate to each projects page to get a more detailed look!",
+                "description": "A selection of projects I've built and contributed to.",
                 "Buttons": {
                     "gitHub": "GitHub"
                 }
@@ -396,9 +396,9 @@
         },
         "Certifications": {
             "Hero": {
-                "chip": "My knowledge",
+                "chip": "Certifications & expertise",
                 "title": "Certifications",
-                "description": "View all of my certifications. With many more to come!",
+                "description": "Professional certifications and areas of expertise. With many more to come!",
                 "Buttons": {
                     "linkedIn": "LinkedIn"
                 }
@@ -409,9 +409,9 @@
         },
         "Stack": {
             "Hero": {
-                "chip": "Everything I have worked with",
+                "chip": "Technologies, platforms and tools I work with",
                 "title": "Stack",
-                "description": "Find all of the tools, languages, frameworks, etc. I have worked with!"
+                "description": "Technologies, platforms and tools I've worked with across development, cloud infrastructure, and DevOps."
             },
             "ProjectDetails": {
                 "noTools": "No tools yet!",

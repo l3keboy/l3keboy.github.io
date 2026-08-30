@@ -19,31 +19,21 @@ export default function SectionProjectDetails({ project }: ISectionHero) {
     <ContentContainer>
       <div className="grid grid-cols-1 gap-y-6 gap-x-3">
         <div>
-          <label className="text-muted">{t("languages").toUpperCase()}</label>
+          <label className="text-muted">
+            {t("technologies").toUpperCase()}
+          </label>
           <div className="flex flex-row flex-wrap gap-1.5 mt-3">
-            {project.languages.length > 0 &&
-              project.languages.map((language) => (
+            {project.technologies.length > 0 &&
+              project.technologies.map((technology) => (
                 <PortfolioChip
-                  key={`${project.slug}-${language}`}
-                  text={language}
+                  key={`${project.slug}-${technology}`}
+                  text={technology}
                   variant="neutral"
                 />
               ))}
-            {project.languages.length <= 0 && <label>{t("noLanguages")}</label>}
-          </div>
-        </div>
-        <div>
-          <label className="text-muted">{t("tools").toUpperCase()}</label>
-          <div className="flex flex-row flex-wrap gap-1.5 mt-3">
-            {project.tools.length > 0 &&
-              project.tools.map((tool) => (
-                <PortfolioChip
-                  key={`${project.slug}-${tool}`}
-                  text={tool}
-                  variant="neutral"
-                />
-              ))}
-            {project.tools.length <= 0 && <label>{t("noTools")}</label>}
+            {project.technologies.length <= 0 && (
+              <label>{t("noTechnologies")}</label>
+            )}
           </div>
         </div>
         <div>

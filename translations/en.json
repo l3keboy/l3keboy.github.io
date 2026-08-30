@@ -387,10 +387,8 @@
             "Slug": {
                 "ProjectDetails": {
                     "ariaLabel": "Navigate to {project}",
-                    "languages": "Languages",
-                    "noLanguages": "No languages yet!",
-                    "tools": "Tools",
-                    "noTools": "No tools yet!",
+                    "technologies": "Technologies",
+                    "noTechnologies": "No technologies yet!",
                     "links": "Links",
                     "noLinks": "No links yet!"
                 }

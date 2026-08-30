@@ -19,14 +19,13 @@ export type ICertificationSiteSettings = {
 export type IProjectSiteSettings = {
   highlight: boolean
   image?: string
-  languages: string[]
+  technologies: string[]
   links: {
     highlight: boolean
     slug: string
     url: string
   }[]
   slug: string
-  tools: string[]
   type: SourceType
 }
 
@@ -232,7 +231,7 @@ export const siteSettings: ISiteSettings = {
     {
       highlight: true,
       image: "https://partio.app/apple-touch-icon.png",
-      languages: ["C#", ".NET", "Next.js", "HTML/CSS", "Tailwind"],
+      technologies: ["C#", ".NET", "Next.js", "HTML/CSS", "Tailwind", "VS Code", "Figma", "Docker", "Docker Compose", "PostgreSQL", "Supabase", "Google Tag Manager", "Google Analytics", "CookieBot", "SignalR", "HeroUI"],
       links: [
         {
           highlight: true, slug: "website",
@@ -244,13 +243,12 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "partio",
-      tools: ["VS Code", "Figma", "Docker", "Docker Compose", "PostgreSQL", "Supabase", "Google Tag Manager", "Google Analytics", "CookieBot", "SignalR", "HeroUI"],
       type: SourceType.CLOSED_SOURCE
     },
     {
       highlight: false,
       image: "https://solyra-coaching.nl/logo.png",
-      languages: ["Next.js", "HTML/CSS", "Tailwind"],
+      technologies: ["Next.js", "HTML/CSS", "Tailwind", "Vercel", "Cal.com", "HeroUI", "VS Code", "Figma"],
       links: [
         {
           highlight: true, slug: "website",
@@ -258,13 +256,12 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "solyra_coaching",
-      tools: ["Vercel", "Cal.com", "HeroUI", "VS Code", "Figma"],
       type: SourceType.CLOSED_SOURCE
     },
     {
       highlight: true,
       image: "https://github.com/husqybot/assets/blob/main/logos/logo_default.png?raw=true",
-      languages: ["Python", "Next.js", "HTML/CSS"],
+      technologies: ["Python", "Next.js", "HTML/CSS", "VS Code", "Docker", "MicroK8S", "PostgreSQL", "Redis", "Lavalink", "HashiCorp Vault", "OpenTelemetry", "Seq", "HeroUI", "Tanstack Query", "Discord API"],
       links: [
         {
           highlight: true, slug: "organization",
@@ -284,13 +281,12 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "husqy",
-      tools: ["VS Code", "Docker", "MicroK8S", "PostgreSQL", "Redis", "Lavalink", "HashiCorp Vault", "OpenTelemetry", "Seq", "HeroUI", "Tanstack Query", "Discord API"],
       type: SourceType.CLOSED_SOURCE
     },
     {
       highlight: false,
       image: "https://github.com/l3keboy/Victreebot/blob/main/assets/logos/VictreeBot.png?raw=true",
-      languages: ["Python"],
+      technologies: ["Python", "Docker", "PostgreSQL", "Discord API", "PokéAPI", "VS Code"],
       links: [
         {
           highlight: true, slug: "source",
@@ -302,12 +298,11 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "victreebot",
-      tools: ["Docker", "PostgreSQL", "Discord API", "PokéAPI", "VS Code"],
       type: SourceType.OPEN_SOURCE
     },
     {
       highlight: true,
-      languages: ["Next.js", "Tailwind"],
+      technologies: ["Next.js", "Tailwind", "Vercel", "HeroUI", "Next-intl", "Figma", "React-cookie", "VS Code"],
       links: [
         {
           highlight: true, slug: "source",
@@ -315,12 +310,11 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "l3keboy_github_io",
-      tools: ["Vercel", "HeroUI", "Next-intl", "Figma", "React-cookie", "VS Code"],
       type: SourceType.OPEN_SOURCE
     },
     {
       highlight: false,
-      languages: ["SwiftUI"],
+      technologies: ["SwiftUI", "Xcode", "Google Safebrowsing API"],
       links: [
         {
           highlight: true, slug: "source",
@@ -328,12 +322,11 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "ios_qr_validator",
-      tools: ["Xcode", "Google Safebrowsing API"],
       type: SourceType.OPEN_SOURCE
     },
     {
       highlight: false,
-      languages: ["SwiftUI"],
+      technologies: ["SwiftUI", "Xcode"],
       links: [
         {
           highlight: true, slug: "source",
@@ -341,12 +334,11 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "ios_timeit",
-      tools: ["Xcode"],
       type: SourceType.OPEN_SOURCE
     },
     {
       highlight: false,
-      languages: ["SwiftUI"],
+      technologies: ["SwiftUI", "Xcode", "Useless Facts API"],
       links: [
         {
           highlight: true, slug: "source",
@@ -354,13 +346,12 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "ios_factzzz",
-      tools: ["Xcode", "Useless Facts API"],
       type: SourceType.OPEN_SOURCE
     },
     {
       highlight: false,
       image: "https://github.com/l3keboy/lukehendriks.net-v2/blob/main/frontend/assets/images/memoji.png?raw=true",
-      languages: ["Nuxt", "Tailwind"],
+      technologies: ["Nuxt", "Tailwind", "VS Code", "Figma"],
       links: [
         {
           highlight: true, slug: "source",
@@ -368,13 +359,12 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "lukehendriks_net-v2",
-      tools: ["VS Code", "Figma"],
       type: SourceType.OPEN_SOURCE
     },
     {
       highlight: false,
       image: "https://github.com/l3keboy/lukehendriks.net-v1/blob/main/images/homescreen-hero.png?raw=true",
-      languages: ["React", "Tailwind", "Laravel Lumen"],
+      technologies: ["React", "Tailwind", "Laravel Lumen", "VS Code", "Figma"],
       links: [
         {
           highlight: true, slug: "source",
@@ -382,7 +372,6 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "lukehendriks_net-v1",
-      tools: ["VS Code", "Figma"],
       type: SourceType.OPEN_SOURCE
     }
   ],

@@ -1,19 +1,41 @@
 import { useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
-import { CertificationsService } from "@/services/CertificationsService";
+import {
+  CertificationSortDirection,
+  CertificationSortField,
+  CertificationsService,
+} from "@/services/CertificationsService";
 
 import CertificationContainer from "../../common/certifications/CertificationContainer";
+import { Companies } from "@/utils/enums/Company";
 
-export default function SectionCertificatesDisplay() {
+// Interfaces
+export interface ISectionCertificatesDisplayParams {
+  company?: string;
+  highlight?: string;
+  sortBy?: CertificationSortField;
+  sortDirection?: CertificationSortDirection;
+}
+
+export default function SectionCertificatesDisplay({
+  company,
+  highlight,
+  sortBy,
+  sortDirection,
+}: ISectionCertificatesDisplayParams) {
   const t = useTranslations("Pages.Certifications.CertificatesDisplay");
 
   // #region Get certificates
-  const certs = CertificationsService.getCertifications({});
+  const certs = CertificationsService.getCertifications({
+    filters: {
+      company: company as Companies | undefined,
+      highlight: highlight === undefined ? undefined : highlight === "true",
+    },
+    sortBy: sortBy,
+    sortDirection: sortDirection,
+  });
   // #endregion
-
-  // TODO Ordering -> By grant date, expiry date
-  // TODO Filtering -> By company, Highlight
 
   return (
     <ContentContainer>

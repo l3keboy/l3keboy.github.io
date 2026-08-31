@@ -4,15 +4,38 @@ import ContentContainer from "@/components/common/ContentContainer";
 import { ProjectService } from "@/services/ProjectService";
 
 import ProjectContainer from "../../common/projects/ProjectContainer";
+import { Technologies } from "@/utils/enums/Technologies";
+import { SourceType } from "@/utils/enums/SourceType";
 
-export default function SectionProjectsDisplay() {
+// Interfaces
+export interface ISectionProjectDisplayParams {
+  technology?: string | string[];
+  type?: string;
+  highlight?: string;
+}
+
+export default function SectionProjectsDisplay({
+  technology,
+  type,
+  highlight,
+}: ISectionProjectDisplayParams) {
   const t = useTranslations("Pages.Projects.ProjectsDisplay");
 
   // #region Get projects
-  const projects = ProjectService.getProjects({});
-  // #endregion
+  const technologies = Array.isArray(technology)
+    ? technology
+    : technology
+      ? [technology]
+      : [];
 
-  // TODO Filtering -> Highlighted, Source type (Open/Closed), Tools used?
+  const projects = ProjectService.getProjects({
+    filters: {
+      technologies: technologies as Technologies[],
+      sourceType: type as SourceType | undefined,
+      highlight: highlight === undefined ? undefined : highlight === "true",
+    },
+  });
+  // #endregion
 
   return (
     <ContentContainer>

@@ -1,11 +1,24 @@
 import SectionHero from "@/components/pages/projects/SectionHero";
-import SectionProjectsDisplay from "@/components/pages/projects/SectionProjectsDisplay";
+import SectionProjectsDisplay, {
+  type ISectionProjectDisplayParams,
+} from "@/components/pages/projects/SectionProjectsDisplay";
 
-export default function Projects() {
+// Interfaces
+type ProjectsPageProps = {
+  searchParams: Promise<ISectionProjectDisplayParams>;
+};
+
+export default async function Projects({ searchParams }: ProjectsPageProps) {
+  const params = await searchParams;
+
   return (
     <div className="flex flex-col gap-12">
       <SectionHero />
-      <SectionProjectsDisplay />
+      <SectionProjectsDisplay
+        technology={params.technology}
+        highlight={params.highlight}
+        type={params.type}
+      />
     </div>
   );
 }

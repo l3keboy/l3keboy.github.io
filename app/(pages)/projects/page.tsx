@@ -15,8 +15,8 @@ export default async function Projects({ searchParams }: ProjectsPageProps) {
     <div className="flex flex-col gap-12">
       <SectionHero />
       <SectionProjectsDisplay
-        technology={params.technology}
         highlight={params.highlight}
+        technology={params.technology}
         type={params.type}
       />
     </div>

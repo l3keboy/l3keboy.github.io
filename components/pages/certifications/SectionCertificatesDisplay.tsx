@@ -6,9 +6,9 @@ import {
   CertificationSortField,
   CertificationsService,
 } from "@/services/CertificationsService";
+import { Companies } from "@/utils/enums/Company";
 
 import CertificationContainer from "../../common/certifications/CertificationContainer";
-import { Companies } from "@/utils/enums/Company";
 import CertificationsSort from "./CertificationsSort";
 
 // Interfaces

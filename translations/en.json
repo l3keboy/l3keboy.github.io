@@ -385,6 +385,8 @@
                 "noProjects": "No projects yet!"
             },
             "ProjectsSort": {
+                "ariaLabel": "Select {type}",
+                "ariaLabelValue": "Select {type} value",
                 "Settings": {
                     "highlight": "Highlight",
                     "sourceType": "Type",
@@ -419,6 +421,8 @@
                 "noCerts": "No Certifications yet!"
             },
             "CertificationsSort": {
+                "ariaLabel": "Select {type} filter",
+                "ariaLabelValue": "Select {type} value",
                 "Settings": {
                     "highlight": "Highlight",
                     "companies": "Companies",

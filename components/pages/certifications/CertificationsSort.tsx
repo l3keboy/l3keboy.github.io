@@ -1,12 +1,12 @@
 "use client";
 // ! Filtering state is kept client side
 
+import { ListBox, Select } from "@heroui/react";
 import { useTranslations } from "next-intl";
-
-import ContentContainer from "@/components/common/ContentContainer";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback } from "react";
-import { ListBox, Select } from "@heroui/react";
+
+import ContentContainer from "@/components/common/ContentContainer";
 import { Companies } from "@/utils/enums/Company";
 
 export default function CertificationsSort() {
@@ -36,9 +36,10 @@ export default function CertificationsSort() {
       <div className="flex flex-row gap-6 mb-6 flex-wrap">
         {/* #region Highlight filter */}
         <Select
+          aria-label={t("ariaLabel", { type: t("Settings.highlight") })}
           className="w-fit"
-          placeholder={`${t("Settings.highlight")}: ${searchParams.get("highlight") ?? t("Values.all")}`}
           onChange={(key) => updateSearch("highlight", key?.toString())}
+          placeholder={`${t("Settings.highlight")}: ${searchParams.get("highlight") ?? t("Values.all")}`}
           value={searchParams.get("highlight") ?? t("Values.all")}
         >
           <Select.Trigger>
@@ -57,15 +58,33 @@ export default function CertificationsSort() {
           </Select.Trigger>
           <Select.Popover>
             <ListBox>
-              <ListBox.Item id="true" textValue={t("Values.yes")}>
+              <ListBox.Item
+                aria-label={t("ariaLabelValue", {
+                  type: t("Values.yes"),
+                })}
+                id="true"
+                textValue={t("Values.yes")}
+              >
                 {t("Values.yes")}
                 <ListBox.ItemIndicator />
               </ListBox.Item>
-              <ListBox.Item id="false" textValue={t("Values.no")}>
+              <ListBox.Item
+                aria-label={t("ariaLabelValue", {
+                  type: t("Values.no"),
+                })}
+                id="false"
+                textValue={t("Values.no")}
+              >
                 {t("Values.no")}
                 <ListBox.ItemIndicator />
               </ListBox.Item>
-              <ListBox.Item id="all" textValue={t("Values.all")}>
+              <ListBox.Item
+                aria-label={t("ariaLabelValue", {
+                  type: t("Values.all"),
+                })}
+                id="all"
+                textValue={t("Values.all")}
+              >
                 {t("Values.all")}
                 <ListBox.ItemIndicator />
               </ListBox.Item>
@@ -76,11 +95,12 @@ export default function CertificationsSort() {
 
         {/* #region Companies filter */}
         <Select
+          aria-label={t("ariaLabel", { type: t("Settings.companies") })}
           className="w-fit"
-          placeholder={`${t("Settings.companies")}: ${searchParams.get("company") ?? t("Values.all")}`}
           onChange={(key) => updateSearch("company", key.join(","))}
-          value={searchParams.get("company")?.split(",") ?? [t("Values.all")]}
+          placeholder={`${t("Settings.companies")}: ${searchParams.get("company") ?? t("Values.all")}`}
           selectionMode="multiple"
+          value={searchParams.get("company")?.split(",") ?? [t("Values.all")]}
         >
           <Select.Trigger>
             <Select.Value>
@@ -96,7 +116,14 @@ export default function CertificationsSort() {
           <Select.Popover>
             <ListBox>
               {Object.values(Companies).map((company) => (
-                <ListBox.Item key={company} id={company} textValue={company}>
+                <ListBox.Item
+                  aria-label={t("ariaLabelValue", {
+                    type: company,
+                  })}
+                  id={company}
+                  key={company}
+                  textValue={company}
+                >
                   {company}
                   <ListBox.ItemIndicator />
                 </ListBox.Item>
@@ -106,11 +133,12 @@ export default function CertificationsSort() {
         </Select>
         {/* #endregion */}
 
-        {/* #region SortBy filter */}
+        {/* #region sortDirection filter */}
         <Select
+          aria-label={t("ariaLabel", { type: t("Settings.sortDirection") })}
           className="w-fit"
-          placeholder={`${t("Settings.sortDirection")}: ${searchParams.get("sortDirection") ?? t("Values.desc")}`}
           onChange={(key) => updateSearch("sortDirection", key?.toString())}
+          placeholder={`${t("Settings.sortDirection")}: ${searchParams.get("sortDirection") ?? t("Values.desc")}`}
           value={searchParams.get("sortDirection")}
         >
           <Select.Trigger>
@@ -118,20 +146,32 @@ export default function CertificationsSort() {
               {({ state }) => {
                 const selectedItem = state.selectedItems[0]?.key;
                 if (selectedItem === "asc")
-                  return `${t("Settings.sortBy")}: ${t("Values.asc")}`;
+                  return `${t("Settings.sortDirection")}: ${t("Values.asc")}`;
                 if (selectedItem === "desc")
-                  return `${t("Settings.sortBy")}: ${t("Values.desc")}`;
+                  return `${t("Settings.sortDirection")}: ${t("Values.desc")}`;
               }}
             </Select.Value>
             <Select.Indicator />
           </Select.Trigger>
           <Select.Popover>
             <ListBox>
-              <ListBox.Item id="asc" textValue={t("Values.asc")}>
+              <ListBox.Item
+                aria-label={t("ariaLabelValue", {
+                  type: t("Values.asc"),
+                })}
+                id="asc"
+                textValue={t("Values.asc")}
+              >
                 {t("Values.asc")}
                 <ListBox.ItemIndicator />
               </ListBox.Item>
-              <ListBox.Item id="desc" textValue={t("Values.desc")}>
+              <ListBox.Item
+                aria-label={t("ariaLabelValue", {
+                  type: t("Values.desc"),
+                })}
+                id="desc"
+                textValue={t("Values.desc")}
+              >
                 {t("Values.desc")}
                 <ListBox.ItemIndicator />
               </ListBox.Item>
@@ -142,9 +182,10 @@ export default function CertificationsSort() {
 
         {/* #region SortBy filter */}
         <Select
+          aria-label={t("ariaLabel", { type: t("Settings.sortBy") })}
           className="w-fit"
-          placeholder={`${t("Settings.sortBy")}: ${searchParams.get("sortBy") ?? t("Values.grantDate")}`}
           onChange={(key) => updateSearch("sortBy", key?.toString())}
+          placeholder={`${t("Settings.sortBy")}: ${searchParams.get("sortBy") ?? t("Values.grantDate")}`}
           value={searchParams.get("sortBy")}
         >
           <Select.Trigger>
@@ -161,11 +202,23 @@ export default function CertificationsSort() {
           </Select.Trigger>
           <Select.Popover>
             <ListBox>
-              <ListBox.Item id="grantDate" textValue={t("Values.grantDate")}>
+              <ListBox.Item
+                aria-label={t("ariaLabelValue", {
+                  type: t("Values.grantDate"),
+                })}
+                id="grantDate"
+                textValue={t("Values.grantDate")}
+              >
                 {t("Values.grantDate")}
                 <ListBox.ItemIndicator />
               </ListBox.Item>
-              <ListBox.Item id="expiryDate" textValue={t("Values.expiryDate")}>
+              <ListBox.Item
+                aria-label={t("ariaLabelValue", {
+                  type: t("Values.expiryDate"),
+                })}
+                id="expiryDate"
+                textValue={t("Values.expiryDate")}
+              >
                 {t("Values.expiryDate")}
                 <ListBox.ItemIndicator />
               </ListBox.Item>

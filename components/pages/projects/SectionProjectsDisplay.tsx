@@ -2,23 +2,23 @@ import { useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
 import { ProjectService } from "@/services/ProjectService";
+import { SourceType } from "@/utils/enums/SourceType";
+import { Technologies } from "@/utils/enums/Technologies";
 
 import ProjectContainer from "../../common/projects/ProjectContainer";
-import { Technologies } from "@/utils/enums/Technologies";
-import { SourceType } from "@/utils/enums/SourceType";
 import ProjectsSort from "./ProjectsSort";
 
 // Interfaces
 export interface ISectionProjectDisplayParams {
+  highlight?: string;
   technology?: string;
   type?: string;
-  highlight?: string;
 }
 
 export default function SectionProjectsDisplay({
+  highlight,
   technology,
   type,
-  highlight,
 }: ISectionProjectDisplayParams) {
   const t = useTranslations("Pages.Projects.ProjectsDisplay");
 
@@ -26,9 +26,9 @@ export default function SectionProjectsDisplay({
   const technologies = technology?.split(",") ?? [];
   const projects = ProjectService.getProjects({
     filters: {
-      technologies: technologies as Technologies[],
-      sourceType: type as SourceType | undefined,
       highlight: highlight === undefined ? undefined : highlight === "true",
+      sourceType: type as SourceType | undefined,
+      technologies: technologies as Technologies[],
     },
   });
   // #endregion

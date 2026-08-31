@@ -12,7 +12,7 @@ export default function SectionProjectsDisplay() {
   const projects = ProjectService.getProjects({});
   // #endregion
 
-  // TODO Filtering -> Tools used?
+  // TODO Filtering -> Highlighted, Source type (Open/Closed), Tools used?
 
   return (
     <ContentContainer>

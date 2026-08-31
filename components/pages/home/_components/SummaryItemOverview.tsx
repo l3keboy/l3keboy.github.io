@@ -1,16 +1,15 @@
 "use client";
 // ! Locales are client side, therefore use client
 
-import { useMessages, useTranslations } from "next-intl";
+import { useLocale, useMessages, useTranslations } from "next-intl";
 
-import { useLocaleContext } from "@/contexts/LocaleContext";
 import { siteSettings } from "@/utils/config/siteSettings";
 
 import SummaryItem, { type ISummaryItem } from "./SummaryItem";
 
 export default function SummaryItemOverview() {
   const t = useTranslations("Pages.Home.Hero");
-  const { resolveSupportedLocale } = useLocaleContext();
+  const locale = useLocale();
   const messages = useMessages();
 
   // #region Get summary items
@@ -24,13 +23,13 @@ export default function SummaryItemOverview() {
         employee: siteSettings.currentEmployee,
         languages: siteSettings.currentLanguages
           .map((x) =>
-            new Intl.DisplayNames([resolveSupportedLocale()], {
+            new Intl.DisplayNames([locale], {
               type: "language",
             }).of(x),
           )
           .join(", "),
         location:
-          new Intl.DisplayNames([resolveSupportedLocale()], {
+          new Intl.DisplayNames([locale], {
             type: "region",
           }).of(siteSettings.currentLocation) ?? "",
       }),

@@ -1,0 +1,455 @@
+{
+    "SiteSettings": {
+        "Projects": {
+            "partio": {
+                "title": "Partio",
+                "subtitle": "Online partygames spelen",
+                "description": "Een platform voor partygames waarmee vrienden online of lokaal samen kunnen spelen. Partio is vanaf de basis ontwikkeld met uitbreidbaarheid en meertalige ondersteuning in gedachten, waardoor het eenvoudig is om nieuwe games en talen toe te voegen.",
+                "Links": {
+                    "organization": "GitHub-organisatie",
+                    "website": "Website"
+                }
+            },
+            "solyra_coaching": {
+                "title": "Solyra Coaching",
+                "subtitle": "Website voor een holistisch & systemisch coach",
+                "description": "Website voor een holistisch & systemisch coach, met onder andere afsprakenplanning, geautomatiseerde deployments met Vercel, geautomatiseerde e-mails en meer.",
+                "Links": {
+                    "website": "Website"
+                }
+            },
+            "husqy": {
+                "title": "Husqy",
+                "subtitle": "Discord-bot voor algemene doeleinden",
+                "description": "Een modulaire Discord-bot die communities en beheerders voorziet van een breed scala aan functies voor serverbeheer. Husqy maakt gebruik van een microservice-architectuur en bevat functionaliteiten zoals logging, begroetingen, tijdelijke spraakkanalen, reactierollen en meer. Husqy beschikt over een webdashboard, documentatie, configureerbare modules en ingebouwde monetisatie om hogere limieten te ondersteunen. Het project staat momenteel stil vanwege andere prioriteiten, maar wordt mogelijk in de toekomst voortgezet.",
+                "Links": {
+                    "organization": "GitHub-organisatie",
+                    "website": "Website",
+                    "docs": "Documentatie",
+                    "dashboard": "Dashboard"
+                }
+            },
+            "victreebot": {
+                "title": "Victreebot",
+                "subtitle": "Discord-bot voor Pokémon GO!-communities",
+                "description": "Een Discord-bot voor Pokémon GO!-communities, met functies zoals raidregistratie en inschrijvingen, evenals het registreren van bekende locaties in jouw omgeving. De bot helpt Pokémon GO!-communities om op één centrale plek samen te werken en met elkaar te communiceren.",
+                "Links": {
+                    "source": "Broncode",
+                    "support_server": "Supportserver"
+                }
+            },
+            "l3keboy_github_io": {
+                "title": "l3keboy.github.io",
+                "subtitle": "Deze website",
+                "description": "De huidige versie van mijn persoonlijke website, gebouwd met Next.js en gehost op Vercel. De website beschikt over lichte en donkere thema's, meertalige ondersteuning en eenvoudig configureerbare content.",
+                "Links": {
+                    "source": "Broncode"
+                }
+            },
+            "ios_qr_validator": {
+                "title": "iOS-app - QR_Validator",
+                "subtitle": "Controleer de links achter QR-codes",
+                "description": "Een iOS-applicatie waarmee je QR-codes kunt scannen om de veiligheid van de links erachter te controleren. Je kunt deze links ook openen in een browser binnen de app of in Safari. Dit project wordt niet langer onderhouden en is gearchiveerd.",
+                "Links": {
+                    "source": "Broncode"
+                }
+            },
+            "ios_timeit": {
+                "title": "iOS-app - TimeIt",
+                "subtitle": "Timerapplicatie",
+                "description": "Een iOS-applicatie waarmee je een timer kunt instellen en een melding ontvangt wanneer de timer is afgelopen. Bevat ook een klokweergave (met seconden) en een stopwatch met ondersteuning voor rondetijden. Dit project wordt niet langer onderhouden en is gearchiveerd.",
+                "Links": {
+                    "source": "Broncode"
+                }
+            },
+            "ios_factzzz": {
+                "title": "iOS-app - Factzzz",
+                "subtitle": "Ontdek willekeurige feitjes",
+                "description": "Een iOS-applicatie die een willekeurig feitje weergeeft. Je kunt favoriete feitjes opslaan (alleen lokaal op het apparaat, zonder iCloud) en feitjes delen. Dit project wordt niet langer onderhouden en is gearchiveerd.",
+                "Links": {
+                    "source": "Broncode"
+                }
+            },
+            "lukehendriks_net-v2": {
+                "title": "lukehendriks.net - V2",
+                "subtitle": "V2 van deze website.",
+                "description": "De tweede versie van deze website, met een eenvoudigere aanpak dan V1 en volledig gericht op een landingspagina. Dit project wordt niet langer onderhouden en is gearchiveerd.",
+                "Links": {
+                    "source": "Broncode"
+                }
+            },
+            "lukehendriks_net-v1": {
+                "title": "lukehendriks.net - V1",
+                "subtitle": "V1 van deze website.",
+                "description": "De eerste versie van deze website, gebouwd met een Laravel-backend en Next.js-frontend. De website bevatte functies zoals een contactformulier dat was beveiligd met Google reCAPTCHA v3 en geautomatiseerde e-mailverzending. Dit project wordt niet langer onderhouden en is gearchiveerd.",
+                "Links": {
+                    "source": "Broncode"
+                }
+            }
+        },
+        "Certifications": {
+            "az_400": {
+                "Skills": {
+                    "1": "Processen en communicatie ontwerpen en implementeren",
+                    "2": "Een strategie voor bronbeheer ontwerpen en implementeren",
+                    "3": "Build- en releasepipelines ontwerpen en implementeren",
+                    "4": "Een beveiligings- en complianceplan ontwikkelen",
+                    "5": "Een instrumentatiestrategie implementeren"
+                }
+            },
+            "az_204": {
+                "Skills": {
+                    "1": "Azure-computeoplossingen ontwikkelen",
+                    "2": "Ontwikkelen voor Azure Storage",
+                    "3": "Azure-beveiliging implementeren",
+                    "4": "Azure-oplossingen monitoren, problemen oplossen en optimaliseren",
+                    "5": "Verbinding maken met en gebruikmaken van Azure-services en services van derden"
+                }
+            },
+            "az_104": {
+                "Skills": {
+                    "1": "Azure-identiteiten en governance beheren",
+                    "2": "Opslag implementeren en beheren",
+                    "3": "Azure-computeresources implementeren en beheren",
+                    "4": "Virtuele netwerken implementeren en beheren",
+                    "5": "Azure-resources monitoren en onderhouden"
+                }
+            },
+            "itil_v4_foundation": {
+                "Skills": {
+                    "1": "Concepten van servicemanagement",
+                    "2": "Service Value System",
+                    "3": "Vier dimensies van servicemanagement",
+                    "4": "Leidende principes",
+                    "5": "Service Value Chain",
+                    "6": "ITIL-practices",
+                    "7": "Continue verbetering",
+                    "8": "Service Level Agreements",
+                    "9": "Belangrijke meetwaarden en prestatie-indicatoren",
+                    "10": "Service Operations",
+                    "11": "Digitale transformatie",
+                    "12": "Problem Management"
+                }
+            },
+            "exin_bcs_practitioner": {
+                "Skills": {
+                    "1": "De context voor Business Process Modelling",
+                    "2": "Modelleren op ondernemingsniveau",
+                    "3": "Modelleren op event-responsniveau",
+                    "4": "Modelleren op actor-taakniveau",
+                    "5": "Bedrijfsprocessen verbeteren",
+                    "6": "Veranderingen beheren en implementeren"
+                }
+            },
+            "exin_bcs_foundation": {
+                "Skills": {
+                    "1": "Wat is businessanalyse?",
+                    "2": "De competenties van een businessanalist",
+                    "3": "De strategische context voor businessanalyse",
+                    "4": "Het framework voor businessanalysediensten",
+                    "5": "De bedrijfssituatie onderzoeken",
+                    "6": "Stakeholders analyseren en beheren",
+                    "7": "Bedrijfsdiensten en -processen verbeteren",
+                    "8": "De oplossing definiëren",
+                    "9": "De businesscase opstellen",
+                    "10": "De requirements vaststellen",
+                    "11": "Requirements documenteren en modelleren",
+                    "12": "Requirements valideren en beheren",
+                    "13": "De requirements opleveren",
+                    "14": "De bedrijfsoplossing opleveren"
+                }
+            },
+            "js_coding_specialist": {
+                "Skills": {
+                    "1": "Basisgrammatica, variabeledeclaraties, datatypen en literals",
+                    "2": "JavaScript-operatoren en expressies",
+                    "3": "Control flow, lussen, iteraties en foutafhandeling",
+                    "4": "Functies",
+                    "5": "Werken met objecten in JavaScript",
+                    "6": "Werken met het Document Object Model",
+                    "7": "Werken met HTML-formulieren"
+                }
+            },
+            "c#_coding_apprentice": {
+                "Skills": {
+                    "1": "C#-fundamentals",
+                    "2": "Control statements",
+                    "3": "Methoden",
+                    "4": "Concepten van objectgeoriënteerd programmeren (OOP)",
+                    "5": "Introductie tot design patterns",
+                    "6": "Introductie tot LINQ (IEnumerable)"
+                }
+            },
+            "dasa_devops_professional_enable_and_scale": {
+                "Skills": {
+                    "1": "Effectieve teams samenstellen",
+                    "2": "Bedrijfstransitie",
+                    "3": "Changemanagement",
+                    "4": "Continue verbetering",
+                    "5": "Enterprise-architectuur",
+                    "6": "Integratiemanagement",
+                    "7": "IT-changemanagement",
+                    "8": "IT-management",
+                    "9": "IT Operations Management",
+                    "10": "Implementatie van IT-systeembeheer"
+                }
+            },
+            "az_900": {
+                "Skills": {
+                    "1": "Cloudconcepten beschrijven",
+                    "2": "Azure-architectuur en -services beschrijven",
+                    "3": "Azure-beheer en governance beschrijven"
+                }
+            },
+            "dasa_devops_fundamentals": {
+                "Skills": {
+                    "1": "DevOps",
+                    "2": "Continue verbetering",
+                    "3": "DevOps-waarden",
+                    "4": "Samenwerking",
+                    "5": "Cross-functioneel teammanagement",
+                    "6": "Value stream mapping"
+                }
+            },
+            "network+": {
+                "Skills": {
+                    "1": "Netwerkbeheer",
+                    "2": "Draadloze technologieën",
+                    "3": "Virtualisatie",
+                    "4": "Software Defined Networking",
+                    "5": "Cloudnetwerken",
+                    "6": "Netwerkbeveiliging",
+                    "7": "Kwetsbaarheidsbeheer",
+                    "8": "Systeem-/netwerkconfiguratie",
+                    "9": "Routing en switching",
+                    "10": "BCDR",
+                    "11": "Netwerkproblemen oplossen"
+                }
+            }
+        },
+        "Stack": {
+            "Categories": {
+                "cloud_and_infra": "Cloud & Infrastructuur",
+                "containers_and_orchestration": "Containers & Orchestratie",
+                "cicd_and_automation": "CI/CD & Automatisering",
+                "monitoring_and_security": "Monitoring & Beveiliging",
+                "development": "Ontwikkeling",
+                "tool": "Tools & Platforms"
+            }
+        }
+    },
+    "Components": {
+        "Navigation": {
+            "Header": {
+                "Links": {
+                    "1": {
+                        "title": "Projecten",
+                        "ariaLabel": "Navigeer naar Projecten",
+                        "url": "/projects"
+                    },
+                    "2": {
+                        "title": "Certificeringen",
+                        "ariaLabel": "Navigeer naar Certificeringen",
+                        "url": "/certifications"
+                    },
+                    "3": {
+                        "title": "Stack",
+                        "ariaLabel": "Navigeer naar Stack",
+                        "url": "/stack"
+                    }
+                }
+            },
+            "Footer": {
+                "chip": "Contact",
+                "title": "Laten we praten!",
+                "description": "Neem contact met me op via LinkedIn, of geef een ster aan iets interessants op GitHub.",
+                "Buttons": {
+                    "linkedIn": "LinkedIn",
+                    "gitHub": "GitHub"
+                },
+                "Links": {
+                    "1": {
+                        "title": "Sitemap",
+                        "ariaLabel": "Navigeer naar Sitemap",
+                        "url": "/sitemap.xml"
+                    }
+                }
+            }
+        },
+        "ThemeSwitcher": {
+            "ariaLabel": "Schakel tussen de lichte en donkere modus van de website"
+        },
+        "LanguageSwitcher": {
+            "ariaLabel": "Wijzig de voorkeurstaal van de website"
+        },
+        "CertificationContainer": {
+            "ariaLabel": "Navigeer naar {certificate}",
+            "granted": "Behaald op:",
+            "expires": "Verloopt op:",
+            "skills": "Vaardigheden"
+        },
+        "ProjectContainer": {
+            "ariaLabel": "Navigeer naar {project}",
+            "languages": "Talen",
+            "tools": "Tools",
+            "projectDetails": "Details"
+        }
+    },
+    "Pages": {
+        "Maintenance": {
+            "chip": "Onderhoud",
+            "title": "Zo weer terug",
+            "description": "Ik voer momenteel enkele updates uit aan deze website. De website is binnenkort weer online — bedankt voor je geduld."
+        },
+        "NotFound": {
+            "chip": "Fout",
+            "title": "404",
+            "description": "Deze route bestaat niet. Mogelijk is deze verplaatst, of misschien is deze nooit gedeployed.",
+            "Buttons": {
+                "home": "Home"
+            }
+        },
+        "Home": {
+            "Hero": {
+                "chip": "DevOps Engineer · Full-stack Developer · Nederland",
+                "title": "Bouw aan Cloud <styled>infrastructuur</styled> en <styled>applicaties.</styled>",
+                "description": "Ik ben Luke, een DevOps Engineer en Full-stack Developer met een focus op Microsoft Azure, moderne cloud-native technologieën en backendontwikkeling.",
+                "Buttons": {
+                    "viewProjects": "Bekijk projecten",
+                    "getInTouch": "Neem contact op"
+                },
+                "Summary": {
+                    "1": {
+                        "title": "Momenteel bij",
+                        "description": "{employee}"
+                    },
+                    "2": {
+                        "title": "Locatie",
+                        "description": "{location}"
+                    },
+                    "3": {
+                        "title": "Opleiding",
+                        "description": "{education}"
+                    },
+                    "4": {
+                        "title": "Talen",
+                        "description": "{languages}"
+                    }
+                }
+            },
+            "About": {
+                "chip": "Over mij",
+                "title": "Leuk je te ontmoeten!",
+                "Paragraphs": {
+                    "1": "Ik ben een DevOps Engineer uit Nederland, gespecialiseerd in Microsoft Azure, cloudinfrastructuur, automatisering en backendontwikkeling. Ik heb HBO-ICT gestudeerd aan Fontys Hogescholen, met een specialisatie in Infrastructure en Cyber Security.",
+                    "2": "Mijn ervaring omvat cloudinfrastructuur, softwareontwikkeling, containerisatie, monitoring, beveiliging en CI/CD. Ik werk met technologieën zoals Azure, .NET, C#, Python, Docker, Kubernetes en Next.js. Momenteel verdiep ik mijn kennis van Azure en verken ik de mogelijkheden van AI."
+                },
+                "Background": {
+                    "chip": "Achtergrond",
+                    "Paragraphs": {
+                        "1": "Ik heb stages gelopen bij Isah Business Software (ERP-software), waar ik heb gewerkt aan het verbeteren van IT-monitoring, en bij Cubics (managed service provider), waar ik heb gewerkt aan het beheren van Azure-tenants voor meerdere klanten.",
+                        "2": "Momenteel werk ik bij CZ (zorgverzekeraar), waar ik werk aan backendsystemen met .NET en Azure (ARM, Functions, Storage, Key Vault, enz.)."
+                    }
+                }
+            },
+            "Stack": {
+                "chip": "Technologieën waarmee ik werk",
+                "title": "Stack",
+                "viewAll": "Alles bekijken",
+                "noStacks": "Nog geen stacks!",
+                "noTools": "Nog geen tools!"
+            },
+            "ProjectHighlights": {
+                "chip": "Geselecteerde projecten",
+                "title": "Projecten",
+                "viewAll": "Bekijk al mijn projecten",
+                "noProjects": "Nog geen projecten!"
+            },
+            "CertificationHighlights": {
+                "chip": "Certificeringen & expertise",
+                "title": "Certificeringen",
+                "viewAll": "Bekijk al mijn certificeringen",
+                "noCerts": "Nog geen certificeringen!"
+            }
+        },
+        "Projects": {
+            "Hero": {
+                "chip": "Geselecteerde projecten",
+                "title": "Projecten",
+                "description": "Een selectie van projecten die ik heb gebouwd en waaraan ik heb bijgedragen.",
+                "Buttons": {
+                    "gitHub": "GitHub"
+                }
+            },
+            "ProjectsDisplay": {
+                "noProjects": "Nog geen projecten!"
+            },
+            "ProjectsSort": {
+                "ariaLabel": "Selecteer {type}",
+                "ariaLabelValue": "Selecteer waarde voor {type}",
+                "Settings": {
+                    "highlight": "Uitgelicht",
+                    "sourceType": "Type",
+                    "technologies": "Technologieën"
+                },
+                "Values": {
+                    "yes": "Ja",
+                    "no": "Nee",
+                    "all": "Alle"
+                }
+            },
+            "Slug": {
+                "ProjectDetails": {
+                    "ariaLabel": "Navigeer naar {project}",
+                    "technologies": "Technologieën",
+                    "noTechnologies": "Nog geen technologieën!",
+                    "links": "Links",
+                    "noLinks": "Nog geen links!"
+                }
+            }
+        },
+        "Certifications": {
+            "Hero": {
+                "chip": "Certificeringen & expertise",
+                "title": "Certificeringen",
+                "description": "Professionele certificeringen en expertisegebieden. En er komen er nog veel meer!",
+                "Buttons": {
+                    "linkedIn": "LinkedIn"
+                }
+            },
+            "CertificatesDisplay": {
+                "noCerts": "Nog geen certificeringen!"
+            },
+            "CertificationsSort": {
+                "ariaLabel": "Selecteer {type}-filter",
+                "ariaLabelValue": "Selecteer waarde voor {type}",
+                "Settings": {
+                    "highlight": "Uitgelicht",
+                    "companies": "Organisaties",
+                    "sortDirection": "Sorteerrichting",
+                    "sortBy": "Sorteren op"
+                },
+                "Values": {
+                    "yes": "Ja",
+                    "no": "Nee",
+                    "all": "Alle",
+                    "grantDate": "Behaaldatum",
+                    "expiryDate": "Vervaldatum",
+                    "asc": "Oudste - Nieuwste",
+                    "desc": "Nieuwste - Oudste"
+                }
+            }
+        },
+        "Stack": {
+            "Hero": {
+                "chip": "Technologieën, platforms en tools waarmee ik werk",
+                "title": "Stack",
+                "description": "Technologieën, platforms en tools waarmee ik heb gewerkt op het gebied van ontwikkeling, cloudinfrastructuur en DevOps."
+            },
+            "ProjectDetails": {
+                "noTools": "Nog geen tools!",
+                "noStacks": "Nog geen stacks!"
+            }
+        }
+    }
+}

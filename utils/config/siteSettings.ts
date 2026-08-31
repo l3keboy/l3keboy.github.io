@@ -458,7 +458,7 @@ export const siteSettings: ISiteSettings = {
   ],
   siteMetadata: {
     maintenance: false,
-    supportedSiteLanguages: ["en"],
+    supportedSiteLanguages: ["en", "nl"],
   },
   // ! Highlighted true are shown on home page
   stack: [

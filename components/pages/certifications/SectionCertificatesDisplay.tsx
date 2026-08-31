@@ -1,15 +1,15 @@
 import { useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
+import { CertificationsService } from "@/services/CertificationsService";
 
 import CertificationContainer from "../../common/certifications/CertificationContainer";
-import { CertificationsService } from "@/services/CertificationsService";
 
 export default function SectionCertificatesDisplay() {
   const t = useTranslations("Pages.Certifications.CertificatesDisplay");
 
   // #region Get certificates
-  const certs = CertificationsService.getAllCertifications();
+  const certs = CertificationsService.getCertifications({});
   // #endregion
 
   // TODO Ordering -> By grant date, expiry date

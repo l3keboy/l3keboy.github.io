@@ -1,7 +1,8 @@
+import { notFound } from "next/navigation";
+
 import SectionHero from "@/components/pages/projects/slug/SectionHero";
 import SectionProjectDetails from "@/components/pages/projects/slug/SectionProjectDetails";
 import { ProjectService } from "@/services/ProjectService";
-import { notFound } from "next/navigation";
 
 export default async function ProjectSlugPage({
   params,

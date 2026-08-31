@@ -1,6 +1,7 @@
 import { Companies } from "../enums/Company"
 import { SourceType } from "../enums/SourceType"
 import { StackCategories } from "../enums/StackCategories";
+import { Technologies } from "../enums/Technologies";
 
 export type ICertificationSiteSettings = {
   certificate: {
@@ -19,13 +20,13 @@ export type ICertificationSiteSettings = {
 export type IProjectSiteSettings = {
   highlight: boolean
   image?: string
-  technologies: string[]
   links: {
     highlight: boolean
     slug: string
     url: string
   }[]
   slug: string
+  technologies: Technologies[]
   type: SourceType
 }
 
@@ -54,7 +55,7 @@ export type IStackCategorySiteSettings = {
 }
 export type IStackCategoryToolSiteSettings = {
   highlighted: boolean,
-  tool: string,
+  tool: Technologies,
 }
 
 export const siteSettings: ISiteSettings = {
@@ -231,7 +232,6 @@ export const siteSettings: ISiteSettings = {
     {
       highlight: true,
       image: "https://partio.app/apple-touch-icon.png",
-      technologies: ["C#", ".NET", "Next.js", "HTML/CSS", "Tailwind", "VS Code", "Figma", "Docker", "Docker Compose", "PostgreSQL", "Supabase", "Google Tag Manager", "Google Analytics", "CookieBot", "SignalR", "HeroUI"],
       links: [
         {
           highlight: true, slug: "website",
@@ -243,12 +243,29 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "partio",
+      technologies: [
+        Technologies.CSHARP,
+        Technologies.DOTNET,
+        Technologies.NEXTJS,
+        Technologies.HTML_CSS,
+        Technologies.TAILWIND,
+        Technologies.VS_CODE,
+        Technologies.FIGMA,
+        Technologies.DOCKER,
+        Technologies.DOCKER_COMPOSE,
+        Technologies.POSTGRESQL,
+        Technologies.SUPABASE,
+        Technologies.GOOGLE_TAG_MANAGER,
+        Technologies.GOOGLE_ANALYTICS,
+        Technologies.COOKIEBOT,
+        Technologies.SIGNALR,
+        Technologies.HEROUI,
+      ],
       type: SourceType.CLOSED_SOURCE
     },
     {
       highlight: false,
       image: "https://solyra-coaching.nl/logo.png",
-      technologies: ["Next.js", "HTML/CSS", "Tailwind", "Vercel", "Cal.com", "HeroUI", "VS Code", "Figma"],
       links: [
         {
           highlight: true, slug: "website",
@@ -256,12 +273,21 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "solyra_coaching",
+      technologies: [
+        Technologies.NEXTJS,
+        Technologies.HTML_CSS,
+        Technologies.TAILWIND,
+        Technologies.VERCEL,
+        Technologies.CAL_COM,
+        Technologies.HEROUI,
+        Technologies.VS_CODE,
+        Technologies.FIGMA,
+      ],
       type: SourceType.CLOSED_SOURCE
     },
     {
       highlight: true,
       image: "https://github.com/husqybot/assets/blob/main/logos/logo_default.png?raw=true",
-      technologies: ["Python", "Next.js", "HTML/CSS", "VS Code", "Docker", "MicroK8S", "PostgreSQL", "Redis", "Lavalink", "HashiCorp Vault", "OpenTelemetry", "Seq", "HeroUI", "Tanstack Query", "Discord API"],
       links: [
         {
           highlight: true, slug: "organization",
@@ -281,12 +307,28 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "husqy",
+      technologies: [
+        Technologies.PYTHON,
+        Technologies.NEXTJS,
+        Technologies.HTML_CSS,
+        Technologies.VS_CODE,
+        Technologies.DOCKER,
+        Technologies.MICROK8S,
+        Technologies.POSTGRESQL,
+        Technologies.REDIS,
+        Technologies.LAVALINK,
+        Technologies.HASHICORP_VAULT,
+        Technologies.OPENTELEMETRY,
+        Technologies.SEQ,
+        Technologies.HEROUI,
+        Technologies.TANSTACK_QUERY,
+        Technologies.DISCORD_API,
+      ],
       type: SourceType.CLOSED_SOURCE
     },
     {
       highlight: false,
       image: "https://github.com/l3keboy/Victreebot/blob/main/assets/logos/VictreeBot.png?raw=true",
-      technologies: ["Python", "Docker", "PostgreSQL", "Discord API", "PokéAPI", "VS Code"],
       links: [
         {
           highlight: true, slug: "source",
@@ -298,11 +340,18 @@ export const siteSettings: ISiteSettings = {
         }
       ],
       slug: "victreebot",
+      technologies: [
+        Technologies.PYTHON,
+        Technologies.DOCKER,
+        Technologies.POSTGRESQL,
+        Technologies.DISCORD_API,
+        Technologies.POKEAPI,
+        Technologies.VS_CODE,
+      ],
       type: SourceType.OPEN_SOURCE
     },
     {
       highlight: true,
-      technologies: ["Next.js", "Tailwind", "Vercel", "HeroUI", "Next-intl", "Figma", "React-cookie", "VS Code"],
       links: [
         {
           highlight: true, slug: "source",
@@ -310,11 +359,20 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "l3keboy_github_io",
+      technologies: [
+        Technologies.NEXTJS,
+        Technologies.TAILWIND,
+        Technologies.VERCEL,
+        Technologies.HEROUI,
+        Technologies.NEXT_INTL,
+        Technologies.FIGMA,
+        Technologies.REACT_COOKIE,
+        Technologies.VS_CODE,
+      ],
       type: SourceType.OPEN_SOURCE
     },
     {
       highlight: false,
-      technologies: ["SwiftUI", "Xcode", "Google Safebrowsing API"],
       links: [
         {
           highlight: true, slug: "source",
@@ -322,11 +380,15 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "ios_qr_validator",
+      technologies: [
+        Technologies.SWIFTUI,
+        Technologies.XCODE,
+        Technologies.GOOGLE_SAFE_BROWSING_API,
+      ],
       type: SourceType.OPEN_SOURCE
     },
     {
       highlight: false,
-      technologies: ["SwiftUI", "Xcode"],
       links: [
         {
           highlight: true, slug: "source",
@@ -334,11 +396,14 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "ios_timeit",
+      technologies: [
+        Technologies.SWIFTUI,
+        Technologies.XCODE,
+      ],
       type: SourceType.OPEN_SOURCE
     },
     {
       highlight: false,
-      technologies: ["SwiftUI", "Xcode", "Useless Facts API"],
       links: [
         {
           highlight: true, slug: "source",
@@ -346,12 +411,16 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "ios_factzzz",
+      technologies: [
+        Technologies.SWIFTUI,
+        Technologies.XCODE,
+        Technologies.USELESS_FACTS_API,
+      ],
       type: SourceType.OPEN_SOURCE
     },
     {
       highlight: false,
       image: "https://github.com/l3keboy/lukehendriks.net-v2/blob/main/frontend/assets/images/memoji.png?raw=true",
-      technologies: ["Nuxt", "Tailwind", "VS Code", "Figma"],
       links: [
         {
           highlight: true, slug: "source",
@@ -359,12 +428,17 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "lukehendriks_net-v2",
+      technologies: [
+        Technologies.NUXT,
+        Technologies.TAILWIND,
+        Technologies.VS_CODE,
+        Technologies.FIGMA,
+      ],
       type: SourceType.OPEN_SOURCE
     },
     {
       highlight: false,
       image: "https://github.com/l3keboy/lukehendriks.net-v1/blob/main/images/homescreen-hero.png?raw=true",
-      technologies: ["React", "Tailwind", "Laravel Lumen", "VS Code", "Figma"],
       links: [
         {
           highlight: true, slug: "source",
@@ -372,6 +446,13 @@ export const siteSettings: ISiteSettings = {
         },
       ],
       slug: "lukehendriks_net-v1",
+      technologies: [
+        Technologies.REACT,
+        Technologies.TAILWIND,
+        Technologies.LARAVEL_LUMEN,
+        Technologies.VS_CODE,
+        Technologies.FIGMA,
+      ],
       type: SourceType.OPEN_SOURCE
     }
   ],
@@ -384,79 +465,79 @@ export const siteSettings: ISiteSettings = {
     {
       slug: StackCategories.CLOUD_AND_INFRA,
       tools: [
-        {highlighted: true, tool: "Azure"}, 
-        {highlighted: true, tool: "Azure ARM"}, 
-        {highlighted: true, tool: "Azure Bicep"}, 
-        {highlighted: true, tool: "Entra ID"}, 
-        {highlighted: true, tool: "PostgreSQL"}, 
-        {highlighted: true, tool: "Redis"}, 
-        {highlighted: false, tool: "UniFi"}, 
-        {highlighted: false, tool: "pfSense"}, 
-        {highlighted: false, tool: "Nginx"}
+      { highlighted: true, tool: Technologies.AZURE },
+      { highlighted: true, tool: Technologies.AZURE_ARM },
+      { highlighted: true, tool: Technologies.AZURE_BICEP },
+      { highlighted: true, tool: Technologies.ENTRA_ID },
+      { highlighted: true, tool: Technologies.POSTGRESQL },
+      { highlighted: true, tool: Technologies.REDIS },
+      { highlighted: false, tool: Technologies.UNIFI },
+      { highlighted: false, tool: Technologies.PFSENSE },
+      { highlighted: false, tool: Technologies.NGINX },
       ],
     },
     {
       slug: StackCategories.CONTAINERS_AND_ORCHESTRATION,
       tools: [
-        {highlighted: true, tool: "Docker"}, 
-        {highlighted: true, tool: "Docker Compose"}, 
-        {highlighted: true, tool: "MicroK8s"}, 
-        {highlighted: true, tool: "Kubernetes"}
+      { highlighted: true, tool: Technologies.DOCKER },
+      { highlighted: true, tool: Technologies.DOCKER_COMPOSE },
+      { highlighted: true, tool: Technologies.MICROK8S },
+      { highlighted: true, tool: Technologies.KUBERNETES },
       ],
     },
     {
       slug: StackCategories.CICD_AND_AUTOMATION,
       tools: [
-        {highlighted: true, tool: "GitHub Actions"}, 
-        {highlighted: true, tool: "Azure DevOps"}, 
-        {highlighted: true, tool: "Ansible"}
+      { highlighted: true, tool: Technologies.GITHUB_ACTIONS },
+      { highlighted: true, tool: Technologies.AZURE_DEVOPS },
+      { highlighted: true, tool: Technologies.ANSIBLE },
       ],
     },
     {
       slug: StackCategories.MONITORING_AND_SECURITY,
       tools: [
-        {highlighted: true, tool: "Azure Key Vault"}, 
-        {highlighted: true, tool: "Application Insights"}, 
-        {highlighted: true, tool: "OpenTelemetry"}, 
-        {highlighted: true, tool: "HashiCorp Vault"}, 
-        {highlighted: false, tool: "Seq"}, 
-        {highlighted: false, tool: "Elastic Stack"}, 
-        {highlighted: false, tool: "Grafana"}, 
-        {highlighted: false, tool: "Zabbix"}
+      { highlighted: true, tool: Technologies.AZURE_KEY_VAULT },
+      { highlighted: true, tool: Technologies.APPLICATION_INSIGHTS },
+      { highlighted: true, tool: Technologies.OPENTELEMETRY },
+      { highlighted: true, tool: Technologies.HASHICORP_VAULT },
+      { highlighted: false, tool: Technologies.SEQ },
+      { highlighted: false, tool: Technologies.ELASTIC_STACK },
+      { highlighted: false, tool: Technologies.GRAFANA },
+      { highlighted: false, tool: Technologies.ZABBIX },
       ],
     },
     {
       slug: StackCategories.DEVELOPMENT,
       tools: [
-        {highlighted: true, tool: "C#"}, 
-        {highlighted: true, tool: ".NET"}, 
-        {highlighted: true, tool: "Next.js"}, 
-        {highlighted: true, tool: "Python"}, 
-        {highlighted: false, tool: "React"}, 
-        {highlighted: false, tool: "JavaScript"}, 
-        {highlighted: false, tool: "HTML/CSS"}, 
-        {highlighted: false, tool: "Tailwind"}, 
-        {highlighted: false, tool: "PowerShell"}, 
-        {highlighted: false, tool: "Bash"}, 
-        {highlighted: false, tool: "SwiftUI"}, 
-        {highlighted: false, tool: "Nuxt"}, 
-        {highlighted: false, tool: "Laravel Lumen"}
+      { highlighted: true, tool: Technologies.CSHARP },
+      { highlighted: true, tool: Technologies.DOTNET },
+      { highlighted: true, tool: Technologies.NEXTJS },
+      { highlighted: true, tool: Technologies.PYTHON },
+      { highlighted: false, tool: Technologies.REACT },
+      { highlighted: false, tool: Technologies.JAVASCRIPT },
+      { highlighted: false, tool: Technologies.HTML_CSS },
+      { highlighted: false, tool: Technologies.TAILWIND },
+      { highlighted: false, tool: Technologies.POWERSHELL },
+      { highlighted: false, tool: Technologies.BASH },
+      { highlighted: false, tool: Technologies.SWIFTUI },
+      { highlighted: false, tool: Technologies.NUXT },
+      { highlighted: false, tool: Technologies.LARAVEL_LUMEN },
       ],
     },
     {
       slug: StackCategories.TOOLS,
       tools: [
-        {highlighted: true, tool: "Visual Studio"}, 
-        {highlighted: true, tool: "VS Code"},
-        {highlighted: true, tool: "Git"}, 
-        {highlighted: true, tool: "Supabase"}, 
-        {highlighted: true, tool: "Google Tag Manager"}, 
-        {highlighted: false, tool: "GitHub"}, 
-        {highlighted: false, tool: "Xcode"}, 
-        {highlighted: false, tool: "Google Analytics"}, 
-        {highlighted: false, tool: "CookieBot"}, 
-        {highlighted: false, tool: "Vercel"}, 
-        {highlighted: false, tool: "Cal.com"}
+      { highlighted: true, tool: Technologies.VISUAL_STUDIO },
+      { highlighted: true, tool: Technologies.VS_CODE },
+      { highlighted: true, tool: Technologies.GIT },
+      { highlighted: true, tool: Technologies.SUPABASE },
+      { highlighted: true, tool: Technologies.GOOGLE_TAG_MANAGER },
+      { highlighted: false, tool: Technologies.GITHUB },
+      { highlighted: false, tool: Technologies.XCODE },
+      { highlighted: false, tool: Technologies.GOOGLE_ANALYTICS },
+      { highlighted: false, tool: Technologies.COOKIEBOT },
+      { highlighted: false, tool: Technologies.VERCEL },
+      { highlighted: false, tool: Technologies.CAL_COM },
       ],
     },
   ],

@@ -2,9 +2,9 @@ import { useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
 import PortfolioChip from "@/components/ui/PortfolioChip";
+import PortfolioLink from "@/components/ui/PortfolioLink";
 import HeadingTitle from "@/components/ui/titles/HeadingTitle";
 import { siteSettings } from "@/utils/config/siteSettings";
-import PortfolioLink from "@/components/ui/PortfolioLink";
 
 export default function SectionStack() {
   const t = useTranslations("Pages.Home.Stack");

@@ -1,10 +1,10 @@
 import { useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
-import { type IProjectSiteSettings } from "@/utils/config/siteSettings";
+import PortfolioButton from "@/components/ui/PortfolioButton";
 import PortfolioChip from "@/components/ui/PortfolioChip";
 import PortfolioLink from "@/components/ui/PortfolioLink";
-import PortfolioButton from "@/components/ui/PortfolioButton";
+import { type IProjectSiteSettings } from "@/utils/config/siteSettings";
 
 // Interfaces
 export interface ISectionHero {

@@ -1,9 +1,8 @@
 import { useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
-import { siteSettings } from "@/utils/config/siteSettings";
-
 import PortfolioChip from "@/components/ui/PortfolioChip";
+import { siteSettings } from "@/utils/config/siteSettings";
 
 export default function SectionStackDisplay() {
   const t = useTranslations("Pages.Stack.StackDisplay");

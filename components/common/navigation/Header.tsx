@@ -2,15 +2,15 @@ import { Avatar, Drawer } from "@heroui/react";
 import { useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
 
+import { IconMenu } from "@/components/icons/Menu";
+import PortfolioButton from "@/components/ui/PortfolioButton";
 import PortfolioLink from "@/components/ui/PortfolioLink";
 import { type NavigationLink } from "@/types/components/navigation/NavigationLink";
 import { siteSettings } from "@/utils/config/siteSettings";
 
 import ContentContainer from "../ContentContainer";
-import { ThemeSwitcher } from "../ThemeSwitcher";
-import PortfolioButton from "@/components/ui/PortfolioButton";
-import { IconMenu } from "@/components/icons/Menu";
 import { LanguageSwitcher } from "../LanguageSwitcher";
+import { ThemeSwitcher } from "../ThemeSwitcher";
 
 export function Header() {
   const t = useTranslations("Components.Navigation.Header");

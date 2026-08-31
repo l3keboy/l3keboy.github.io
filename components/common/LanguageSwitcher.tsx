@@ -1,12 +1,14 @@
 "use client";
 // ! Languages are only relevant on the client side, therefore use client
 
-import { useLocaleContext } from "@/contexts/LocaleContext";
 import { Dropdown } from "@heroui/react";
-import PortfolioButton from "../ui/PortfolioButton";
 import { useTranslations } from "next-intl";
-import { IconGlobe } from "../icons/Globe";
+
+import { useLocaleContext } from "@/contexts/LocaleContext";
 import { siteSettings } from "@/utils/config/siteSettings";
+
+import { IconGlobe } from "../icons/Globe";
+import PortfolioButton from "../ui/PortfolioButton";
 
 export function LanguageSwitcher() {
   const t = useTranslations("Components.LanguageSwitcher");
@@ -32,8 +34,8 @@ export function LanguageSwitcher() {
             return (
               <Dropdown.Item
                 className="rounded-lg"
-                key={lang}
                 id={lang}
+                key={lang}
                 textValue={new Intl.DisplayNames([], {
                   type: "language",
                 }).of(lang)}

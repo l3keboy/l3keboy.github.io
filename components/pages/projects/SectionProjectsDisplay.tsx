@@ -1,18 +1,18 @@
 import { useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
+import { ProjectService } from "@/services/ProjectService";
 
 import ProjectContainer from "../../common/projects/ProjectContainer";
-import { ProjectService } from "@/services/ProjectService";
 
 export default function SectionProjectsDisplay() {
   const t = useTranslations("Pages.Projects.ProjectsDisplay");
 
   // #region Get projects
-  const projects = ProjectService.getAllProjects();
+  const projects = ProjectService.getProjects({});
   // #endregion
 
-  // TODO Filtering -> Highlighted, Source type (Open/Closed), Tools used?
+  // TODO Filtering -> Tools used?
 
   return (
     <ContentContainer>

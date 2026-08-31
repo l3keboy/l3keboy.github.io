@@ -1,10 +1,12 @@
 "use client";
 // ! Locales are client side, therefore use client
 
-import { useLocaleContext } from "@/contexts/LocaleContext";
 import { useMessages, useTranslations } from "next-intl";
-import SummaryItem, { type ISummaryItem } from "./SummaryItem";
+
+import { useLocaleContext } from "@/contexts/LocaleContext";
 import { siteSettings } from "@/utils/config/siteSettings";
+
+import SummaryItem, { type ISummaryItem } from "./SummaryItem";
 
 export default function SummaryItemOverview() {
   const t = useTranslations("Pages.Home.Hero");

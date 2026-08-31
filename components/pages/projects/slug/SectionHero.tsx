@@ -1,12 +1,12 @@
 import { useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
+import ImageDisplay from "@/components/common/projects/ImageDisplay";
 import PortfolioButton from "@/components/ui/PortfolioButton";
 import PortfolioChip from "@/components/ui/PortfolioChip";
 import PortfolioLink from "@/components/ui/PortfolioLink";
 import DisplayTitle from "@/components/ui/titles/DisplayTitle";
 import { type IProjectSiteSettings } from "@/utils/config/siteSettings";
-import ImageDisplay from "@/components/common/projects/ImageDisplay";
 
 // Interfaces
 export interface ISectionHero {
@@ -33,8 +33,8 @@ export default function SectionHero({ project }: ISectionHero) {
           <ImageDisplay
             bigIcon
             fullIcon
-            title={tProjects(`${project.slug}.title`)}
             image={project.image}
+            title={tProjects(`${project.slug}.title`)}
           />
         </div>
         <label className="md:max-w-[45%] text-muted">

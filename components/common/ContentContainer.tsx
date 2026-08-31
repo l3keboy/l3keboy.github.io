@@ -18,7 +18,7 @@ export default function ContentContainer({
     <>
       <div
         className={clsx(
-          "max-w-270 m-auto w-full py-6 flex flex-col justify-between",
+          "max-w-270 m-auto w-full pb-6 flex flex-col justify-between",
           contentContainerClassNames,
         )}
       >

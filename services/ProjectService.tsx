@@ -40,7 +40,7 @@ export class ProjectService {
 
     if (filters?.technologies?.length) {
       projects = projects.filter((project) =>
-        filters.technologies!.every((technology) =>
+        filters.technologies!.some((technology) =>
           project.technologies.includes(technology),
         ),
       );

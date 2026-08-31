@@ -384,6 +384,18 @@
             "ProjectsDisplay": {
                 "noProjects": "No projects yet!"
             },
+            "ProjectsSort": {
+                "Settings": {
+                    "highlight": "Highlight",
+                    "sourceType": "Type",
+                    "technologies": "Technologies"
+                },
+                "Values": {
+                    "yes": "Yes",
+                    "no": "No",
+                    "all": "All"
+                }
+            },
             "Slug": {
                 "ProjectDetails": {
                     "ariaLabel": "Navigate to {project}",

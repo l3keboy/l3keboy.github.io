@@ -9,6 +9,7 @@ import {
 
 import CertificationContainer from "../../common/certifications/CertificationContainer";
 import { Companies } from "@/utils/enums/Company";
+import CertificationsSort from "./CertificationsSort";
 
 // Interfaces
 export interface ISectionCertificatesDisplayParams {
@@ -39,6 +40,7 @@ export default function SectionCertificatesDisplay({
 
   return (
     <ContentContainer>
+      <CertificationsSort />
       {certs.length <= 0 && <label>{t("noCerts")}</label>}
       {certs.length > 0 && (
         <div className="flex flex-col gap-6">

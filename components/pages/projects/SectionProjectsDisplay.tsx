@@ -6,10 +6,11 @@ import { ProjectService } from "@/services/ProjectService";
 import ProjectContainer from "../../common/projects/ProjectContainer";
 import { Technologies } from "@/utils/enums/Technologies";
 import { SourceType } from "@/utils/enums/SourceType";
+import ProjectsSort from "./ProjectsSort";
 
 // Interfaces
 export interface ISectionProjectDisplayParams {
-  technology?: string | string[];
+  technology?: string;
   type?: string;
   highlight?: string;
 }
@@ -22,12 +23,7 @@ export default function SectionProjectsDisplay({
   const t = useTranslations("Pages.Projects.ProjectsDisplay");
 
   // #region Get projects
-  const technologies = Array.isArray(technology)
-    ? technology
-    : technology
-      ? [technology]
-      : [];
-
+  const technologies = technology?.split(",") ?? [];
   const projects = ProjectService.getProjects({
     filters: {
       technologies: technologies as Technologies[],
@@ -39,6 +35,7 @@ export default function SectionProjectsDisplay({
 
   return (
     <ContentContainer>
+      <ProjectsSort />
       {projects.length <= 0 && <label>{t("noProjects")}</label>}
       {projects.length > 0 && (
         <div className="flex flex-col gap-6">

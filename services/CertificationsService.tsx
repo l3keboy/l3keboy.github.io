@@ -6,7 +6,7 @@ import { Companies } from "@/utils/enums/Company";
 
 // Interfaces
 export interface CertificationFilters {
-  company?: Companies;
+  company?: Companies[];
   highlight?: boolean;
 }
 export interface CertificationQueryOptions {
@@ -38,8 +38,8 @@ export class CertificationsService {
 
     // Filtering
     if (filters?.company) {
-      certifications = certifications.filter(
-        (cert) => cert.company.name === filters.company,
+      certifications = certifications.filter((cert) =>
+        filters.company?.includes(cert.company.name),
       );
     }
 

@@ -417,6 +417,23 @@
             },
             "CertificatesDisplay": {
                 "noCerts": "No Certifications yet!"
+            },
+            "CertificationsSort": {
+                "Settings": {
+                    "highlight": "Highlight",
+                    "companies": "Companies",
+                    "sortDirection": "Sort direction",
+                    "sortBy": "Sort by"
+                },
+                "Values": {
+                    "yes": "Yes",
+                    "no": "No",
+                    "all": "All",
+                    "grantDate": "Grant date",
+                    "expiryDate": "Expiry date",
+                    "asc": "Oldest - Newest",
+                    "desc": "Newest - Oldest"
+                }
             }
         },
         "Stack": {

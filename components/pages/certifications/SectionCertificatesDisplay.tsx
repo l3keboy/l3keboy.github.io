@@ -13,7 +13,7 @@ import CertificationsSort from "./CertificationsSort";
 
 // Interfaces
 export interface ISectionCertificatesDisplayParams {
-  company?: string;
+  company?: string[];
   highlight?: string;
   sortBy?: CertificationSortField;
   sortDirection?: CertificationSortDirection;
@@ -30,7 +30,7 @@ export default function SectionCertificatesDisplay({
   // #region Get certificates
   const certs = CertificationsService.getCertifications({
     filters: {
-      company: company as Companies | undefined,
+      company: company as Companies[] | undefined,
       highlight: highlight === undefined ? undefined : highlight === "true",
     },
     sortBy: sortBy,

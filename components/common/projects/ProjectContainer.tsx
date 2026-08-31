@@ -8,15 +8,10 @@ import PortfolioLink from "../../ui/PortfolioLink";
 import CardTitle from "../../ui/titles/CardTitle";
 import ImageDisplay from "./ImageDisplay";
 
-export type IProject = {
-  description: string;
-  subtitle: string;
-  title: string;
-} & IProjectSiteSettings;
 export type IProjectContainer = {
   bigIcon?: boolean;
   cardTitleAs?: ElementType;
-  project: IProject;
+  project: IProjectSiteSettings;
 };
 
 export default function ProjectContainer({
@@ -33,16 +28,19 @@ export default function ProjectContainer({
   return (
     <div className="w-full h-full p-6 rounded-lg bg-surface flex flex-col gap-3">
       <div className="flex flex-row justify-between gap-6 w-full relative">
-        <CardTitle as={projectContainerCardTitleAs} text={project.title} />
+        <CardTitle
+          as={projectContainerCardTitleAs}
+          text={tProjects(`${project.slug}.title`)}
+        />
         <ImageDisplay
           bigIcon={projectContainerBigIcon}
           image={project.image}
-          title={project.title}
+          title={tProjects(`${project.slug}.title`)}
         />
       </div>
       <div className="text-muted flex flex-col gap-3">
         <label>
-          {project.type} - {project.subtitle}
+          {project.type} - {tProjects(`${project.slug}.subtitle`)}
         </label>
       </div>
       <div className="flex flex-row gap-3 flex-wrap">

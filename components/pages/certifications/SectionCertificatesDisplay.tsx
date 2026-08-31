@@ -1,28 +1,15 @@
 import { useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
-import { siteSettings } from "@/utils/config/siteSettings";
 
-import CertificationContainer, {
-  type ICertification,
-} from "../../common/certifications/CertificationContainer";
+import CertificationContainer from "../../common/certifications/CertificationContainer";
+import { CertificationsService } from "@/services/CertificationsService";
 
 export default function SectionCertificatesDisplay() {
   const t = useTranslations("Pages.Certifications.CertificatesDisplay");
-  const tCertifications = useTranslations("SiteSettings.Certifications");
 
   // #region Get certificates
-  const siteSettingsCerts = siteSettings.certifications;
-
-  const certs: ICertification[] = [];
-  siteSettingsCerts.forEach((certificate) => {
-    certs.push({
-      ...certificate,
-      skills: Object.values(
-        tCertifications.raw(`${certificate.slug}.Skills`),
-      ) as string[],
-    });
-  });
+  const certs = CertificationsService.getAllCertifications();
   // #endregion
 
   // TODO Ordering -> By grant date, expiry date

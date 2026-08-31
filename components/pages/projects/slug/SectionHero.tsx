@@ -14,7 +14,7 @@ export interface ISectionHero {
 }
 
 export default function SectionHero({ project }: ISectionHero) {
-  const t = useTranslations("SiteSettings.Projects");
+  const tProjects = useTranslations("SiteSettings.Projects");
 
   return (
     <ContentContainer showDivider>
@@ -22,29 +22,29 @@ export default function SectionHero({ project }: ISectionHero) {
         <div className="flex flex-row justify-between gap-12 relative">
           <div className="flex flex-col gap-3 ">
             {/* #region Chip */}
-            <PortfolioChip text={t(`${project.slug}.subtitle`)} />
+            <PortfolioChip text={tProjects(`${project.slug}.subtitle`)} />
             {/* #endregion */}
 
             <DisplayTitle
               classNames="md:max-w-[50%]"
-              text={t(`${project.slug}.title`)}
+              text={tProjects(`${project.slug}.title`)}
             />
           </div>
           <ImageDisplay
             bigIcon
             fullIcon
-            title={t(`${project.slug}.title`)}
+            title={tProjects(`${project.slug}.title`)}
             image={project.image}
           />
         </div>
         <label className="md:max-w-[45%] text-muted">
-          {t(`${project.slug}.description`)}
+          {tProjects(`${project.slug}.description`)}
         </label>
         <div className="flex flex-row gap-3">
           <PortfolioLink
             content={
               <PortfolioButton
-                content={t(
+                content={tProjects(
                   `${project.slug}.Links.${project.links.filter((x) => x.highlight)[0].slug}`,
                 )}
               />

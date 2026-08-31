@@ -1,32 +1,17 @@
 import { useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
-import ProjectContainer, {
-  type IProject,
-} from "@/components/common/projects/ProjectContainer";
+import ProjectContainer from "@/components/common/projects/ProjectContainer";
 import PortfolioChip from "@/components/ui/PortfolioChip";
 import PortfolioLink from "@/components/ui/PortfolioLink";
 import HeadingTitle from "@/components/ui/titles/HeadingTitle";
-import { siteSettings } from "@/utils/config/siteSettings";
+import { ProjectService } from "@/services/ProjectService";
 
 export default function SectionProjectHighlights() {
   const t = useTranslations("Pages.Home.ProjectHighlights");
-  const tProjects = useTranslations("SiteSettings.Projects");
 
   // #region Get highlighted certificates
-  const siteSettingsHighlightedProjects = siteSettings.projects.filter(
-    (x) => x.highlight === true,
-  );
-
-  const highlightedProjects: IProject[] = [];
-  siteSettingsHighlightedProjects.forEach((project) => {
-    highlightedProjects.push({
-      ...project,
-      description: tProjects(`${project.slug}.description`),
-      subtitle: tProjects(`${project.slug}.subtitle`),
-      title: tProjects(`${project.slug}.title`),
-    });
-  });
+  const highlightedProjects = ProjectService.getHighlightedProjects();
   // #endregion
 
   return (

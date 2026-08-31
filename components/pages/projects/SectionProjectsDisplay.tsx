@@ -1,28 +1,15 @@
 import { useTranslations } from "next-intl";
 
 import ContentContainer from "@/components/common/ContentContainer";
-import { siteSettings } from "@/utils/config/siteSettings";
 
-import ProjectContainer, {
-  type IProject,
-} from "../../common/projects/ProjectContainer";
+import ProjectContainer from "../../common/projects/ProjectContainer";
+import { ProjectService } from "@/services/ProjectService";
 
 export default function SectionProjectsDisplay() {
   const t = useTranslations("Pages.Projects.ProjectsDisplay");
-  const tProjects = useTranslations("SiteSettings.Projects");
 
   // #region Get projects
-  const siteSettingsProjects = siteSettings.projects;
-
-  const projects: IProject[] = [];
-  siteSettingsProjects.forEach((project) => {
-    projects.push({
-      ...project,
-      description: tProjects(`${project.slug}.description`),
-      subtitle: tProjects(`${project.slug}.subtitle`),
-      title: tProjects(`${project.slug}.title`),
-    });
-  });
+  const projects = ProjectService.getAllProjects();
   // #endregion
 
   // TODO Filtering -> Highlighted, Source type (Open/Closed), Tools used?

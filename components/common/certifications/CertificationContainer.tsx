@@ -9,12 +9,9 @@ import PortfolioLink from "../../ui/PortfolioLink";
 import CardTitle from "../../ui/titles/CardTitle";
 import { DateDisplay } from "./DateDisplay";
 
-export type ICertification = {
-  skills: string[];
-} & ICertificationSiteSettings;
 export type ICertificationContainer = {
   cardTitleAs?: ElementType;
-  certificate: ICertification;
+  certificate: ICertificationSiteSettings;
   showSkills?: boolean;
 };
 
@@ -24,9 +21,14 @@ export default function CertificationContainer({
   showSkills,
 }: ICertificationContainer) {
   const t = useTranslations("Components.CertificationContainer");
+  const tCertifications = useTranslations("SiteSettings.Certifications");
 
   const certificationContainerShowSkills = showSkills ?? false;
   const certificationContainerCardTitleAs = cardTitleAs ?? "h3";
+
+  const skills = Object.values(
+    tCertifications.raw(`${certificate.slug}.Skills`),
+  ) as string[];
 
   return (
     <PortfolioLink
@@ -53,7 +55,7 @@ export default function CertificationContainer({
             <>
               <label>{t("skills").toUpperCase()}</label>
               <div className="flex flex-row flex-wrap gap-x-3 gap-y-1.5">
-                {certificate.skills.map((skill) => (
+                {skills.map((skill) => (
                   <PortfolioChip
                     classNames="px-1.5 py-0.5"
                     key={`${certificate.slug}-${skill}`}

@@ -1,32 +1,17 @@
 import { useTranslations } from "next-intl";
 
-import CertificationContainer, {
-  type ICertification,
-} from "@/components/common/certifications/CertificationContainer";
+import CertificationContainer from "@/components/common/certifications/CertificationContainer";
 import ContentContainer from "@/components/common/ContentContainer";
 import PortfolioChip from "@/components/ui/PortfolioChip";
 import PortfolioLink from "@/components/ui/PortfolioLink";
 import HeadingTitle from "@/components/ui/titles/HeadingTitle";
-import { siteSettings } from "@/utils/config/siteSettings";
+import { CertificationsService } from "@/services/CertificationsService";
 
 export default function SectionCertificationHighlights() {
   const t = useTranslations("Pages.Home.CertificationHighlights");
-  const tCertifications = useTranslations("SiteSettings.Certifications");
 
   // #region Get highlighted certificates
-  const siteSettingsHighlightedCerts = siteSettings.certifications.filter(
-    (x) => x.highlight === true,
-  );
-
-  const highlightedCerts: ICertification[] = [];
-  siteSettingsHighlightedCerts.forEach((certificate) => {
-    highlightedCerts.push({
-      ...certificate,
-      skills: Object.values(
-        tCertifications.raw(`${certificate.slug}.Skills`),
-      ) as string[],
-    });
-  });
+  const highlightedCerts = CertificationsService.getHighlightedCertifications();
   // #endregion
 
   return (

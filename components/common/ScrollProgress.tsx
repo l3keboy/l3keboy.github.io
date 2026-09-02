@@ -34,6 +34,6 @@ export function ScrollProgress() {
   }, []);
 
   return (
-    <div ref={barRef} className="fixed top-0 left-0 h-0.5 bg-accent z-50" />
+    <div className="fixed top-0 left-0 h-0.5 bg-accent z-50" ref={barRef} />
   );
 }

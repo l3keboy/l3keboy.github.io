@@ -55,11 +55,11 @@ export default function SectionProjectDetails({ project }: ISectionHero) {
                         variant={link.highlight ? "primary" : "tertiary"}
                       />
                     }
+                    disableAnimation
                     href={link.url}
                     key={`${project.slug}-${link.slug}`}
                     linkIsExternal
                     noUnderline
-                    disableAnimation
                   />
                 );
               })}

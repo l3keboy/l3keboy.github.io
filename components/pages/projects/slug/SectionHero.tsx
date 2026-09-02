@@ -49,10 +49,10 @@ export default function SectionHero({ project }: ISectionHero) {
                 )}
               />
             }
+            disableAnimation
             href={project.links.filter((x) => x.highlight)[0].url}
             linkIsExternal
             noUnderline
-            disableAnimation
           />
         </div>
       </div>

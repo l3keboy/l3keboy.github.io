@@ -69,10 +69,10 @@ export default function CertificationContainer({
           )}
         </div>
       }
+      disableAnimation
       href={certificate.certificate.url}
       linkIsExternal
       noUnderline
-      disableAnimation
     />
   );
 }

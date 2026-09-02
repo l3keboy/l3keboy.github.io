@@ -1,6 +1,7 @@
-import clsx from "clsx";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "./globals.css";
+import clsx from "clsx";
 import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
@@ -54,6 +55,8 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
           "text-base",
         )}
       >
+        <SpeedInsights />
+
         <NextIntlClientProvider>
           <PortfolioRootLayout>{children}</PortfolioRootLayout>
         </NextIntlClientProvider>

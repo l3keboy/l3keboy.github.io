@@ -57,10 +57,10 @@ export function Footer() {
         <div className="flex flex-row my-0 mt-3 md:my-auto gap-3">
           <PortfolioLink
             content={<PortfolioButton content={t("Buttons.linkedIn")} />}
+            disableAnimation
             href={siteSettings.urls.linkedInUrl}
             linkIsExternal
             noUnderline
-            disableAnimation
           />
           <PortfolioLink
             content={
@@ -69,10 +69,10 @@ export function Footer() {
                 variant="outline"
               />
             }
+            disableAnimation
             href={siteSettings.urls.githubUrl}
             linkIsExternal
             noUnderline
-            disableAnimation
           />
         </div>
         {/* #endregion */}

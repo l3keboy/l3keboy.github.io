@@ -58,11 +58,11 @@ export default function ProjectContainer({
                     variant={link.highlight ? "primary" : "outline"}
                   />
                 }
+                disableAnimation
                 href={link.url}
                 key={`${project.slug}-${link.slug}`}
                 linkIsExternal
                 noUnderline
-                disableAnimation
               />
             );
           })}
@@ -78,9 +78,9 @@ export default function ProjectContainer({
               variant="tertiary"
             />
           }
+          disableAnimation
           href={`/projects/${project.slug}`}
           noUnderline
-          disableAnimation
         />
       </div>
     </div>

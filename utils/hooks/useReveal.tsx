@@ -26,5 +26,5 @@ export function useReveal() {
     return () => observer.disconnect();
   }, []);
 
-  return { ref, inView };
+  return { inView, ref };
 }

@@ -10,8 +10,8 @@ import { siteSettings } from "@/utils/config/siteSettings";
 
 import ContentContainer from "../ContentContainer";
 import { LanguageSwitcher } from "../LanguageSwitcher";
-import { ThemeSwitcher } from "../ThemeSwitcher";
 import { ScrollProgress } from "../ScrollProgress";
+import { ThemeSwitcher } from "../ThemeSwitcher";
 
 export function Header() {
   const t = useTranslations("Components.Navigation.Header");

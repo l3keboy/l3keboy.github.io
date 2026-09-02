@@ -29,10 +29,10 @@ export default function SectionHero() {
         <div className="flex flex-row gap-3">
           <PortfolioLink
             content={<PortfolioButton content={t("Buttons.gitHub")} />}
+            disableAnimation
             href={siteSettings.urls.githubUrl}
             linkIsExternal
             noUnderline
-            disableAnimation
           />
         </div>
       </div>

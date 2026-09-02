@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/common/Reveal";
 import SectionCertificatesDisplay, {
   type ISectionCertificatesDisplayParams,
 } from "@/components/pages/certifications/SectionCertificatesDisplay";
@@ -15,13 +16,17 @@ export default async function Certifications({
 
   return (
     <div className="flex flex-col gap-12">
-      <SectionHero />
-      <SectionCertificatesDisplay
-        company={params.company}
-        highlight={params.highlight}
-        sortBy={params.sortBy}
-        sortDirection={params.sortDirection}
-      />
+      <Reveal>
+        <SectionHero />
+      </Reveal>
+      <Reveal>
+        <SectionCertificatesDisplay
+          company={params.company}
+          highlight={params.highlight}
+          sortBy={params.sortBy}
+          sortDirection={params.sortDirection}
+        />
+      </Reveal>
     </div>
   );
 }

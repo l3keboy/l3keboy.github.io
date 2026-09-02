@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/common/Reveal";
 import SectionHero from "@/components/pages/projects/SectionHero";
 import SectionProjectsDisplay, {
   type ISectionProjectDisplayParams,
@@ -13,12 +14,16 @@ export default async function Projects({ searchParams }: ProjectsPageProps) {
 
   return (
     <div className="flex flex-col gap-12">
-      <SectionHero />
-      <SectionProjectsDisplay
-        highlight={params.highlight}
-        technology={params.technology}
-        type={params.type}
-      />
+      <Reveal>
+        <SectionHero />
+      </Reveal>
+      <Reveal>
+        <SectionProjectsDisplay
+          highlight={params.highlight}
+          technology={params.technology}
+          type={params.type}
+        />
+      </Reveal>
     </div>
   );
 }

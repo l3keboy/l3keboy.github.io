@@ -33,7 +33,7 @@ export default function CertificationContainer({
   return (
     <PortfolioLink
       ariaLabel={t("ariaLabel", { certificate: certificate.certificate.name })}
-      classNames="flex-1 flex h-auto w-full"
+      classNames="flex-1 flex h-auto w-full transition-all duration-200 ease-[cubic-bezier(.16,1,.3,1)] data-hovered:-translate-y-0.5 data-pressed:translate-y-0 data-pressed:opacity-100 motion-reduce:transition-none motion-reduce:translate-y-0"
       content={
         <div className="w-full h-full p-6 rounded-lg bg-surface border border-transparent hover:border-accent hover:border-solid flex flex-col gap-3">
           <div className="flex flex-row justify-between gap-6">

@@ -42,16 +42,13 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
   const locale = await getLocale();
 
   return (
-    <html
-      className={`${spaceGrotesk.variable} ${sourceSans3.variable} ${ibmPlexMono.variable} font-family-secondary antialiased`}
-      lang={locale}
-      suppressHydrationWarning
-    >
+    <html lang={locale} suppressHydrationWarning>
       {/* Load GTM */}
       <GoogleTagManager />
 
       <body
         className={clsx(
+          `${spaceGrotesk.variable} ${sourceSans3.variable} ${ibmPlexMono.variable} font-family-secondary antialiased`,
           // Margins and paddings
           "m-0 p-0 px-6",
           // Heights and widths

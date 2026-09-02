@@ -2,7 +2,7 @@
 // ! Client side component because contexts can only be made client side
 
 import { useRouter } from "next/navigation";
-import { createContext, useCallback, useContext, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useState } from "react";
 import { ReactNode } from "react";
 import { useCookies } from "react-cookie";
 
@@ -29,7 +29,18 @@ export default function LocaleContextProvider({
 }: Readonly<{ children: ReactNode }>) {
   const router = useRouter();
 
-  const [_, setCookie] = useCookies(["LUKEHENDRIKS_NET_LOCALE"]);
+  const [cookies, setCookie] = useCookies(["LUKEHENDRIKS_NET_LOCALE"]);
+
+  const getLocale = useCallback(async () => {
+    let localeCookie = cookies.LUKEHENDRIKS_NET_LOCALE;
+
+    if (!localeCookie) {
+      const browserLocale = navigator.language;
+      setCookie("LUKEHENDRIKS_NET_LOCALE", browserLocale);
+      localeCookie = browserLocale;
+      router.refresh();
+    }
+  }, [cookies.LUKEHENDRIKS_NET_LOCALE, router, setCookie]);
 
   const setLocale = useCallback(
     async ({ userPreferredLocale }: ISetLocale) => {
@@ -42,6 +53,13 @@ export default function LocaleContextProvider({
     },
     [router, setCookie],
   );
+
+  useEffect(() => {
+    const run = async () => {
+      getLocale();
+    };
+    run();
+  }, [getLocale]);
 
   return (
     <LocaleContext.Provider

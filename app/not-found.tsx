@@ -41,6 +41,7 @@ export default function NotFound() {
                 <PortfolioButton content={t("Buttons.home")} size="lg" />
               }
               noUnderline
+              disableAnimation
             />
           </div>
           {/* #endregion */}

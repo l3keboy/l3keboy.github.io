@@ -32,6 +32,7 @@ export default function SectionHero() {
             href={siteSettings.urls.githubUrl}
             linkIsExternal
             noUnderline
+            disableAnimation
           />
         </div>
       </div>

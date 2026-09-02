@@ -7,6 +7,7 @@ export type IPortfolioLink = {
   ariaLabel?: string;
   classNames?: string;
   content: ReactNode;
+  disableAnimation?: boolean;
   href?: LinkRootProps["href"];
   linkIsExternal?: boolean;
   noUnderline?: boolean;
@@ -16,6 +17,7 @@ export default function PortfolioLink({
   ariaLabel,
   classNames,
   content,
+  disableAnimation,
   href,
   linkIsExternal,
   noUnderline,
@@ -29,10 +31,18 @@ export default function PortfolioLink({
   const portfolioLinkRel = linkIsExternal ? "noopener noreferrer" : undefined;
   const portfolioLinkNoUnderline = noUnderline ? "no-underline" : "";
 
+  const portfolioLinkDisableAnimation = disableAnimation ?? false;
+
   return (
     <Link
       aria-label={portfolioLinkAriaLabel?.toString()}
-      className={clsx(portfolioLinkNoUnderline, portfolioLinkClassNames)}
+      className={clsx(
+        !portfolioLinkDisableAnimation
+          ? "no-underline hovered:no-underline focused:no-underline transition duration-300 ease-in-out after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
+          : "",
+        portfolioLinkNoUnderline,
+        portfolioLinkClassNames,
+      )}
       href={portfolioLinkHref}
       rel={portfolioLinkRel}
       target={portfolioLinkTarget}

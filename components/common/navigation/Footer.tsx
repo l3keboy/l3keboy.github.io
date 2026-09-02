@@ -60,6 +60,7 @@ export function Footer() {
             href={siteSettings.urls.linkedInUrl}
             linkIsExternal
             noUnderline
+            disableAnimation
           />
           <PortfolioLink
             content={
@@ -71,6 +72,7 @@ export function Footer() {
             href={siteSettings.urls.githubUrl}
             linkIsExternal
             noUnderline
+            disableAnimation
           />
         </div>
         {/* #endregion */}

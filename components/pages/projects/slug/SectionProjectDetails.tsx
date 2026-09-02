@@ -59,6 +59,7 @@ export default function SectionProjectDetails({ project }: ISectionHero) {
                     key={`${project.slug}-${link.slug}`}
                     linkIsExternal
                     noUnderline
+                    disableAnimation
                   />
                 );
               })}

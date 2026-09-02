@@ -34,6 +34,7 @@ export default function SectionHero() {
             href={siteSettings.urls.githubUrl}
             linkIsExternal
             noUnderline
+            disableAnimation
           />
           <PortfolioLink
             content={
@@ -45,6 +46,7 @@ export default function SectionHero() {
             href={siteSettings.urls.linkedInUrl}
             linkIsExternal
             noUnderline
+            disableAnimation
           />
         </div>
       </div>

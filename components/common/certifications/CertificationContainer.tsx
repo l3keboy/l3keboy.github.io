@@ -72,6 +72,7 @@ export default function CertificationContainer({
       href={certificate.certificate.url}
       linkIsExternal
       noUnderline
+      disableAnimation
     />
   );
 }

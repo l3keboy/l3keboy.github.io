@@ -62,6 +62,7 @@ export default function ProjectContainer({
                 key={`${project.slug}-${link.slug}`}
                 linkIsExternal
                 noUnderline
+                disableAnimation
               />
             );
           })}
@@ -79,6 +80,7 @@ export default function ProjectContainer({
           }
           href={`/projects/${project.slug}`}
           noUnderline
+          disableAnimation
         />
       </div>
     </div>

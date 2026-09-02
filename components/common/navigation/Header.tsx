@@ -11,6 +11,7 @@ import { siteSettings } from "@/utils/config/siteSettings";
 import ContentContainer from "../ContentContainer";
 import { LanguageSwitcher } from "../LanguageSwitcher";
 import { ThemeSwitcher } from "../ThemeSwitcher";
+import { ScrollProgress } from "../ScrollProgress";
 
 export function Header() {
   const t = useTranslations("Components.Navigation.Header");
@@ -31,94 +32,97 @@ export function Header() {
   // #endregion
 
   return (
-    <header
-      className="sticky top-0 left-0 w-full py-6 border-b border-solid border-border z-10 backdrop-blur bg-[color-mix(in_srgb,var(--background)_90%,transparent)] "
-      role="navigation"
-    >
-      <ContentContainer classNames="!flex-row !py-0">
-        {/* #region Avatar */}
-        <div className="flex flex-row gap-1.5">
-          <Avatar className="bg-transparent">
-            <Avatar.Image
-              asChild
-              className="bg-transparent"
-              height={40}
-              src="/assets/memoji.png"
-              width={40}
-            >
-              <Image
-                alt={siteSettings.title}
+    <>
+      <ScrollProgress />
+      <header
+        className="sticky top-0 left-0 w-full py-6 border-b border-solid border-border z-10 backdrop-blur bg-[color-mix(in_srgb,var(--background)_90%,transparent)] "
+        role="navigation"
+      >
+        <ContentContainer classNames="!flex-row !py-0">
+          {/* #region Avatar */}
+          <div className="flex flex-row gap-1.5">
+            <Avatar className="bg-transparent">
+              <Avatar.Image
+                asChild
                 className="bg-transparent"
-                loading="eager"
+                height={40}
                 src="/assets/memoji.png"
-              />
-            </Avatar.Image>
-          </Avatar>
-          <PortfolioLink
-            classNames="font-family-primary font-semibold my-auto"
-            content={siteSettings.title}
-          />
-        </div>
-        {/* #endregion */}
+                width={40}
+              >
+                <Image
+                  alt={siteSettings.title}
+                  className="bg-transparent"
+                  loading="eager"
+                  src="/assets/memoji.png"
+                />
+              </Avatar.Image>
+            </Avatar>
+            <PortfolioLink
+              classNames="font-family-primary font-semibold my-auto"
+              content={siteSettings.title}
+            />
+          </div>
+          {/* #endregion */}
 
-        {/* #region Navigation links */}
-        <nav className="flex-row gap-3 text-center m-auto hidden md:flex">
-          {navigationLinks.map((link) => {
-            return (
-              <PortfolioLink
-                ariaLabel={link.ariaLabel}
-                classNames="font-family-primary text-sm text-muted"
-                content={link.title}
-                href={link.url}
-                key={link.key}
-              />
-            );
-          })}
-        </nav>
-        {/* #endregion */}
+          {/* #region Navigation links */}
+          <nav className="flex-row gap-3 text-center m-auto hidden md:flex">
+            {navigationLinks.map((link) => {
+              return (
+                <PortfolioLink
+                  ariaLabel={link.ariaLabel}
+                  classNames="font-family-primary text-sm text-muted"
+                  content={link.title}
+                  href={link.url}
+                  key={link.key}
+                />
+              );
+            })}
+          </nav>
+          {/* #endregion */}
 
-        {/* #region Dark mode toggle */}
-        <div className="my-auto hidden md:flex gap-1.5">
-          <ThemeSwitcher />
-          <LanguageSwitcher />
-        </div>
-        {/* #endregion */}
+          {/* #region Dark mode toggle */}
+          <div className="my-auto hidden md:flex gap-1.5">
+            <ThemeSwitcher />
+            <LanguageSwitcher />
+          </div>
+          {/* #endregion */}
 
-        {/* #region Hamburger menu */}
-        <div className="flex md:hidden">
-          <Drawer>
-            <PortfolioButton content={<IconMenu />} variant="ghost" />
-            <Drawer.Backdrop variant="opaque">
-              <Drawer.Content placement="right">
-                <Drawer.Dialog aria-label="Mobile menu">
-                  <Drawer.Body>
-                    <div className="flex flex-col gap-6">
-                      {navigationLinks.map((link) => {
-                        return (
-                          <PortfolioLink
-                            ariaLabel={link.ariaLabel}
-                            classNames="font-family-primary text-sm text-muted"
-                            content={link.title}
-                            href={link.url}
-                            key={link.key}
-                          />
-                        );
-                      })}
-                    </div>
-                  </Drawer.Body>
-                  <Drawer.Footer>
-                    <div className="flex flex-row gap-1.5">
-                      <ThemeSwitcher />
-                      <LanguageSwitcher />
-                    </div>
-                  </Drawer.Footer>
-                </Drawer.Dialog>
-              </Drawer.Content>
-            </Drawer.Backdrop>
-          </Drawer>
-        </div>
-        {/* #endregion */}
-      </ContentContainer>
-    </header>
+          {/* #region Hamburger menu */}
+          <div className="flex md:hidden">
+            <Drawer>
+              <PortfolioButton content={<IconMenu />} variant="ghost" />
+              <Drawer.Backdrop variant="opaque">
+                <Drawer.Content placement="right">
+                  <Drawer.Dialog aria-label="Mobile menu">
+                    <Drawer.Body>
+                      <div className="flex flex-col gap-6">
+                        {navigationLinks.map((link) => {
+                          return (
+                            <PortfolioLink
+                              ariaLabel={link.ariaLabel}
+                              classNames="font-family-primary text-sm text-muted"
+                              content={link.title}
+                              href={link.url}
+                              key={link.key}
+                            />
+                          );
+                        })}
+                      </div>
+                    </Drawer.Body>
+                    <Drawer.Footer>
+                      <div className="flex flex-row gap-1.5">
+                        <ThemeSwitcher />
+                        <LanguageSwitcher />
+                      </div>
+                    </Drawer.Footer>
+                  </Drawer.Dialog>
+                </Drawer.Content>
+              </Drawer.Backdrop>
+            </Drawer>
+          </div>
+          {/* #endregion */}
+        </ContentContainer>
+      </header>
+    </>
   );
 }

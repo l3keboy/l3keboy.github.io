@@ -9,6 +9,7 @@ export type IPortfolioButton = {
   ariaLabel?: string;
   classNames?: string;
   content: ReactNode;
+  disableAnimation?: boolean;
   isDisabled?: boolean;
   isLoading?: boolean;
   onPress?: () => void;
@@ -20,6 +21,7 @@ export default function PortfolioButton({
   ariaLabel,
   classNames,
   content,
+  disableAnimation,
   isDisabled,
   isLoading,
   onPress,
@@ -38,10 +40,18 @@ export default function PortfolioButton({
 
   const portfolioButtonAriaLabel = ariaLabel ?? content;
 
+  const portfolioButtonDisableAnimation = disableAnimation ?? false;
+
   return (
     <Button
       aria-label={portfolioButtonAriaLabel?.toString()}
-      className={clsx("rounded-lg", portfolioButtonClassNames)}
+      className={clsx(
+        "rounded-lg",
+        !portfolioButtonDisableAnimation
+          ? "transition-all duration-200 ease-[cubic-bezier(.16,1,.3,1)] data-hovered:-translate-y-0.5 data-pressed:translate-y-0 data-pressed:opacity-100 motion-reduce:transition-none motion-reduce:translate-y-0"
+          : "",
+        portfolioButtonClassNames,
+      )}
       isDisabled={portfolioButtonIsDisabled}
       isPending={portfolioButtonIsPending}
       onPress={portfolioButtonOnPress}

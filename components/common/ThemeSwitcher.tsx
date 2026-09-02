@@ -30,6 +30,7 @@ export function ThemeSwitcher() {
     <PortfolioButton
       ariaLabel={t("ariaLabel")}
       content={activeTheme === "light" ? <IconMoon /> : <IconSun />}
+      disableAnimation
       onPress={() => {
         switch (activeTheme) {
           case "dark":

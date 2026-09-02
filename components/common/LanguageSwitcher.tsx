@@ -20,6 +20,7 @@ export function LanguageSwitcher() {
       <PortfolioButton
         ariaLabel={t("ariaLabel")}
         content={<IconGlobe />}
+        disableAnimation
         onPress={() => {}}
         size="sm"
         variant="outline"

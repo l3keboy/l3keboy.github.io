@@ -7,6 +7,10 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 import { IBM_Plex_Mono, Source_Sans_3, Space_Grotesk } from "next/font/google";
 
+import Cookiebot from "@/components/common/analytics/Cookies/Cookiebot";
+import GoogleConsentModeV2 from "@/components/common/analytics/GoogleConsentModeV2";
+import GoogleTagManager from "@/components/common/analytics/GoogleTagManager";
+import WebVitals from "@/components/common/analytics/WebVitals";
 import PortfolioRootLayout from "@/components/layouts/PortfolioRootLayout";
 
 // Fonts
@@ -43,6 +47,9 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
       lang={locale}
       suppressHydrationWarning
     >
+      {/* Load GTM */}
+      <GoogleTagManager />
+
       <body
         className={clsx(
           // Margins and paddings
@@ -55,6 +62,13 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
           "text-base",
         )}
       >
+        {/* Load Cookiebot */}
+        <Cookiebot />
+        {/* Load Google ConsentMode V2 initially */}
+        <GoogleConsentModeV2 />
+        {/* Load Web vitals */}
+        <WebVitals />
+        {/* Vercel Speed Insights */}
         <SpeedInsights />
 
         <NextIntlClientProvider>

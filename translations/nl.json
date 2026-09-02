@@ -272,6 +272,11 @@
                         "title": "Sitemap",
                         "ariaLabel": "Navigeer naar Sitemap",
                         "url": "/sitemap.xml"
+                    },
+                    "2": {
+                        "title": "Cookies",
+                        "ariaLabel": "Navigeer naar Cookies",
+                        "url": "/cookies"
                     }
                 }
             }
@@ -308,6 +313,9 @@
             "Buttons": {
                 "home": "Home"
             }
+        },
+        "Cookies": {
+            "title": "Cookies"
         },
         "Home": {
             "Hero": {

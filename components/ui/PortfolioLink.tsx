@@ -38,7 +38,7 @@ export default function PortfolioLink({
       aria-label={portfolioLinkAriaLabel?.toString()}
       className={clsx(
         !portfolioLinkDisableAnimation
-          ? "no-underline hovered:no-underline focused:no-underline transition duration-300 ease-in-out after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
+          ? "no-underline hovered:no-underline focused:no-underline transition duration-300 ease-in-out after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
           : "",
         portfolioLinkNoUnderline,
         portfolioLinkClassNames,

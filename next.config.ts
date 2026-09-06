@@ -18,7 +18,6 @@ const nextConfig = (phase: string): NextConfig => {
   const isDev = phase === PHASE_DEVELOPMENT_SERVER;
 
   return {
-    output: "standalone",
     reactStrictMode: false,
     ...(isDev && {
       allowedDevOrigins: ["localhost", "192.168.254.203"],

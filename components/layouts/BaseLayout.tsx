@@ -7,7 +7,7 @@ import { Header } from "../common/navigation/Header";
 
 export default function BaseLayout({ children }: IPortfolioLayout) {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-dvh flex-col">
       <Header />
       <main
         className={clsx(

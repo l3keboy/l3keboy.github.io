@@ -10,8 +10,9 @@ export default function SummaryItem({ item }: { item: ISummaryItem }) {
   return (
     <div
       className={clsx(
-        "py-6 grow border-y flex flex-col gap-0",
+        "py-6 grow flex border-y flex-col gap-0",
         item.key !== 1 ? "md:px-3 md:border-l " : "",
+        item.key === 4 ? "border-b-0! md:border-y!" : "",
       )}
       key={item.key}
     >

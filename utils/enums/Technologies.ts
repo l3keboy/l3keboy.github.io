@@ -5,6 +5,7 @@ export enum Technologies {
   AZURE = "Azure",
   AZURE_ARM = "Azure ARM",
   AZURE_BICEP = "Azure Bicep",
+  AZURE_STORAGE = "Azure Storage",
   ENTRA_ID = "Entra ID",
   POSTGRESQL = "PostgreSQL",
   REDIS = "Redis",
@@ -17,6 +18,7 @@ export enum Technologies {
   DOCKER_COMPOSE = "Docker Compose",
   MICROK8S = "MicroK8s",
   KUBERNETES = "Kubernetes",
+  AZURE_FUNCTIONS = "Azure Functions",
 
   // CI/CD & Automation
   GITHUB_ACTIONS = "GitHub Actions",
@@ -25,6 +27,7 @@ export enum Technologies {
 
   // Monitoring & Security
   AZURE_KEY_VAULT = "Azure Key Vault",
+  AZURE_APP_CONFIG = "Azure App Config",
   APPLICATION_INSIGHTS = "Application Insights",
   OPENTELEMETRY = "OpenTelemetry",
   HASHICORP_VAULT = "HashiCorp Vault",

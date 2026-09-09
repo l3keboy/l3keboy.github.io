@@ -24,7 +24,7 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   perfectionist.configs["recommended-alphabetical"],
   {
-    ignores: ["node_modules", ".next"],
+    ignores: ["node_modules", ".next", ".vercel"],
   },
 ]);
 

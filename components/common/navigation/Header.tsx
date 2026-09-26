@@ -10,7 +10,6 @@ import { siteSettings } from "@/utils/config/siteSettings";
 
 import ContentContainer from "../ContentContainer";
 import { LanguageSwitcher } from "../LanguageSwitcher";
-import { ScrollProgress } from "../ScrollProgress";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 
 export function Header() {
@@ -32,10 +31,8 @@ export function Header() {
   // #endregion
 
   return (
-    <>
-      <ScrollProgress />
       <header
-        className="sticky top-0 left-0 w-full py-6 border-b border-solid border-border z-10 backdrop-blur bg-[color-mix(in_srgb,var(--background)_90%,transparent)] "
+        className="w-full py-6 border-b border-solid border-border z-10 backdrop-blur bg-[color-mix(in_srgb,var(--background)_90%,transparent)] "
         role="navigation"
       >
         <ContentContainer classNames="!flex-row !py-0">
@@ -123,6 +120,5 @@ export function Header() {
           {/* #endregion */}
         </ContentContainer>
       </header>
-    </>
   );
 }

@@ -278,9 +278,9 @@ export const siteSettings: ISiteSettings = {
         Technologies.HTML_CSS,
         Technologies.TAILWIND,
         Technologies.VERCEL,
-        Technologies.CAL_COM,
         Technologies.HEROUI,
         Technologies.VS_CODE,
+        Technologies.NODEMAILER,
         Technologies.FIGMA,
       ],
       type: SourceType.CLOSED_SOURCE

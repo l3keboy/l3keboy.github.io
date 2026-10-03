@@ -76,4 +76,5 @@ export enum Technologies {
   USELESS_FACTS_API = "Useless Facts API",
   NEXT_INTL = "Next-intl",
   REACT_COOKIE = "React-cookie",
+  NODEMAILER = "Nodemailer",
 }

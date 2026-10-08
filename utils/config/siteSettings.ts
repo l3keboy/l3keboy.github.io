@@ -98,7 +98,7 @@ export const siteSettings: ISiteSettings = {
       company: {
         name: Companies.MICROSOFT
       },
-      expiryDate: new Date(2027, 2), // March 2027
+      expiryDate: new Date(2028, 2), // March 2027
       grantDate: new Date(2025, 2), // March 2025
       highlight: true,
       slug: "az_104",

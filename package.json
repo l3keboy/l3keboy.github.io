@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "tsc": "npx tsc --noEmit",
-    "fix": "npx eslint . --fix"
+    "fix": "npx eslint . --fix",
+    "test": "node --test \"**/*.tests.ts\""
   },
   "dependencies": {
     "@heroui/react": "^3.2.4",

@@ -1,6 +1,7 @@
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 import "@/styles/globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import clsx from "clsx";
 import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
@@ -71,6 +72,8 @@ export default async function RootLayout({
         <WebVitals />
         {/* Vercel Speed Insights */}
         <SpeedInsights />
+        {/* Vercel Analytics */}
+        <Analytics />
 
         <NextIntlClientProvider>
           <PortfolioRootLayout>{children}</PortfolioRootLayout>

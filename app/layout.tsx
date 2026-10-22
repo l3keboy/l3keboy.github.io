@@ -1,6 +1,6 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import "./globals.css";
+import "@/styles/globals.css";
 import clsx from "clsx";
 import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";

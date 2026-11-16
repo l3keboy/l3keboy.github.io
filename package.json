@@ -40,7 +40,7 @@
     "@typescript/native": "npm:typescript@^7.0.2",
     "eslint": "^10.14.0",
     "eslint-config-next": "^16.4.5",
-    "eslint-plugin-perfectionist": "^5.7.0",
+    "eslint-plugin-perfectionist": "^5.13.0",
     "tailwindcss": "^4",
     "tsx": "^4.23.15",
     "typescript": "npm:@typescript/typescript6@^6.0.2"
